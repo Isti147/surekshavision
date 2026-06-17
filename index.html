@@ -52,6 +52,16 @@
             border-bottom: 1px solid #1e293b;
         }
 
+        .top-nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            color: #00a0dc !important;
+        }
+
         /* Navbar Styling */
         .main-navbar {
             background-color: var(--primary-dark) !important;
@@ -276,11 +286,11 @@
             border-top: 5px solid var(--accent-blue);
         }
 
-        .top-nav a {
+        .contact-footer a {
             transition: color 0.3s ease;
         }
 
-        .top-nav a:hover {
+        .contact-footer a:hover {
             color: #00a0dc !important;
         }
 
@@ -444,7 +454,9 @@
             class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
             <div class="d-flex flex-column flex-sm-row gap-1 gap-sm-4 align-items-center">
                 <div class="small">
-                    <i class="fa-solid fa-envelope text-info me-1"></i>ahamadmdistiyaque@gmail.com
+                    <!-- ईमेल फिक्स: क्लिक करते ही मेलबॉक्स खुलेगा -->
+                    <i class="fa-solid fa-envelope text-info me-1"></i>
+                    <a href="mailto:ahamadmdistiyaque@gmail.com" class="text-light">ahamadmdistiyaque@gmail.com</a>
                 </div>
                 <div id="text-emergency" class="small">
                     <i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service
@@ -722,6 +734,43 @@
         </div>
     </div>
 
+    <!-- ================= ONLINE PAYMENT GATEWAY MODULE (100% FIXED QR) ================= -->
+    <div class="container py-4 reveal-element">
+        <div class="p-4 rounded-4 shadow-sm text-center bg-white border border-primary">
+            <h6 id="text-pay-sub" class="text-primary fw-bold text-uppercase small"><i
+                    class="fa-solid fa-credit-card me-1"></i> Quick Pay</h6>
+            <h3 id="text-pay-title" class="fw-bold text-dark fs-4">Online Payment Karein</h3>
+            <p id="text-pay-desc" class="text-muted small mb-4">Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से
+                सुरक्षित भुगतान करें।</p>
+
+            <div class="row g-3 justify-content-center align-items-center">
+                <div class="col-12 col-md-5">
+                    <div class="p-3 rounded-3 bg-light border border-dashed text-md-start">
+                        <p class="mb-2 text-dark font-weight-bold small"><strong>UPI ID:</strong> <span
+                                class="text-primary">9123188984@ybl</span></p>
+                        <p class="mb-3 text-dark small"><strong>Merchant:</strong> Suraksha Vision</p>
+                        <!-- डायरेक्ट मोबाइल पेमेंट्स के लिए डीपलिंकिंग बटन -->
+                        <a href="upi://pay?pa=9123188984@ybl&pn=Suraksha%20Vision&cu=INR"
+                            class="btn btn-primary rounded-pill btn-sm fw-bold px-4">
+                            <i class="fa-solid fa-bolt me-1"></i> Pay via UPI App
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 text-muted small fw-bold">OR / YA</div>
+                <div class="col-12 col-md-4 text-center">
+                    <!-- यूआरएल एनकोडेड 100% वर्किंग लाइव क्यूआर कोड जनरेटर -->
+                    <div class="p-2 border rounded-3 bg-white d-inline-block shadow-sm">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi%3A%2F%2Fpay%3Fpa%3D9123188984%40ybl%26pn%3DSuraksha%2520Vision%26cu%3DINR"
+                            alt="UPI QR Code" class="img-fluid" style="width: 140px; height: 140px;">
+                    </div>
+                    <p id="text-pay-scan" class="text-muted small mt-2 mb-0"><i class="fa-solid fa-qrcode me-1"></i>
+                        Scan to Pay</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CUSTOMER FEEDBACK SECTION ================= -->
     <div class="container py-4 reveal-element">
         <div class="p-4 rounded-4 shadow-sm" style="background-color: white; border-top: 4px solid #22c55e;">
             <div class="text-center mb-4">
@@ -881,8 +930,15 @@
                         payein.</p>
                     <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong
                             id="text-foot-call">Call:</strong> +91 9123188984</p>
-                    <p class="mb-1 small"><i class="fa-solid fa-envelope text-info me-1"></i> <strong
-                            id="text-foot-email">Email:</strong> razamdfurquan@gmail.com</p>
+
+                    <!-- ईमेल फिक्स: क्लिक करते ही मेलबॉक्स डायरेक्ट रीडायरेक्ट करेगा -->
+                    <p class="mb-1 small">
+                        <i class="fa-solid fa-envelope text-info me-1"></i>
+                        <strong id="text-foot-email">Email:</strong>
+                        <a href="mailto:razamdfurquan@gmail.com"
+                            class="text-info text-decoration-none">razamdfurquan@gmail.com</a>
+                    </p>
+
                     <p class="mb-0 small"><i class="fa-brands fa-linkedin text-info me-1"></i> <strong
                             id="text-foot-linkedin">LinkedIn:</strong> <a
                             href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank"
@@ -914,6 +970,7 @@
         </div>
     </div>
 
+    <!-- ================= AI CHATBOT INTERACTIVE WIDGET ================= -->
     <div class="chatbot-launcher" onclick="toggleChatbot()">
         <i class="fa-solid fa-robot" id="chat-icon"></i>
     </div>
@@ -1083,6 +1140,13 @@
                 p3Title: 'System Config',
                 p3Sub: 'fix configuration charge',
                 p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
+
+                // Payment Additions
+                paySub: 'Quick Pay',
+                payTitle: 'Online Payment Karein',
+                payDesc: 'Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से सुरक्षित भुगतान करें।',
+                payScan: 'Scan to Pay',
+
                 formTitle: 'Get a Free Quote',
                 formDesc: 'Fill in your details, we will get back shortly.',
                 lblName: 'Aapka Naam',
@@ -1174,6 +1238,13 @@
                 p3Title: 'System Config',
                 p3Sub: 'fix configuration charge',
                 p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
+
+                // Payment Additions
+                paySub: 'Quick Pay',
+                payTitle: 'Pay Securely Online',
+                payDesc: 'Make swift payments via Google Pay, PhonePe, Paytm, or any standard UPI Apps.',
+                payScan: 'Scan to Pay',
+
                 formTitle: 'Get a Free Quote',
                 formDesc: 'Fill in your details, we will get back shortly.',
                 lblName: 'Your Name',
@@ -1280,6 +1351,12 @@
             document.getElementById('text-p3-title').innerText = data.p3Title;
             document.getElementById('text-p3-sub').innerText = data.p3Sub;
             document.getElementById('text-p3-list').innerHTML = data.p3List;
+
+            // Online Payments Local Translation Sync
+            document.getElementById('text-pay-sub').innerHTML = `<i class="fa-solid fa-credit-card me-1"></i> ${data.paySub}`;
+            document.getElementById('text-pay-title').innerText = data.payTitle;
+            document.getElementById('text-pay-desc').innerText = data.payDesc;
+            document.getElementById('text-pay-scan').innerHTML = `<i class="fa-solid fa-qrcode me-1"></i> ${data.payScan}`;
 
             // Feedback Dynamic Translation Sync
             document.getElementById('text-feed-sub').innerText = data.feedSub;
