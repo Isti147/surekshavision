@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suraksha Vision | Best CCTV Camera & Computer Repair in Patna, Danapur & Khagaul</title>
+
+    <meta name="description"
+        content="Suraksha Vision offers professional HD/IP CCTV camera installation, networking, and laptop repair services across Danapur Cantt, Usri, Jamsaut, Khagaul, Phulwari Sharif, Bihta, and Patna. Led by a B.Tech Network Engineer.">
+    <meta name="keywords"
+        content="Suraksha Vision, CCTV camera repair Patna, CCTV installation Danapur, Computer repair near me, IP camera setup Khagaul, POE switch setup Bihta, Intercom programming Phulwari Sharif, CCTV repair Jamsaut, Router configuration Usri, Network engineer Patna">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary-dark: #0f172a;
+            /* Ultra Dark Blue */
+            --accent-blue: #0284c7;
+            /* Premium Sky Blue */
+            --glow-yellow: #f59e0b;
+            /* Premium Gold/Yellow */
+        }
+
+        /* Custom Modern Language Dropdown */
+        .lang-selector-container select {
+            background-color: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #475569;
+            padding: 4px 10px;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Top Bar Styling */
+        .top-nav {
+            background-color: #020617;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        /* Navbar Styling */
+        .main-navbar {
+            background-color: var(--primary-dark) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Live Pulsing Dot Animation */
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulseSystem 1.6s infinite;
+        }
+
+        @keyframes pulseSystem {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        /* Live Activity Ticker Toast Popup */
+        .live-toast-alert {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ffffff;
+            color: #1e293b;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            border-left: 4px solid var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transform: translateX(-150%);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .live-toast-alert.show-popup {
+            transform: translateX(0);
+        }
+
+        /* Chalta Firta Elements Slide-in Animation */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: buildUp 0.8s ease forwards;
+        }
+
+        @keyframes buildUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section with Glassmorphism */
+        .hero-premium {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 132, 199, 0.4)), url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+        }
+
+        @media (min-width: 768px) {
+            .hero-premium {
+                padding: 120px 0;
+            }
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        @media (min-width: 576px) {
+            .hero-card {
+                padding: 40px;
+            }
+        }
+
+        /* Interactive Buttons */
+        .btn-premium-call {
+            background: linear-gradient(45deg, #0284c7, #0369a1);
+            color: white;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium-call:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.6);
+            color: white;
+        }
+
+        .btn-premium-wa {
+            background: linear-gradient(45deg, #22c55e, #15803d);
+            color: white;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-premium-wa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.6);
+            color: white;
+        }
+
+        /* Modern Service Cards */
+        .card-service-premium {
+            border: none;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card-service-premium:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: #f0f9ff;
+            color: var(--accent-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 1.8rem;
+        }
+
+        /* About Us Profile Highlight */
+        .profile-section {
+            background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+            border-top: 5px solid var(--accent-blue);
+        }
+
+        @media (min-width: 768px) {
+            .profile-section {
+                background: linear-gradient(to right, #ffffff, #f1f5f9);
+                border-top: none;
+                border-left: 5px solid var(--accent-blue);
+            }
+        }
+
+        /* Pricing Table Card */
+        .price-card {
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(2, 132, 199, 0.1);
+        }
+
+        /* Feature Badge Section */
+        .feature-badge {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        /* Brand Badge Styling */
+        .brand-badge {
+            background: white;
+            border: 1px dashed #cbd5e1;
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #475569;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            font-size: 0.85rem;
+        }
+
+        /* Accordion Customization */
+        .accordion-button:not(.collapsed) {
+            background-color: #f0f9ff;
+            color: var(--accent-blue);
+        }
+
+        /* Premium Contact Footer */
+        .contact-footer {
+            background-color: #020617;
+            color: #94a3b8;
+            border-top: 5px solid var(--accent-blue);
+        }
+
+        .top-nav a {
+            transition: color 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            color: #00a0dc !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="live-toast" class="live-toast-alert">
+        <span class="pulse-dot"></span>
+        <span id="toast-message-text">Live: Processing query from Danapur Cantt...</span>
+    </div>
+
+    <div class="top-nav text-white py-2">
+        <div
+            class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
+            <div class="d-flex flex-column flex-sm-row gap-1 gap-sm-4 align-items-center">
+                <div class="small">
+                    <i class="fa-solid fa-envelope text-info me-1"></i>ahamadmdistiyaque@gmail.com
+                </div>
+                <div id="text-emergency" class="small">
+                    <i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank"
+                        class="text-light text-decoration-none small">
+                        <i class="fa-brands fa-linkedin text-info me-1"></i>LinkedIn Connect
+                    </a>
+                </div>
+            </div>
+            <div class="lang-selector-container d-flex align-items-center gap-2 mt-1 mt-sm-0">
+                <i class="fa-solid fa-language text-info"></i>
+                <select id="language-switcher" onchange="changeLanguage(this.value)">
+                    <option value="hi" selected>हिन्दी (Hindi)</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-dark main-navbar py-2 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand fw-bold fs-4 text-white" href="#">
+                <i class="fa-solid fa-shield-halved text-warning me-1"></i>SURAKSHA <span
+                    style="color: var(--accent-blue);">VISION</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <span
+                    class="badge bg-dark border border-secondary text-light me-2 d-none d-sm-inline-flex align-items-center gap-2 small">
+                    <span class="pulse-dot"></span>System Active
+                </span>
+                <a href="tel:+919123188984" class="btn btn-warning btn-sm fw-bold rounded-pill px-3">
+                    <i class="fa-solid fa-phone me-1"></i>Call
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-premium d-flex align-items-center reveal-element">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9 hero-card">
+                    <span id="text-hero-badge"
+                        class="badge bg-danger px-3 py-2 rounded-pill mb-2 text-uppercase small">Top Rated Security
+                        Expert</span>
+                    <h1 id="text-hero-title" class="fs-2 fw-bold mb-2 text-white">Aapka Ghar, Hamari <span
+                            style="color: var(--glow-yellow);">Suraksha</span></h1>
+                    <p id="text-hero-subtitle" class="fs-6 text-light mb-3">Danapur Cantt, Usri aur Jamsaut Ka Sabse
+                        Advanced CCTV & Intercom Installer</p>
+                    <p id="text-hero-desc" class="text-slate-300 mb-4 small opacity-75">Hum Apartments, Offices, aur
+                        Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete
+                        installation aur repair service dete hain.</p>
+
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a id="text-btn-call" href="tel:+919123188984"
+                            class="btn btn-premium-call btn-md rounded-pill px-4 py-2">
+                            <i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein
+                        </a>
+                        <a id="text-btn-wa"
+                            href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20enquire%20about%20CCTV/Intercom%20installation."
+                            target="_blank" class="btn btn-premium-wa btn-md rounded-pill px-4 py-2">
+                            <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-4 rounded-4 profile-section shadow-sm p-4 reveal-element">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-md-8">
+                <h6 id="text-about-sub" class="text-primary fw-bold text-uppercase small">Hamare Bare Mein</h6>
+                <h3 id="text-about-title" class="fw-bold text-dark fs-4">Technical Expertise Aur Deep Problem-Solving
+                </h3>
+                <p id="text-about-desc1" class="small text-secondary mb-2">Suraksha Vision ek **B.Tech graduate** ke
+                    netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki
+                    computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur
+                    industrial electrical networks ke deep implementation ko handle karte hain.</p>
+                <p id="text-about-desc2" class="small text-secondary mb-0">Hum bade multi-apartment housings aur
+                    commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe
+                    **Static IP network deployment** karne me expert hain.</p>
+            </div>
+            <div class="col-12 col-md-4 text-center mt-3 mt-md-0">
+                <div class="p-3 rounded-4 bg-white shadow-sm border border-info">
+                    <i class="fa-solid fa-user-gear text-info fs-1 mb-2"></i>
+                    <h6 id="text-about-cardtitle" class="fw-bold text-dark mb-1">B.Tech Led Team</h6>
+                    <p id="text-about-carddesc" class="text-muted small mb-0">High-level analytical skills aur
+                        enterprise infrastructure solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 text-center bg-white rounded-4 shadow-sm my-4 reveal-element">
+        <h6 id="text-brands-heading" class="text-muted text-uppercase fw-bold mb-3 small" style="letter-spacing: 1px;">
+            Top Trusted Brands We Support</h6>
+        <div class="row g-2 justify-content-center align-items-center">
+            <div class="col-4 col-sm-2">
+                <div class="brand-badge w-100">CP PLUS</div>
+            </div>
+            <div class="col-4 col-sm-2">
+                <div class="brand-badge w-100">HIKVISION</div>
+            </div>
+            <div class="col-4 col-sm-2">
+                <div class="brand-badge w-100">DAHUA</div>
+            </div>
+            <div class="col-4 col-sm-2">
+                <div class="brand-badge w-100">DIGISOL</div>
+            </div>
+            <div class="col-4 col-sm-2">
+                <div class="brand-badge w-100">TP-LINK</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3 reveal-element">
+        <div class="text-center mb-4">
+            <h6 id="text-why-sub" class="text-primary fw-bold text-uppercase small">Hamari Khubiyan</h6>
+            <h3 id="text-why-title" class="fw-bold text-dark fs-4">Log Humpar Bharosa Kyun Karte Hain?</h3>
+        </div>
+        <div class="row g-3 text-center">
+            <div class="col-12 col-md-4">
+                <div class="feature-badge">
+                    <i class="fa-solid fa-user-shield text-success fs-3 mb-2"></i>
+                    <h6 id="text-feat1-title" class="fw-bold mb-1">Certified Team</h6>
+                    <p id="text-feat1-desc" class="text-muted small mb-0">Networking aur hardware troubleshooting ke
+                        expert technicians.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="feature-badge">
+                    <i class="fa-solid fa-tags text-warning fs-3 mb-2"></i>
+                    <h6 id="text-feat2-title" class="fw-bold mb-1">Best Local Pricing</h6>
+                    <p id="text-feat2-desc" class="text-muted small mb-0">Pure Danapur aur Patna belt me sabse
+                        affordable aur sahi daam.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="feature-badge">
+                    <i class="fa-solid fa-screwdriver-wrench text-info fs-3 mb-2"></i>
+                    <h6 id="text-feat3-title" class="fw-bold mb-1">Fast Service</h6>
+                    <p id="text-feat3-desc" class="text-muted small mb-0">Call aane ke kuch hi ghanto me aapke doorstep
+                        par service haazir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white py-4 shadow-sm my-4 reveal-element">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h6 id="text-serv-sub" class="text-primary fw-bold text-uppercase small">Services</h6>
+                <h3 id="text-serv-title" class="fw-bold fs-4" style="color: var(--primary-dark);">Professional Security
+                    & IT Solutions</h3>
+            </div>
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
+                        <h5 id="text-serv1-title" class="fw-bold mb-2">CCTV Camera Setup</h5>
+                        <p id="text-serv1-desc" class="text-muted small mb-0">HD & IP Cameras, DVR/NVR configuration,
+                            aur mobile par router ke through live view setting.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-tty"></i></div>
+                        <h5 id="text-serv2-title" class="fw-bold mb-2">EPABX Intercom Systems</h5>
+                        <p id="text-serv2-desc" class="text-muted small mb-0">Naye ya purane apartments aur building ke
+                            liye complete multi-line intercom programming aur secure wiring.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                        <h5 id="text-serv3-title" class="fw-bold mb-2">Networking & POE Switches</h5>
+                        <p id="text-serv3-desc" class="text-muted small mb-0">Heavy camera networks ke liye static IP
+                            settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
+                        <h5 id="text-serv4-title" class="fw-bold mb-2">Computer Hardware & Software</h5>
+                        <p id="text-serv4-desc" class="text-muted small mb-0">Laptop/Desktop repair, OS installation,
+                            malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-3 reveal-element">
+        <div class="text-center mb-4">
+            <h6 id="text-proj-sub" class="text-info fw-bold text-uppercase small">Hamare Kamyab Projects</h6>
+            <h3 id="text-proj-title" class="fw-bold text-dark fs-4">Proven Track Record & Case Studies</h3>
+        </div>
+        <div class="row g-3">
+            <div class="col-12 col-md-6">
+                <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 border-primary h-100">
+                    <h6 id="text-proj1-title" class="fw-bold text-dark mb-1"><i
+                            class="fa-solid fa-building text-primary me-2"></i>16-Channel Apartment NVR Security</h6>
+                    <p id="text-proj1-desc" class="text-muted small mb-0">Humne haal hi me bade multi-storey residential
+                        complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced
+                        infrastructure lagakar complete **65-days backup capacity continuous recording** deploy ki gayi
+                        hai.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 border-success h-100">
+                    <h6 id="text-proj2-title" class="fw-bold text-dark mb-1"><i
+                            class="fa-solid fa-network-wired text-success me-2"></i>Static IP Infrastructure Management
+                    </h6>
+                    <p id="text-proj2-desc" class="text-muted small mb-0">Ranchi aur Patna ke critical setups me jahan
+                        normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely
+                        automatic loop fault se nikal kar enterprise **Static IP architecture** par shift kiya taaki
+                        seamless network uptime mile.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 reveal-element">
+        <div class="text-center mb-4">
+            <h6 id="text-price-sub" class="text-primary fw-bold text-uppercase small">Standard Rates</h6>
+            <h3 id="text-price-title" class="fw-bold text-dark fs-4">CCTV Installation & Service Charges</h3>
+            <p id="text-price-desc" class="text-muted small">Bina kisi hidden cost ke genuine service aur fixing rates
+            </p>
+        </div>
+        <div class="row g-3 justify-content-center">
+            <div class="col-12 col-md-4">
+                <div class="price-card p-3 text-center h-100">
+                    <h6 id="text-p1-title" class="fw-bold text-muted text-uppercase mb-2">Analog Setup</h6>
+                    <h3 class="fw-bold text-dark mb-1">₹300</h3>
+                    <p id="text-p1-sub" class="text-muted small mb-3">per camera fixing charge</p>
+                    <hr class="my-2">
+                    <ul id="text-p1-list" class="list-unstyled text-start small text-secondary"
+                        style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check text-info me-1"></i> HD Bullet/Dome Camera Mounting</li>
+                        <li><i class="fa-solid fa-check text-info me-1"></i> BNC & DC Connector Punching</li>
+                        <li><i class="fa-solid fa-check text-info me-1"></i> Camera Angle Alignment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="price-card featured p-3 text-center h-100">
+                    <h6 id="text-p2-title" class="fw-bold text-primary text-uppercase mb-2">IP / PoE Setup</h6>
+                    <h3 class="fw-bold text-dark mb-1">₹400</h3>
+                    <p id="text-p2-sub" class="text-muted small mb-3">per camera fixing charge</p>
+                    <hr class="my-2">
+                    <ul id="text-p2-list" class="list-unstyled text-start small text-secondary"
+                        style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li>
+                        <li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li>
+                        <li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="price-card p-3 text-center h-100">
+                    <h6 id="text-p3-title" class="fw-bold text-muted text-uppercase mb-2">System Config</h6>
+                    <h3 class="fw-bold text-dark mb-1">₹500</h3>
+                    <p id="text-p3-sub" class="text-muted small mb-3">fix configuration charge</p>
+                    <hr class="my-2">
+                    <ul id="text-p3-list" class="list-unstyled text-start small text-secondary"
+                        style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li>
+                        <li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li>
+                        <li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 reveal-element">
+        <div class="row g-4">
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4 shadow-sm mb-4"
+                    style="background-color: white; border-top: 4px solid var(--accent-blue);">
+                    <h4 id="text-form-title" class="fw-bold mb-1 text-dark fs-5">Get a Free Quote</h4>
+                    <p id="text-form-desc" class="text-muted small mb-3">Apna details bharein, hum contact karenge.</p>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Service Quote Request - Suraksha Vision">
+                        <div class="mb-2">
+                            <label id="text-lbl-name" class="form-label small fw-semibold mb-1">Aapka Naam</label>
+                            <input type="text" name="name" class="form-control form-control-sm" required>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-phone" class="form-label small fw-semibold mb-1">Mobile Number</label>
+                            <input type="tel" name="phone" class="form-control form-control-sm" required>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-service" class="form-label small fw-semibold mb-1">Service Jo
+                                Chahiye</label>
+                            <select class="form-select form-select-sm" name="service" id="form-service-select">
+                                <option selected>CCTV Camera Installation / Repair</option>
+                                <option>EPABX Intercom Programming</option>
+                                <option>Biometric / Access Control</option>
+                                <option>Networking / WiFi Setup</option>
+                                <option>Computer Hardware & Software Repair</option>
+                            </select>
+                        </div>
+                        <button id="text-form-btn" type="submit"
+                            class="btn btn-premium-call w-100 py-2 rounded-pill mt-2 btn-sm">Submit Requirement</button>
+                    </form>
+                </div>
+
+                <div class="p-3 rounded-4 shadow-sm"
+                    style="background-color: white; border-top: 4px solid var(--glow-yellow);">
+                    <h4 id="text-job-title" class="fw-bold mb-1 text-dark fs-5"><i
+                            class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
+                    <p id="text-job-desc" class="text-muted small mb-2">Apni CV yahan submit karein.</p>
+                    <div class="alert alert-warning py-1 px-2 mb-3 rounded-3 border-0 small" style="font-size: 0.8rem;">
+                        <i class="fa-solid fa-circle-exclamation me-1"></i> <span id="text-job-notice">Mandatory:
+                            Applying candidate must possess a personal bike, valid driving license, and standard
+                            verification documents (Aadhaar Card, ID proof).</span>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Job Application with CV - Suraksha Vision">
+                        <div class="mb-2">
+                            <label id="text-lbl-jobname" class="form-label small fw-semibold mb-1">Full Name</label>
+                            <input type="text" name="applicant_name" class="form-control form-control-sm" required>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-jobprofile" class="form-label small fw-semibold mb-1">Aapka Profile /
+                                Role</label>
+                            <select class="form-select form-select-sm" name="applied_role" id="form-job-select">
+                                <option selected>CCTV Installation Technician</option>
+                                <option>Network Support Engineer</option>
+                                <option>Intercom / EPABX Expert</option>
+                                <option>Sales & Marketing Executive</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-cv" class="form-label small fw-semibold mb-1">Upload CV (PDF
+                                Only)</label>
+                            <input type="file" name="attachment" class="form-control form-control-sm" accept=".pdf"
+                                required>
+                        </div>
+                        <button id="text-job-btn" type="submit"
+                            class="btn btn-warning w-100 py-2 rounded-pill mt-2 btn-sm fw-bold">Upload & Apply
+                            Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <h4 id="text-faq-title" class="fw-bold mb-1 text-dark fs-5">Aksar Puche Jaane Wale Sawal</h4>
+                <p id="text-faq-desc" class="text-muted small mb-3">Kuch aam sawal jo customers puchte hain.</p>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button id="text-faq1-q" class="accordion-button small fw-semibold p-3" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Kya hum mobile par CCTV ka live view dekh sakte hain?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div id="text-faq1-a" class="accordion-body text-muted small">
+                                Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki
+                                aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button id="text-faq2-q" class="accordion-button collapsed small fw-semibold p-3"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Intercom configuration me kitna samay lagta hai?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div id="text-faq2-a" class="accordion-body text-muted small">
+                                Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti
+                                hai aur multi-line programming ko jaldi complete kar deti hai.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-footer py-4 text-light reveal-element">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <h5>SURAKSHA VISION</h5>
+                    <p id="text-foot-desc" class="small opacity-75" style="max-width: 450px;">Hum aapke poore business
+                        aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation
+                        payein.</p>
+                    <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong
+                            id="text-foot-call">Call:</strong> +91 9123188984</p>
+                    <p class="mb-1 small"><i class="fa-solid fa-envelope text-info me-1"></i> <strong
+                            id="text-foot-email">Email:</strong> razamdfurquan@gmail.com</p>
+                    <p class="mb-0 small"><i class="fa-brands fa-linkedin text-info me-1"></i> <strong
+                            id="text-foot-linkedin">LinkedIn:</strong> <a
+                            href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank"
+                            class="text-info text-decoration-none">View Professional Profile</a></p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="p-3 rounded-4" style="background-color: #0f172a; border: 1px solid #1e293b;">
+                        <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i
+                                class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
+                        <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong
+                                id="text-loc-addr">Address:</strong> Usri, Jamsaut Road, Near Danapur Cantt, Patna -
+                            801503</p>
+                        <p class="mb-2 small text-muted"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong
+                                id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
+                        <div class="text-center text-md-start">
+                            <a id="text-loc-btn"
+                                href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20visit%20your%20office."
+                                target="_blank" class="btn btn-success rounded-pill px-3 btn-sm">
+                                <i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-3">
+            <div class="text-center opacity-50 small">
+                <p class="mb-0">&copy; 2026 Suraksha Vision. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+        // Automatic Dynamic Notification Popup Ticker Setup
+        const toastBlock = document.getElementById('live-toast');
+        const messageText = document.getElementById('toast-message-text');
+
+        const runtimeMessages = [
+            "Live: Processing query from Danapur Cantt...",
+            "Update: Usri site IP camera patching successful.",
+            "Alert: Intercom configuration query routing from Jamsaut...",
+            "Status: System diagnostics running smoothly."
+        ];
+
+        let counterIndex = 0;
+        setInterval(() => {
+            toastBlock.classList.remove('show-popup');
+            setTimeout(() => {
+                messageText.innerText = runtimeMessages[counterIndex];
+                toastBlock.classList.add('show-popup');
+                counterIndex = (counterIndex + 1) % runtimeMessages.length;
+            }, 600);
+        }, 5000);
+
+        const translations = {
+            hi: {
+                emergency: '<i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service',
+                heroBadge: 'Top Rated Security Expert',
+                heroTitle: 'Aapka Ghar, Hamari <span style="color: var(--glow-yellow);">Suraksha</span>',
+                heroSubtitle: 'Danapur Cantt, Usri aur Jamsaut Ka Sabse Advanced CCTV & Intercom Installer',
+                heroDesc: 'Hum Apartments, Offices, aur Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete installation aur repair service dete hain.',
+                btnCall: '<i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein',
+                btnWa: '<i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message',
+                aboutSub: 'Hamare Bare Mein',
+                aboutTitle: 'Technical Expertise Aur Deep Problem-Solving',
+                aboutDesc1: 'Suraksha Vision ek B.Tech graduate ke netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur industrial electrical networks ke deep implementation ko handle karte hain.',
+                aboutDesc2: 'Hum bade multi-apartment housings aur commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe Static IP network deployment karne me expert hain.',
+                aboutCardtitle: 'B.Tech Led Team',
+                aboutCarddesc: 'High-level analytical skills aur enterprise infrastructure solutions.',
+                brandsHeading: 'Top Trusted Brands We Support',
+                whySub: 'Hamari Khubiyan',
+                whyTitle: 'Log Humpar Bharosa Kyun Karte Hain?',
+                feat1Title: 'Certified Team',
+                feat1Desc: 'Networking aur hardware troubleshooting ke expert technicians.',
+                feat2Title: 'Best Local Pricing',
+                feat2Desc: 'Pure Danapur aur Patna belt me sabse affordable aur sahi daam.',
+                feat3Title: 'Fast Service',
+                feat3Desc: 'Call aane ke kuch hi ghanto me aapke doorstep par service haazir.',
+                servSub: 'Services',
+                servTitle: 'Professional Security & IT Solutions',
+                serv1Title: 'CCTV Camera Setup',
+                serv1Desc: 'HD & IP Cameras, DVR/NVR configuration, aur mobile par router ke through live view setting.',
+                serv2Title: 'EPABX Intercom Systems',
+                serv2Desc: 'Naye ya purane apartments aur building ke liye complete multi-line intercom programming aur secure wiring.',
+                serv3Title: 'Networking & POE Switches',
+                serv3Desc: 'Heavy camera networks ke liye static IP settings, high-quality POE switches setup aur complete routing troubleshoot.',
+                serv4Title: 'Computer Hardware & Software',
+                serv4Desc: 'Laptop/Desktop repair, OS installation, malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).',
+                projSub: 'Hamare Kamyab Projects',
+                projTitle: 'Proven Track Record & Case Studies',
+                proj1Title: '<i class="fa-solid fa-building text-primary me-2"></i>16-Channel Apartment NVR Security',
+                proj1Desc: 'Humne haal hi me bade multi-storey residential complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced infrastructure lagakar complete 65-days backup capacity continuous recording deploy ki gayi hai.',
+                proj2Title: '<i class="fa-solid fa-network-wired text-success me-2"></i>Static IP Infrastructure Management',
+                proj2Desc: 'Ranchi aur Patna ke critical setups me jahan normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely automatic loop fault se nikal kar enterprise Static IP architecture par shift kiya taaki seamless network uptime mile.',
+                priceSub: 'Standard Rates',
+                priceTitle: 'CCTV Installation & Service Charges',
+                priceDesc: 'Bina kisi hidden cost ke genuine service aur fixing rates',
+                p1Title: 'Analog Setup',
+                p1Sub: 'per camera fixing charge',
+                p1List: '<li><i class="fa-solid fa-check text-info me-1"></i> HD Bullet/Dome Camera Mounting</li><li><i class="fa-solid fa-check text-info me-1"></i> BNC & DC Connector Punching</li><li><i class="fa-solid fa-check text-info me-1"></i> Camera Angle Alignment</li>',
+                p2Title: 'IP / PoE Setup',
+                p2Sub: 'per camera fixing charge',
+                p2List: '<li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li><li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li><li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>',
+                p3Title: 'System Config',
+                p3Sub: 'fix configuration charge',
+                p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
+                formTitle: 'Get a Free Quote',
+                formDesc: 'Fill in your details, we will get back shortly.',
+                lblName: 'Aapka Naam',
+                lblPhone: 'Mobile Number',
+                lblService: 'Service Jo Chahiye',
+                formBtn: 'Submit Requirement',
+                jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
+                jobDesc: 'Apni CV yahan submit karein.',
+                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (Aadhaar Card, ID proof).',
+                lblJobname: 'Pura Naam',
+                lblJobprofile: 'Aapka Profile / Role',
+                lblCv: 'Upload CV (PDF)',
+                jobBtn: 'Upload & Apply Now',
+                faqTitle: 'Frequently Asked Questions',
+                faqDesc: 'Kuch aam sawal jo customers puchte hain.',
+                faq1Q: 'Kya hum mobile par CCTV ka live view dekh sakte hain?',
+                faq1A: 'Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.',
+                faq2Q: 'Intercom configuration me kitna samay lagta hai?',
+                faq2A: 'Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti hai aur multi-line programming ko jaldi complete kar deti hai.',
+                footDesc: 'Hum aapke poore business aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation payein.',
+                footCall: 'Call:',
+                footEmail: 'Email:',
+                footLinkedin: 'LinkedIn:',
+                locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
+                locAddr: 'Address:',
+                locLand: 'Landmark:',
+                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
+                formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
+                jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive']
+            },
+            en: {
+                emergency: '<i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service',
+                heroBadge: 'Top Rated Security Expert',
+                heroTitle: 'Your Home, Our <span style="color: var(--glow-yellow);">Security</span>',
+                heroSubtitle: 'Most Advanced CCTV & Intercom Installer in Danapur Cantt, Usri and Jamsaut',
+                heroDesc: 'We provide complete installation and repair services for High-Definition IP Cameras, Biometrics Systems, and EPABX Intercoms for Apartments, Offices, and Shops.',
+                btnCall: '<i class="fa-solid fa-phone-flip me-2"></i> Call Us Now',
+                btnWa: '<i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message',
+                aboutSub: 'About Us',
+                aboutTitle: 'Technical Expertise & Deep Problem-Solving',
+                aboutDesc1: 'Suraksha Vision is a high-end technical enterprise led by a B.Tech graduate. We don\'t just install cameras; we deal with core computer hardware troubleshooting, complex server routing, cybersecurity infrastructure, and deep execution of industrial electrical network deployments.',
+                aboutDesc2: 'We excel in handling Static IP structural designs to prevent automatic system downtime in large multi-apartment complex environments whenever local DHCP routing infrastructures completely break down.',
+                aboutCardtitle: 'B.Tech Led Team',
+                aboutCarddesc: 'High-level analytical skills and enterprise infrastructure solutions.',
+                brandsHeading: 'Top Trusted Brands We Support',
+                whySub: 'Our Key Features',
+                whyTitle: 'Why People Trust Us?',
+                feat1Title: 'Certified Team',
+                feat1Desc: 'Expert technicians specialized in networking and hardware troubleshooting.',
+                feat2Title: 'Best Local Pricing',
+                feat2Desc: 'Most affordable and transparent pricing across Danapur and Patna belt.',
+                feat3Title: 'Fast Service',
+                feat3Desc: 'Service available at your doorstep within a few hours of your call.',
+                servSub: 'Services',
+                servTitle: 'Professional Security & IT Solutions',
+                serv1Title: 'CCTV Camera Setup',
+                serv1Desc: 'Configuration of HD & IP Cameras, DVR/NVR settings, and live mobile viewing setup via router.',
+                serv2Title: 'EPABX Intercom Systems',
+                serv2Desc: 'Complete multi-line intercom programming and secure wiring for new or old residential apartments.',
+                serv3Title: 'Networking & POE Switches',
+                serv3Desc: 'Static IP configuration for heavy networks, PoE switches setup, and complete network troubleshooting.',
+                serv4Title: 'Computer Hardware & Software',
+                serv4Desc: 'Complete desktop/laptop repair, OS installation, malware/virus removal, and hardware upgrades (RAM/SSD) for optimal performance.',
+                projSub: 'Our Successful Projects',
+                projTitle: 'Proven Track Record & Case Studies',
+                proj1Title: '<i class="fa-solid fa-building text-primary me-2"></i>16-Channel Apartment NVR Security',
+                proj1Desc: 'We recently deployed a full security infrastructure for a multi-storey residential complex containing 15 high-definition IP cameras running on a 16-channel NVR, complete with an optimized server build pushing a massive 65-day back recording history storage capacity.',
+                proj2Title: '<i class="fa-solid fa-network-wired text-success me-2"></i>Static IP Infrastructure Management',
+                proj2Desc: 'In critical commercial sites across Ranchi and Patna zones experiencing continuous downtime from DHCP network breaks, our engineering team resolved cross-loop configurations and mapped out enterprise-level Static IP tracking for complete network reliability.',
+                priceSub: 'Standard Rates',
+                priceTitle: 'CCTV Installation & Service Charges',
+                priceDesc: 'Genuine fixing and service rates without any hidden costs',
+                p1Title: 'Analog Setup',
+                p1Sub: 'per camera fixing charge',
+                p1List: '<li><i class="fa-solid fa-check text-info me-1"></i> HD Bullet/Dome Camera Mounting</li><li><i class="fa-solid fa-check text-info me-1"></i> BNC & DC Connector Punching</li><li><i class="fa-solid fa-check text-info me-1"></i> Camera Angle Alignment</li>',
+                p2Title: 'IP / PoE Setup',
+                p2Sub: 'per camera fixing charge',
+                p2List: '<li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li><li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li><li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>',
+                p3Title: 'System Config',
+                p3Sub: 'fix configuration charge',
+                p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
+                formTitle: 'Get a Free Quote',
+                formDesc: 'Fill in your details, we will get back shortly.',
+                lblName: 'Your Name',
+                lblPhone: 'Mobile Number',
+                lblService: 'Required Service',
+                formBtn: 'Submit Requirement',
+                jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
+                jobDesc: 'Submit your CV here.',
+                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (Aadhaar Card, ID proof).',
+                lblJobname: 'Full Name',
+                lblJobprofile: 'Your Profile / Role',
+                lblCv: 'Upload CV (PDF)',
+                jobBtn: 'Upload & Apply Now',
+                faqTitle: 'Frequently Asked Questions',
+                faqDesc: 'Common queries raised by our valuable clients.',
+                faq1Q: 'Can we view the CCTV live feed on mobile?',
+                faq1A: 'Yes, absolutely! We configure your router and NVR/DVR securely so you can monitor live video streaming from anywhere in the world.',
+                faq2Q: 'How long does it take for Intercom configuration?',
+                faq2A: 'It completely depends on the building size and total active lines. However, our team ensures fast execution with zero local disturbance.',
+                footDesc: 'We take complete care of your residential and business security infrastructure. Contact us today for a free consultation.',
+                footCall: 'Call Now:',
+                footEmail: 'Email Us:',
+                footLinkedin: 'LinkedIn:',
+                locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
+                locAddr: 'Address:',
+                locLand: 'Landmark:',
+                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
+                formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
+                jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive']
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = translations[lang];
+
+            // Top Nav & Hero
+            document.getElementById('text-emergency').innerHTML = data.emergency;
+            document.getElementById('text-hero-badge').innerText = data.heroBadge;
+            document.getElementById('text-hero-title').innerHTML = data.heroTitle;
+            document.getElementById('text-hero-subtitle').innerText = data.heroSubtitle;
+            document.getElementById('text-hero-desc').innerText = data.heroDesc;
+            document.getElementById('text-btn-call').innerHTML = data.btnCall;
+            document.getElementById('text-btn-wa').innerHTML = data.btnWa;
+
+            // About Us Section
+            document.getElementById('text-about-sub').innerText = data.aboutSub;
+            document.getElementById('text-about-title').innerText = data.aboutTitle;
+            document.getElementById('text-about-desc1').innerText = data.aboutDesc1;
+            document.getElementById('text-about-desc2').innerText = data.aboutDesc2;
+            document.getElementById('text-about-cardtitle').innerText = data.aboutCardtitle;
+            document.getElementById('text-about-carddesc').innerText = data.aboutCarddesc;
+
+            // Brands & Why Choose Us
+            document.getElementById('text-brands-heading').innerText = data.brandsHeading;
+            document.getElementById('text-why-sub').innerText = data.whySub;
+            document.getElementById('text-why-title').innerText = data.whyTitle;
+            document.getElementById('text-feat1-title').innerText = data.feat1Title;
+            document.getElementById('text-feat1-desc').innerText = data.feat1Desc;
+            document.getElementById('text-feat2-title').innerText = data.feat2Title;
+            document.getElementById('text-feat2-desc').innerText = data.feat2Desc;
+            document.getElementById('text-feat3-title').innerText = data.feat3Title;
+            document.getElementById('text-feat3-desc').innerText = data.feat3Desc;
+
+            // Services
+            document.getElementById('text-serv-sub').innerText = data.servSub;
+            document.getElementById('text-serv-title').innerText = data.servTitle;
+            document.getElementById('text-serv1-title').innerText = data.serv1Title;
+            document.getElementById('text-serv1-desc').innerText = data.serv1Desc;
+            document.getElementById('text-serv2-title').innerText = data.serv2Title;
+            document.getElementById('text-serv2-desc').innerText = data.serv2Desc;
+            document.getElementById('text-serv3-title').innerText = data.serv3Title;
+            document.getElementById('text-serv3-desc').innerText = data.serv3Desc;
+            document.getElementById('text-serv4-title').innerText = data.serv4Title;
+            document.getElementById('text-serv4-desc').innerText = data.serv4Desc;
+
+            // Projects Section
+            document.getElementById('text-proj-sub').innerText = data.projSub;
+            document.getElementById('text-proj-title').innerText = data.projTitle;
+            document.getElementById('text-proj1-title').innerHTML = data.proj1Title;
+            document.getElementById('text-proj1-desc').innerText = data.proj1Desc;
+            document.getElementById('text-proj2-title').innerHTML = data.proj2Title;
+            document.getElementById('text-proj2-desc').innerText = data.proj2Desc;
+
+            // Rates Card
+            document.getElementById('text-price-sub').innerText = data.priceSub;
+            document.getElementById('text-price-title').innerText = data.priceTitle;
+            document.getElementById('text-price-desc').innerText = data.priceDesc;
+            document.getElementById('text-p1-title').innerText = data.p1Title;
+            document.getElementById('text-p1-sub').innerText = data.p1Sub;
+            document.getElementById('text-p1-list').innerHTML = data.p1List;
+            document.getElementById('text-p2-title').innerText = data.p2Title;
+            document.getElementById('text-p2-sub').innerText = data.p2Sub;
+            document.getElementById('text-p2-list').innerHTML = data.p2List;
+            document.getElementById('text-p3-title').innerText = data.p3Title;
+            document.getElementById('text-p3-sub').innerText = data.p3Sub;
+            document.getElementById('text-p3-list').innerHTML = data.p3List;
+
+            // Form Elements
+            document.getElementById('text-form-title').innerText = data.formTitle;
+            document.getElementById('text-form-desc').innerText = data.formDesc;
+            document.getElementById('text-lbl-name').innerText = data.lblName;
+            document.getElementById('text-lbl-phone').innerText = data.lblPhone;
+            document.getElementById('text-lbl-service').innerText = data.lblService;
+            document.getElementById('text-form-btn').innerText = data.formBtn;
+
+            // Career Module Elements
+            document.getElementById('text-job-title').innerHTML = data.jobTitle;
+            document.getElementById('text-job-desc').innerText = data.jobDesc;
+            document.getElementById('text-job-notice').innerText = data.jobNotice;
+            document.getElementById('text-lbl-jobname').innerText = data.lblJobname;
+            document.getElementById('text-lbl-jobprofile').innerText = data.lblJobprofile;
+            document.getElementById('text-lbl-cv').innerText = data.lblCv;
+            document.getElementById('text-job-btn').innerText = data.jobBtn;
+
+            // Sync Form Select Box Options Language
+            const selectBox = document.getElementById('form-service-select');
+            for (let i = 0; i < selectBox.options.length; i++) {
+                if (data.formOpts[i]) selectBox.options[i].text = data.formOpts[i];
+            }
+
+            // Sync Career Select Box Options Language
+            const jobSelectBox = document.getElementById('form-job-select');
+            for (let j = 0; j < jobSelectBox.options.length; j++) {
+                if (data.jobOpts[j]) jobSelectBox.options[j].text = data.jobOpts[j];
+            }
+
+            // FAQs Section
+            document.getElementById('text-faq-title').innerText = data.faqTitle;
+            document.getElementById('text-faq-desc').innerText = data.faqDesc;
+            document.getElementById('text-faq1-q').innerText = data.faq1Q;
+            document.getElementById('text-faq1-a').innerText = data.faq1A;
+            document.getElementById('text-faq2-q').innerText = data.faq2Q;
+            document.getElementById('text-faq2-a').innerText = data.faq2A;
+
+            // Footer Elements
+            document.getElementById('text-foot-desc').innerText = data.footDesc;
+            document.getElementById('text-foot-call').innerText = data.footCall;
+            document.getElementById('text-foot-email').innerText = data.footEmail;
+            document.getElementById('text-foot-linkedin').innerText = data.footLinkedin;
+            document.getElementById('text-loc-title').innerHTML = data.locTitle;
+            document.getElementById('text-loc-addr').innerText = data.locAddr;
+            document.getElementById('text-loc-land').innerText = data.locLand;
+            document.getElementById('text-loc-btn').innerHTML = data.locBtn;
+        }
+    </script>
+</body>
+
+</html>
