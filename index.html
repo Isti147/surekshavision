@@ -7,11 +7,13 @@
 
     <title>Suraksha Vision | Best CCTV Camera & Computer Repair in Patna, Danapur & Khagaul</title>
 
-    <meta name="description"
-        content="Suraksha Vision offers professional HD/IP CCTV camera installation, networking, and laptop repair services across Danapur Cantt, Usri, Jamsaut, Khagaul, Phulwari Sharif, Bihta, and Patna. Led by a B.Tech Network Engineer.">
-    <meta name="keywords"
-        content="Suraksha Vision, CCTV camera repair Patna, CCTV installation Danapur, Computer repair near me, IP camera setup Khagaul, POE switch setup Bihta, Intercom programming Phulwari Sharif, CCTV repair Jamsaut, Router configuration Usri, Network engineer Patna">
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -25,14 +27,10 @@
 
         :root {
             --primary-dark: #0f172a;
-            /* Ultra Dark Blue */
             --accent-blue: #0284c7;
-            /* Premium Sky Blue */
             --glow-yellow: #f59e0b;
-            /* Premium Gold/Yellow */
         }
 
-        /* Custom Modern Language Dropdown */
         .lang-selector-container select {
             background-color: #1e293b;
             color: #f8fafc;
@@ -45,7 +43,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Top Bar Styling */
         .top-nav {
             background-color: #020617;
             font-size: 0.85rem;
@@ -62,13 +59,11 @@
             color: #00a0dc !important;
         }
 
-        /* Navbar Styling */
         .main-navbar {
             background-color: var(--primary-dark) !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Live Pulsing Dot Animation */
         .pulse-dot {
             width: 8px;
             height: 8px;
@@ -96,7 +91,6 @@
             }
         }
 
-        /* Live Activity Ticker Toast Popup */
         .live-toast-alert {
             position: fixed;
             bottom: 20px;
@@ -121,7 +115,6 @@
             transform: translateX(0);
         }
 
-        /* Chalta Firta Elements Slide-in Animation */
         .reveal-element {
             opacity: 0;
             transform: translateY(30px);
@@ -135,7 +128,6 @@
             }
         }
 
-        /* Hero Section with Glassmorphism */
         .hero-premium {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(2, 132, 199, 0.4)), url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80');
             background-size: cover;
@@ -164,7 +156,6 @@
             }
         }
 
-        /* Interactive Buttons */
         .btn-premium-call {
             background: linear-gradient(45deg, #0284c7, #0369a1);
             color: white;
@@ -195,7 +186,6 @@
             color: white;
         }
 
-        /* Modern Service Cards */
         .card-service-premium {
             border: none;
             background: white;
@@ -225,7 +215,6 @@
             font-size: 1.8rem;
         }
 
-        /* About Us Profile Highlight */
         .profile-section {
             background: linear-gradient(to bottom, #ffffff, #f1f5f9);
             border-top: 5px solid var(--accent-blue);
@@ -239,7 +228,6 @@
             }
         }
 
-        /* Pricing Table Card */
         .price-card {
             border: 1px solid #e2e8f0;
             background: white;
@@ -252,7 +240,6 @@
             box-shadow: 0 10px 30px rgba(2, 132, 199, 0.1);
         }
 
-        /* Feature Badge Section */
         .feature-badge {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -260,7 +247,6 @@
             padding: 20px;
         }
 
-        /* Brand Badge Styling */
         .brand-badge {
             background: white;
             border: 1px dashed #cbd5e1;
@@ -273,13 +259,11 @@
             font-size: 0.85rem;
         }
 
-        /* Accordion Customization */
         .accordion-button:not(.collapsed) {
             background-color: #f0f9ff;
             color: var(--accent-blue);
         }
 
-        /* Premium Contact Footer */
         .contact-footer {
             background-color: #020617;
             color: #94a3b8;
@@ -450,8 +434,7 @@
     </div>
 
     <div class="top-nav text-white py-2">
-        <div
-            class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
             <div class="d-flex flex-column flex-sm-row gap-1 gap-sm-4 align-items-center">
                 <div class="small">
                     <i class="fa-solid fa-envelope text-info me-1"></i>
@@ -484,11 +467,10 @@
                     style="color: var(--accent-blue);">VISION</span>
             </a>
             <div class="d-flex align-items-center">
-                <span
-                    class="badge bg-dark border border-secondary text-light me-2 d-none d-sm-inline-flex align-items-center gap-2 small">
+                <span class="badge bg-dark border border-secondary text-light me-2 d-none d-sm-inline-flex align-items-center gap-2 small">
                     <span class="pulse-dot"></span>System Active
                 </span>
-                <a href="tel:+919123188984" class="btn btn-warning btn-sm fw-bold rounded-pill px-3">
+                <a id="navCallBtn" href="tel:+919123188984" class="btn btn-warning btn-sm fw-bold rounded-pill px-3">
                     <i class="fa-solid fa-phone me-1"></i>Call
                 </a>
             </div>
@@ -499,25 +481,16 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-9 hero-card">
-                    <span id="text-hero-badge"
-                        class="badge bg-danger px-3 py-2 rounded-pill mb-2 text-uppercase small">Top Rated Security
-                        Expert</span>
-                    <h1 id="text-hero-title" class="fs-2 fw-bold mb-2 text-white">Aapka Ghar, Hamari <span
-                            style="color: var(--glow-yellow);">Suraksha</span></h1>
-                    <p id="text-hero-subtitle" class="fs-6 text-light mb-3">Danapur Cantt, Usri aur Jamsaut Ka Sabse
-                        Advanced CCTV & Intercom Installer</p>
-                    <p id="text-hero-desc" class="text-slate-300 mb-4 small opacity-75">Hum Apartments, Offices, aur
-                        Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete
-                        installation aur repair service dete hain.</p>
+                    <span id="text-hero-badge" class="badge bg-danger px-3 py-2 rounded-pill mb-2 text-uppercase small">Top Rated Security Expert</span>
+                    <h1 id="text-hero-title" class="fs-2 fw-bold mb-2 text-white">Aapka Ghar, Hamari <span style="color: var(--glow-yellow);">Suraksha</span></h1>
+                    <p id="text-hero-subtitle" class="fs-6 text-light mb-3">Danapur Cantt, Usri aur Jamsaut Ka Sabse Advanced CCTV & Intercom Installer</p>
+                    <p id="text-hero-desc" class="text-slate-300 mb-4 small opacity-75">Hum Apartments, Offices, aur Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete installation aur repair service dete hain.</p>
 
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a id="text-btn-call" href="tel:+919123188984"
-                            class="btn btn-premium-call btn-md rounded-pill px-4 py-2">
+                        <a id="heroCallBtn" href="tel:+919123188984" class="btn btn-premium-call btn-md rounded-pill px-4 py-2">
                             <i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein
                         </a>
-                        <a id="text-btn-wa"
-                            href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20enquire%20about%20CCTV/Intercom%20installation."
-                            target="_blank" class="btn btn-premium-wa btn-md rounded-pill px-4 py-2">
+                        <a id="heroWaBtn" href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20enquire%20about%20CCTV/Intercom%20installation." target="_blank" class="btn btn-premium-wa btn-md rounded-pill px-4 py-2">
                             <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message
                         </a>
                     </div>
@@ -530,46 +503,28 @@
         <div class="row align-items-center g-3">
             <div class="col-12 col-md-8">
                 <h6 id="text-about-sub" class="text-primary fw-bold text-uppercase small">Hamare Bare Mein</h6>
-                <h3 id="text-about-title" class="fw-bold text-dark fs-4">Technical Expertise Aur Deep Problem-Solving
-                </h3>
-                <p id="text-about-desc1" class="small text-secondary mb-2">Suraksha Vision ek **B.Tech graduate** ke
-                    netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki
-                    computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur
-                    industrial electrical networks ke deep implementation ko handle karte hain.</p>
-                <p id="text-about-desc2" class="small text-secondary mb-0">Hum bade multi-apartment housings aur
-                    commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe
-                    **Static IP network deployment** karne me expert hain.</p>
+                <h3 id="text-about-title" class="fw-bold text-dark fs-4">Technical Expertise Aur Deep Problem-Solving</h3>
+                <p id="text-about-desc1" class="small text-secondary mb-2">Suraksha Vision ek **B.Tech graduate** ke netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur industrial electrical networks ke deep implementation ko handle karte hain.</p>
+                <p id="text-about-desc2" class="small text-secondary mb-0">Hum bade multi-apartment housings aur commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe **Static IP network deployment** karne me expert hain.</p>
             </div>
             <div class="col-12 col-md-4 text-center mt-3 mt-md-0">
                 <div class="p-3 rounded-4 bg-white shadow-sm border border-info">
                     <i class="fa-solid fa-user-gear text-info fs-1 mb-2"></i>
                     <h6 id="text-about-cardtitle" class="fw-bold text-dark mb-1">B.Tech Led Team</h6>
-                    <p id="text-about-carddesc" class="text-muted small mb-0">High-level analytical skills aur
-                        enterprise infrastructure solutions.</p>
+                    <p id="text-about-carddesc" class="text-muted small mb-0">High-level analytical skills aur enterprise infrastructure solutions.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="container py-4 text-center bg-white rounded-4 shadow-sm my-4 reveal-element">
-        <h6 id="text-brands-heading" class="text-muted text-uppercase fw-bold mb-3 small" style="letter-spacing: 1px;">
-            Top Trusted Brands We Support</h6>
+        <h6 id="text-brands-heading" class="text-muted text-uppercase fw-bold mb-3 small" style="letter-spacing: 1px;">Top Trusted Brands We Support</h6>
         <div class="row g-2 justify-content-center align-items-center">
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">CP PLUS</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">HIKVISION</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">DAHUA</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">DIGISOL</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">TP-LINK</div>
-            </div>
+            <div class="col-4 col-sm-2"> <div class="brand-badge w-100">CP PLUS</div> </div>
+            <div class="col-4 col-sm-2"> <div class="brand-badge w-100">HIKVISION</div> </div>
+            <div class="col-4 col-sm-2"> <div class="brand-badge w-100">DAHUA</div> </div>
+            <div class="col-4 col-sm-2"> <div class="brand-badge w-100">DIGISOL</div> </div>
+            <div class="col-4 col-sm-2"> <div class="brand-badge w-100">TP-LINK</div> </div>
         </div>
     </div>
 
@@ -583,24 +538,21 @@
                 <div class="feature-badge">
                     <i class="fa-solid fa-user-shield text-success fs-3 mb-2"></i>
                     <h6 id="text-feat1-title" class="fw-bold mb-1">Certified Team</h6>
-                    <p id="text-feat1-desc" class="text-muted small mb-0">Networking aur hardware troubleshooting ke
-                        expert technicians.</p>
+                    <p id="text-feat1-desc" class="text-muted small mb-0">Networking aur hardware troubleshooting ke expert technicians.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="feature-badge">
                     <i class="fa-solid fa-tags text-warning fs-3 mb-2"></i>
                     <h6 id="text-feat2-title" class="fw-bold mb-1">Best Local Pricing</h6>
-                    <p id="text-feat2-desc" class="text-muted small mb-0">Pure Danapur aur Patna belt me sabse
-                        affordable aur sahi daam.</p>
+                    <p id="text-feat2-desc" class="text-muted small mb-0">Pure Danapur aur Patna belt me sabse affordable aur sahi daam.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="feature-badge">
                     <i class="fa-solid fa-screwdriver-wrench text-info fs-3 mb-2"></i>
                     <h6 id="text-feat3-title" class="fw-bold mb-1">Fast Service</h6>
-                    <p id="text-feat3-desc" class="text-muted small mb-0">Call aane ke kuch hi ghanto me aapke doorstep
-                        par service haazir.</p>
+                    <p id="text-feat3-desc" class="text-muted small mb-0">Call aane ke kuch hi ghanto me aapke doorstep par service haazir.</p>
                 </div>
             </div>
         </div>
@@ -610,40 +562,35 @@
         <div class="container">
             <div class="text-center mb-4">
                 <h6 id="text-serv-sub" class="text-primary fw-bold text-uppercase small">Services</h6>
-                <h3 id="text-serv-title" class="fw-bold fs-4" style="color: var(--primary-dark);">Professional Security
-                    & IT Solutions</h3>
+                <h3 id="text-serv-title" class="fw-bold fs-4" style="color: var(--primary-dark);">Professional Security & IT Solutions</h3>
             </div>
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
                         <h5 id="text-serv1-title" class="fw-bold mb-2">CCTV Camera Setup</h5>
-                        <p id="text-serv1-desc" class="text-muted small mb-0">HD & IP Cameras, DVR/NVR configuration,
-                            aur mobile par router ke through live view setting.</p>
+                        <p id="text-serv1-desc" class="text-muted small mb-0">HD & IP Cameras, DVR/NVR configuration, aur mobile par router ke through live view setting.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-tty"></i></div>
                         <h5 id="text-serv2-title" class="fw-bold mb-2">EPABX Intercom Systems</h5>
-                        <p id="text-serv2-desc" class="text-muted small mb-0">Naye ya purane apartments aur building ke
-                            liye complete multi-line intercom programming aur secure wiring.</p>
+                        <p id="text-serv2-desc" class="text-muted small mb-0">Naye ya purane apartments aur building ke liye complete multi-line intercom programming aur secure wiring.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
                         <h5 id="text-serv3-title" class="fw-bold mb-2">Networking & POE Switches</h5>
-                        <p id="text-serv3-desc" class="text-muted small mb-0">Heavy camera networks ke liye static IP
-                            settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
+                        <p id="text-serv3-desc" class="text-muted small mb-0">Heavy camera networks ke liye static IP settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
                         <h5 id="text-serv4-title" class="fw-bold mb-2">Computer Hardware & Software</h5>
-                        <p id="text-serv4-desc" class="text-muted small mb-0">Laptop/Desktop repair, OS installation,
-                            malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
+                        <p id="text-serv4-desc" class="text-muted small mb-0">Laptop/Desktop repair, OS installation, malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
                     </div>
                 </div>
             </div>
@@ -658,23 +605,14 @@
         <div class="row g-3">
             <div class="col-12 col-md-6">
                 <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 border-primary h-100">
-                    <h6 id="text-proj1-title" class="fw-bold text-dark mb-1"><i
-                            class="fa-solid fa-building text-primary me-2"></i>16-Channel Apartment NVR Security</h6>
-                    <p id="text-proj1-desc" class="text-muted small mb-0">Humne haal hi me bade multi-storey residential
-                        complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced
-                        infrastructure lagakar complete **65-days backup capacity continuous recording** deploy ki gayi
-                        hai.</p>
+                    <h6 id="text-proj1-title" class="fw-bold text-dark mb-1"><i class="fa-solid fa-building text-primary me-2"></i>16-Channel Apartment NVR Security</h6>
+                    <p id="text-proj1-desc" class="text-muted small mb-0">Humne haal hi me bade multi-storey residential complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced infrastructure lagakar complete **65-days backup capacity continuous recording** deploy ki gayi hai.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                 <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 border-success h-100">
-                    <h6 id="text-proj2-title" class="fw-bold text-dark mb-1"><i
-                            class="fa-solid fa-network-wired text-success me-2"></i>Static IP Infrastructure Management
-                    </h6>
-                    <p id="text-proj2-desc" class="text-muted small mb-0">Ranchi aur Patna ke critical setups me jahan
-                        normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely
-                        automatic loop fault se nikal kar enterprise **Static IP architecture** par shift kiya taaki
-                        seamless network uptime mile.</p>
+                    <h6 id="text-proj2-title" class="fw-bold text-dark mb-1"><i class="fa-solid fa-network-wired text-success me-2"></i>Static IP Infrastructure Management</h6>
+                    <p id="text-proj2-desc" class="text-muted small mb-0">Ranchi aur Patna ke critical setups me jahan normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely automatic loop fault se nikal kar enterprise **Static IP architecture** par shift kiya taaki seamless network uptime mile.</p>
                 </div>
             </div>
         </div>
@@ -684,8 +622,7 @@
         <div class="text-center mb-4">
             <h6 id="text-price-sub" class="text-primary fw-bold text-uppercase small">Standard Rates</h6>
             <h3 id="text-price-title" class="fw-bold text-dark fs-4">CCTV Installation & Service Charges</h3>
-            <p id="text-price-desc" class="text-muted small">Bina kisi hidden cost ke genuine service aur fixing rates
-            </p>
+            <p id="text-price-desc" class="text-muted small">Bina kisi hidden cost ke genuine service aur fixing rates</p>
         </div>
         <div class="row g-3 justify-content-center">
             <div class="col-12 col-md-4">
@@ -694,8 +631,7 @@
                     <h3 class="fw-bold text-dark mb-1">₹300</h3>
                     <p id="text-p1-sub" class="text-muted small mb-3">per camera fixing charge</p>
                     <hr class="my-2">
-                    <ul id="text-p1-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
+                    <ul id="text-p1-list" class="list-unstyled text-start small text-secondary" style="line-height: 1.8;">
                         <li><i class="fa-solid fa-check text-info me-1"></i> HD Bullet/Dome Camera Mounting</li>
                         <li><i class="fa-solid fa-check text-info me-1"></i> BNC & DC Connector Punching</li>
                         <li><i class="fa-solid fa-check text-info me-1"></i> Camera Angle Alignment</li>
@@ -708,8 +644,7 @@
                     <h3 class="fw-bold text-dark mb-1">₹400</h3>
                     <p id="text-p2-sub" class="text-muted small mb-3">per camera fixing charge</p>
                     <hr class="my-2">
-                    <ul id="text-p2-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
+                    <ul id="text-p2-list" class="list-unstyled text-start small text-secondary" style="line-height: 1.8;">
                         <li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li>
                         <li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li>
                         <li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>
@@ -722,8 +657,7 @@
                     <h3 class="fw-bold text-dark mb-1">₹500</h3>
                     <p id="text-p3-sub" class="text-muted small mb-3">fix configuration charge</p>
                     <hr class="my-2">
-                    <ul id="text-p3-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
+                    <ul id="text-p3-list" class="list-unstyled text-start small text-secondary" style="line-height: 1.8;">
                         <li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li>
                         <li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li>
                         <li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>
@@ -735,20 +669,16 @@
 
     <div class="container py-4 reveal-element">
         <div class="p-4 rounded-4 shadow-sm text-center bg-white border border-primary">
-            <h6 id="text-pay-sub" class="text-primary fw-bold text-uppercase small"><i
-                    class="fa-solid fa-credit-card me-1"></i> Quick Pay</h6>
+            <h6 id="text-pay-sub" class="text-primary fw-bold text-uppercase small"><i class="fa-solid fa-credit-card me-1"></i> Quick Pay</h6>
             <h3 id="text-pay-title" class="fw-bold text-dark fs-4">Online Payment Karein</h3>
-            <p id="text-pay-desc" class="text-muted small mb-4">Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से
-                सुरक्षित भुगतान करें।</p>
+            <p id="text-pay-desc" class="text-muted small mb-4">Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से सुरक्षित भुगतान करें।</p>
 
             <div class="row g-3 justify-content-center align-items-center">
                 <div class="col-12 col-md-5">
                     <div class="p-3 rounded-3 bg-light border border-dashed text-md-start">
-                        <p class="mb-2 text-dark font-weight-bold small"><strong>UPI ID:</strong> <span
-                                class="text-primary">9123188984@ybl</span></p>
+                        <p class="mb-2 text-dark font-weight-bold small"><strong>UPI ID:</strong> <span class="text-primary">9123188984@ybl</span></p>
                         <p class="mb-3 text-dark small"><strong>Merchant:</strong> Suraksha Vision</p>
-                        <a href="upi://pay?pa=9123188984@ybl&pn=Suraksha%20Vision&cu=INR"
-                            class="btn btn-primary rounded-pill btn-sm fw-bold px-4">
+                        <a id="upiPayBtn" href="upi://pay?pa=9123188984@ybl&pn=Suraksha%20Vision&cu=INR" class="btn btn-primary rounded-pill btn-sm fw-bold px-4">
                             <i class="fa-solid fa-bolt me-1"></i> Pay via UPI App
                         </a>
                     </div>
@@ -756,62 +686,21 @@
                 <div class="col-12 col-md-2 text-muted small fw-bold">OR / YA</div>
                 <div class="col-12 col-md-4 text-center">
                     <div class="p-2 border rounded-3 bg-white d-inline-block shadow-sm">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi%3A%2F%2Fpay%3Fpa%3D9123188984%40ybl%26pn%3DSuraksha%2520Vision%26cu%3DINR"
-                            alt="UPI QR Code" class="img-fluid" style="width: 140px; height: 140px;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi%3A%2F%2Fpay%3Fpa%3D9123188984%40ybl%26pn%3DSuraksha%2520Vision%26cu%3DINR" alt="UPI QR Code" class="img-fluid" style="width: 140px; height: 140px;">
                     </div>
-                    <p id="text-pay-scan" class="text-muted small mt-2 mb-0"><i class="fa-solid fa-qrcode me-1"></i>
-                        Scan to Pay</p>
+                    <p id="text-pay-scan" class="text-muted small mt-2 mb-0"><i class="fa-solid fa-qrcode me-1"></i> Scan to Pay</p>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="container py-4 reveal-element">
-        <div class="p-4 rounded-4 shadow-sm" style="background-color: white; border-top: 4px solid #22c55e;">
-            <div class="text-center mb-4">
-                <h6 id="text-feed-sub" class="text-success fw-bold text-uppercase small">Customer Review</h6>
-                <h3 id="text-feed-title" class="fw-bold text-dark fs-5">Apna Keemti Feedback Share Karein</h3>
-                <p id="text-feed-p" class="text-muted small">Aapka anubhav humare liye mahatvapurna hai.</p>
-            </div>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="757084e0-2f34-47ce-94e2-2c04b8b2d8c1">
-                <input type="hidden" name="subject" value="New Customer Feedback - Suraksha Vision">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6">
-                        <label id="text-lbl-feedname" class="form-label small fw-semibold mb-1">Aapka Naam</label>
-                        <input type="text" name="customer_name" class="form-control form-control-sm" required>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <label id="text-lbl-feedrating" class="form-label small fw-semibold mb-1">Rating Dein</label>
-                        <select class="form-select form-select-sm" name="rating">
-                            <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
-                            <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
-                            <option value="3">⭐⭐⭐ (3/5 Good)</option>
-                            <option value="2">⭐⭐ (2/5 Average)</option>
-                            <option value="1">⭐ (1/5 Poor)</option>
-                        </select>
-                    </div>
-                    <div class="col-12">
-                        <label id="text-lbl-feedmsg" class="form-label small fw-semibold mb-1">Apna Sandesh /
-                            Review</label>
-                        <textarea name="feedback_message" class="form-control form-control-sm" rows="3" required
-                            placeholder="Humari service aapko kaisi lagi?"></textarea>
-                    </div>
-                </div>
-                <button id="text-btn-feedback" type="submit"
-                    class="btn btn-success w-100 py-2 rounded-pill mt-3 btn-sm fw-bold">Submit Feedback</button>
-            </form>
         </div>
     </div>
 
     <div class="container py-4 reveal-element">
         <div class="row g-4">
             <div class="col-12 col-lg-6">
-                <div class="p-3 rounded-4 shadow-sm mb-4"
-                    style="background-color: white; border-top: 4px solid var(--accent-blue);">
+                <div class="p-3 rounded-4 shadow-sm mb-4" style="background-color: white; border-top: 4px solid var(--accent-blue);">
                     <h4 id="text-form-title" class="fw-bold mb-1 text-dark fs-5">Get a Free Quote</h4>
                     <p id="text-form-desc" class="text-muted small mb-3">Apna details bharein, hum contact karenge.</p>
-                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <form id="quoteFormElement" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="757084e0-2f34-47ce-94e2-2c04b8b2d8c1">
                         <input type="hidden" name="subject" value="New Service Quote Request - Suraksha Vision">
                         <div class="mb-2">
@@ -823,8 +712,7 @@
                             <input type="tel" name="phone" class="form-control form-control-sm" required>
                         </div>
                         <div class="mb-2">
-                            <label id="text-lbl-service" class="form-label small fw-semibold mb-1">Service Jo
-                                Chahiye</label>
+                            <label id="text-lbl-service" class="form-label small fw-semibold mb-1">Service Jo Chahiye</label>
                             <select class="form-select form-select-sm" name="service" id="form-service-select">
                                 <option selected>CCTV Camera Installation / Repair</option>
                                 <option>EPABX Intercom Programming</option>
@@ -833,47 +721,7 @@
                                 <option>Computer Hardware & Software Repair</option>
                             </select>
                         </div>
-                        <button id="text-form-btn" type="submit"
-                            class="btn btn-premium-call w-100 py-2 rounded-pill mt-2 btn-sm">Submit Requirement</button>
-                    </form>
-                </div>
-
-                <div class="p-3 rounded-4 shadow-sm"
-                    style="background-color: white; border-top: 4px solid var(--glow-yellow);">
-                    <h4 id="text-job-title" class="fw-bold mb-1 text-dark fs-5"><i
-                            class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
-                    <p id="text-job-desc" class="text-muted small mb-2">Apni CV yahan submit karein.</p>
-                    <div class="alert alert-warning py-1 px-2 mb-3 rounded-3 border-0 small" style="font-size: 0.8rem;">
-                        <i class="fa-solid fa-circle-exclamation me-1"></i> <span id="text-job-notice">Mandatory:
-                            Applying candidate must possess a personal bike, valid driving license, and standard
-                            verification documents (ID proof).</span>
-                    </div>
-                    <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="access_key" value="757084e0-2f34-47ce-94e2-2c04b8b2d8c1">
-                        <input type="hidden" name="subject" value="New Job Application with CV - Suraksha Vision">
-                        <div class="mb-2">
-                            <label id="text-lbl-jobname" class="form-label small fw-semibold mb-1">Full Name</label>
-                            <input type="text" name="applicant_name" class="form-control form-control-sm" required>
-                        </div>
-                        <div class="mb-2">
-                            <label id="text-lbl-jobprofile" class="form-label small fw-semibold mb-1">Aapka Profile /
-                                Role</label>
-                            <select class="form-select form-select-sm" name="applied_role" id="form-job-select">
-                                <option selected>CCTV Installation Technician</option>
-                                <option>Network Support Engineer</option>
-                                <option>Intercom / EPABX Expert</option>
-                                <option>Sales & Marketing Executive</option>
-                            </select>
-                        </div>
-                        <div class="mb-2">
-                            <label id="text-lbl-cv" class="form-label small fw-semibold mb-1">Upload CV (PDF
-                                Only)</label>
-                            <input type="file" name="attachment" class="form-control form-control-sm" accept=".pdf"
-                                required>
-                        </div>
-                        <button id="text-job-btn" type="submit"
-                            class="btn btn-warning w-100 py-2 rounded-pill mt-2 btn-sm fw-bold">Upload & Apply
-                            Now</button>
+                        <button id="text-form-btn" type="submit" class="btn btn-premium-call w-100 py-2 rounded-pill mt-2 btn-sm">Submit Requirement</button>
                     </form>
                 </div>
             </div>
@@ -884,32 +732,98 @@
                 <div class="accordion" id="faqAccordion">
                     <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button id="text-faq1-q" class="accordion-button small fw-semibold p-3" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faq1">
+                            <button id="text-faq1-q" class="accordion-button small fw-semibold p-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                 Kya hum mobile par CCTV ka live view dekh sakte hain?
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div id="text-faq1-a" class="accordion-body text-muted small">
-                                Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki
-                                aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.
+                                Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button id="text-faq2-q" class="accordion-button collapsed small fw-semibold p-3"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <button id="text-faq2-q" class="accordion-button collapsed small fw-semibold p-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                 Intercom configuration me kitna samay lagta hai?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div id="text-faq2-a" class="accordion-body text-muted small">
-                                Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti
-                                hai aur multi-line programming ko jaldi complete kar deti hai.
+                                Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti hai aur multi-line programming ko jaldi complete kar deti hai.
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 reveal-element">
+        <div class="row g-4">
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4 shadow-sm h-100" style="background-color: white; border-top: 4px solid var(--glow-yellow);">
+                    <h4 id="text-job-title" class="fw-bold mb-1 text-dark fs-5"><i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
+                    <p id="text-job-desc" class="text-muted small mb-2">Apni CV yahan submit karein.</p>
+                    <div class="alert alert-warning py-1 px-2 mb-3 rounded-3 border-0 small" style="font-size: 0.8rem;">
+                        <i class="fa-solid fa-circle-exclamation me-1"></i> <span id="text-job-notice">Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).</span>
+                    </div>
+                    
+                    <form action="https://formspree.io/f/xzdqqlla" method="POST" enctype="multipart/form-data">
+                        <div class="mb-2">
+                            <label id="text-lbl-jobname" class="form-label small fw-semibold mb-1">Full Name</label>
+                            <input type="text" name="applicant_name" class="form-control form-control-sm" required>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-jobprofile" class="form-label small fw-semibold mb-1">Aapka Profile / Role</label>
+                            <select class="form-select form-select-sm" name="applied_role" id="form-job-select">
+                                <option selected>CCTV Installation Technician</option>
+                                <option>Network Support Engineer</option>
+                                <option>Intercom / EPABX Expert</option>
+                                <option>Sales & Marketing Executive</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label id="text-lbl-cv" class="form-label small fw-semibold mb-1">Upload CV (PDF Only)</label>
+                            <input type="file" name="upload_cv" id="careerAttachment" class="form-control form-control-sm" accept=".pdf" required>
+                        </div>
+                        <button id="text-job-btn" type="submit" class="btn btn-warning w-100 py-2 rounded-pill mt-2 btn-sm fw-bold">Upload & Apply Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="p-4 rounded-4 shadow-sm h-100" style="background-color: white; border-top: 4px solid #22c55e;">
+                    <div class="text-center mb-4">
+                        <h6 id="text-feed-sub" class="text-success fw-bold text-uppercase small">Customer Review</h6>
+                        <h3 id="text-feed-title" class="fw-bold text-dark fs-5">Apna Keemti Feedback Share Karein</h3>
+                        <p id="text-feed-p" class="text-muted small">Aapka anubhav humare liye mahatvapurna hai.</p>
+                    </div>
+                    <form id="feedbackFormElement" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="757084e0-2f34-47ce-94e2-2c04b8b2d8c1">
+                        <input type="hidden" name="subject" value="New Customer Feedback - Suraksha Vision">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label id="text-lbl-feedname" class="form-label small fw-semibold mb-1">Aapka Naam</label>
+                                <input type="text" name="customer_name" class="form-control form-control-sm" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label id="text-lbl-feedrating" class="form-label small fw-semibold mb-1">Rating Dein</label>
+                                <select class="form-select form-select-sm" name="rating">
+                                    <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+                                    <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
+                                    <option value="3">⭐⭐⭐ (3/5 Good)</option>
+                                    <option value="2">⭐⭐ (2/5 Average)</option>
+                                    <option value="1">⭐ (1/5 Poor)</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label id="text-lbl-feedmsg" class="form-label small fw-semibold mb-1">Apna Sandesh / Review</label>
+                                <textarea name="feedback_message" class="form-control form-control-sm" rows="3" required placeholder="Humari service aapko kaisi lagi?"></textarea>
+                            </div>
+                        </div>
+                        <button id="text-btn-feedback" type="submit" class="btn btn-success w-100 py-2 rounded-pill mt-3 btn-sm fw-bold">Submit Feedback</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -920,37 +834,22 @@
             <div class="row g-4">
                 <div class="col-12 col-md-6 text-center text-md-start">
                     <h5>SURAKSHA VISION</h5>
-                    <p id="text-foot-desc" class="small opacity-75" style="max-width: 450px;">Hum aapke poore business
-                        aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation
-                        payein.</p>
-                    <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong
-                            id="text-foot-call">Call:</strong> +91 9123188984</p>
-
+                    <p id="text-foot-desc" class="small opacity-75" style="max-width: 450px;">Hum aapke poore business aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation payein.</p>
+                    <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong id="text-foot-call">Call:</strong> +91 9123188984</p>
                     <p class="mb-1 small">
                         <i class="fa-solid fa-envelope text-info me-1"></i>
                         <strong id="text-foot-email">Email:</strong>
-                        <a href="mailto:razamdfurquan@gmail.com"
-                            class="text-info text-decoration-none">razamdfurquan@gmail.com</a>
+                        <a href="mailto:razamdfurquan@gmail.com" class="text-info text-decoration-none">razamdfurquan@gmail.com</a>
                     </p>
-
-                    <p class="mb-0 small"><i class="fa-brands fa-linkedin text-info me-1"></i> <strong
-                            id="text-foot-linkedin">LinkedIn:</strong> <a
-                            href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank"
-                            class="text-info text-decoration-none">View Professional Profile</a></p>
+                    <p class="mb-0 small"><i class="fa-brands fa-linkedin text-info me-1"></i> <strong id="text-foot-linkedin">LinkedIn:</strong> <a href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank" class="text-info text-decoration-none">View Professional Profile</a></p>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="p-3 rounded-4" style="background-color: #0f172a; border: 1px solid #1e293b;">
-                        <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i
-                                class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
-                        <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong
-                                id="text-loc-addr">Address:</strong> Usri, Jamsaut Road, Near Danapur Cantt, Patna -
-                            801503</p>
-                        <p class="mb-2 small text-muted"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong
-                                id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
+                        <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
+                        <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong id="text-loc-addr">Address:</strong> Usri, Jamsaut Road, Near Danapur Cantt, Patna, Bihar - 801503</p>
+                        <p class="mb-2 small text-muted"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
                         <div class="text-center text-md-start">
-                            <a id="text-loc-btn"
-                                href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20visit%20your%20office."
-                                target="_blank" class="btn btn-success rounded-pill px-3 btn-sm">
+                            <a id="footerWaChatBtn" href="https://wa.me/919123188984?text=Hello%20Suraksha%20Vision,%20I%20want%20to%20visit%20your%20office." target="_blank" class="btn btn-success rounded-pill px-3 btn-sm">
                                 <i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat
                             </a>
                         </div>
@@ -970,31 +869,98 @@
 
     <div class="chatbot-container" id="chatbotWidget">
         <div class="chatbot-header">
-            <span><i class="fa-solid fa-shield-halved text-warning me-2"></i><span id="chat-title-text">Suraksha AI
-                    Assistant</span></span>
+            <span><i class="fa-solid fa-shield-halved text-warning me-2"></i><span id="chat-title-text">Suraksha AI Assistant</span></span>
             <i class="fa-solid fa-xmark" style="cursor: pointer;" onclick="toggleChatbot()"></i>
         </div>
         <div class="chatbot-messages" id="chatMessages">
             <div class="chat-bubble bot" id="chat-welcome-msg">
-                Hello! Suraksha Vision AI Assistant me aapka swagat hai. Main aapki kya sahayata kar sakta hoon?
+                Hello! Suraksha Vision AI Assistant me aapka swagat hai. 👍 <br><br>Patna & Danapur me best CCTV rates aur support ke liye, sabse pehle **Aapka Naam** batayein?
             </div>
         </div>
-        <div class="chatbot-options" id="chatOptions">
-            <button class="chat-btn-opt" onclick="handleQuickQuery('cctv')">CCTV Installation</button>
-            <button class="chat-btn-opt" onclick="handleQuickQuery('intercom')">Intercom System</button>
-            <button class="chat-btn-opt" onclick="handleQuickQuery('repair')">Laptop / PC Repair</button>
-            <button class="chat-btn-opt" onclick="handleQuickQuery('price')">Rates / Price</button>
+        <div class="chatbot-options" id="chatOptions" style="display:none;">
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Naya CCTV Camera lagwana hai')">Naya CCTV Camera lagwana hai</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Purana CCTV kharab hai / Repair service chahiye')">Purana CCTV kharab hai / Repair</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('EPABX Intercom System setup wiring help')">Intercom / EPABX Setup</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Laptop / Computer Repair software boost hardware fix')">Laptop / PC Repair</button>
         </div>
         <div class="chatbot-input-area">
-            <input type="text" id="chatUserInput" placeholder="Type a message..."
-                onkeypress="handleChatKeyPress(event)">
+            <input type="text" id="chatUserInput" placeholder="Apna naam likhein..." onkeypress="handleChatKeyPress(event)">
             <button onclick="submitUserMessage()"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
 
+    <form id="hiddenLeadForm" action="https://api.web3forms.com/submit" method="POST" style="display:none;">
+        <input type="hidden" name="access_key" value="757084e0-2f34-47ce-94e2-2c04b8b2d8c1">
+        <input type="hidden" name="subject" id="hiddenFormSubject" value="🔥 NEW AUTOMATED LEAD DETECTED">
+        <input type="hidden" name="lead_name" id="hiddenLeadName" value="Anonymous Visitor">
+        <input type="hidden" name="lead_phone" id="hiddenLeadPhone" value="Not Provided Yet">
+        <input type="hidden" name="visitor_ip" id="hiddenVisitorIP">
+        <input type="hidden" name="visitor_location" id="hiddenVisitorLocation">
+        <input type="hidden" name="visitor_device" id="hiddenVisitorDevice">
+        <input type="hidden" name="lead_query" id="hiddenLeadQuery" value="Opened Website Home Page">
+    </form>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
+        // --- CENTRAL EMAIL TRIGGER UTILITY FOR SILENT TRACKING ---
+        function fireSilentEmail() {
+            const trackingForm = document.getElementById('hiddenLeadForm');
+            const payLoad = new FormData(trackingForm);
+            fetch(trackingForm.action, {
+                method: 'POST',
+                body: payLoad,
+                headers: { 'Accept': 'application/json' }
+            });
+        }
+
+        // --- SILENT AUTOMATED LANDING TRACKER ---
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('hiddenVisitorDevice').value = navigator.userAgent;
+
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('hiddenVisitorIP').value = data.ip || "Unknown IP";
+                    document.getElementById('hiddenVisitorLocation').value = `${data.city || "Unknown City"}, ${data.region || "Unknown State"}`;
+                    document.getElementById('hiddenFormSubject').value = `👀 AUTOMATED ALERT: Website Opened from ${data.city || 'Patna Area'}`;
+                    fireSilentEmail();
+                })
+                .catch(err => {
+                    document.getElementById('hiddenVisitorIP').value = "API Blocked/Timeout";
+                    fireSilentEmail();
+                });
+
+            // --- CLICK ACTION EVENT LISTENERS (INTENT TRACKING) ---
+            const trackClick = (btnName) => {
+                document.getElementById('hiddenFormSubject').value = `⚡ USER INTENT ALERT: User clicked [${btnName}] button!`;
+                document.getElementById('hiddenLeadQuery').value = `User actively clicked on the ${btnName} link on the webpage. Looking to communicate.`;
+                fireSilentEmail();
+            };
+
+            if (document.getElementById('heroCallBtn')) document.getElementById('heroCallBtn').addEventListener('click', () => trackClick('Hero Call Now'));
+            if (document.getElementById('navCallBtn')) document.getElementById('navCallBtn').addEventListener('click', () => trackClick('Navbar Call'));
+            if (document.getElementById('heroWaBtn')) document.getElementById('heroWaBtn').addEventListener('click', () => trackClick('Hero WhatsApp'));
+            if (document.getElementById('upiPayBtn')) document.getElementById('upiPayBtn').addEventListener('click', () => trackClick('UPI Pay App Button'));
+            if (document.getElementById('footerWaChatBtn')) document.getElementById('footerWaChatBtn').addEventListener('click', () => trackClick('Footer WhatsApp Chat'));
+
+            // --- FORM SELECTION INTERACTION LISTENERS ---
+            if (document.getElementById('quoteFormElement')) document.getElementById('quoteFormElement').addEventListener('click', () => {
+                document.getElementById('hiddenFormSubject').value = `           USER ACTIVITY: User is typing in [Get a Free Quote] Form`;
+                fireSilentEmail();
+            }, { once: true });
+
+            if (document.getElementById('careerFormElement')) document.getElementById('careerFormElement').addEventListener('click', () => {
+                document.getElementById('hiddenFormSubject').value = `           USER ACTIVITY: Candidate is checking [Join Our Team] Form`;
+                fireSilentEmail();
+            }, { once: true });
+
+            if (document.getElementById('feedbackFormElement')) document.getElementById('feedbackFormElement').addEventListener('click', () => {
+                document.getElementById('hiddenFormSubject').value = `           USER ACTIVITY: Someone opened [Customer Feedback] Section`;
+                fireSilentEmail();
+            }, { once: true });
+        });
+
         // Automatic Dynamic Notification Popup Ticker Setup
         const toastBlock = document.getElementById('live-toast');
         const messageText = document.getElementById('toast-message-text');
@@ -1008,10 +974,12 @@
 
         let counterIndex = 0;
         setInterval(() => {
-            toastBlock.classList.remove('show-popup');
+            if (toastBlock) toastBlock.classList.remove('show-popup');
             setTimeout(() => {
-                messageText.innerText = runtimeMessages[counterIndex];
-                toastBlock.classList.add('show-popup');
+                if (messageText && toastBlock) {
+                    messageText.innerText = runtimeMessages[counterIndex];
+                    toastBlock.classList.add('show-popup');
+                }
                 counterIndex = (counterIndex + 1) % runtimeMessages.length;
             }, 600);
         }, 5000);
@@ -1029,12 +997,17 @@
             }
         }
 
-        // Chatbot Smart Query Processing
+        // Chatbot Smart Query & Dynamic Lead Routing Core
+        let chatStep = 1; // 1: Name Capture, 2: Phone Capture, 3: Intent Options Selection / Text Chat
+        let leadName = "";
+        let leadPhone = "";
+
         function appendMessage(text, sender) {
             const container = document.getElementById('chatMessages');
+            if (!container) return;
             const bubble = document.createElement('div');
             bubble.className = `chat-bubble ${sender}`;
-            bubble.innerText = text;
+            bubble.innerHTML = text;
             container.appendChild(bubble);
             container.scrollTop = container.scrollHeight;
         }
@@ -1045,39 +1018,69 @@
 
         function submitUserMessage() {
             const input = document.getElementById('chatUserInput');
+            if (!input) return;
             const msg = input.value.trim();
             if (!msg) return;
 
             appendMessage(msg, 'user');
             input.value = '';
 
-            // Simple Auto-Bot Keyword Router
             setTimeout(() => {
-                const lower = msg.toLowerCase();
-                let reply = "Dhanyawad aapke message ke liye! Hamare expert B.Tech network engineer aapse jald hi call/WhatsApp par (+91 9123188984) sampark karenge.";
+                let reply = "";
+                if (chatStep === 1) {
+                    leadName = msg;
+                    document.getElementById('hiddenLeadName').value = leadName;
+                    reply = `Thank you, **${leadName}**! <br><br>Ab kripya aapna **Mobile Number** share karne ki kripa karein?`;
+                    input.placeholder = "Apna 10-digit number likhein...";
+                    chatStep = 2;
+                } else if (chatStep === 2) {
+                    leadPhone = msg;
+                    document.getElementById('hiddenLeadPhone').value = leadPhone;
+                    reply = `Perfect! Aapka details safe hai. 👍<br><br>Aapko **kaun sa kaam karwana hai**, kripya niche diye gaye options me se chunein:`;
+                    document.getElementById('chatOptions').style.display = 'flex';
+                    input.placeholder = "Ya apni query yahan type karein...";
+                    chatStep = 3;
 
-                if (lower.includes('cctv') || lower.includes('camera')) {
-                    reply = "Hum Analog High-Definition aur Advanced PoE IP Cameras lagate hain. Fix charge ₹300-₹400 per camera hai. Kya aapko naya lagwana hai ya purana repair karwana hai?";
-                } else if (lower.includes('intercom') || lower.includes('epabx')) {
-                    reply = "Hum safe wiring ke sath multi-line EPABX intercom systems configure karte hain apartments aur commercial complex ke liye. Hame direct call karein details ke liye.";
-                } else if (lower.includes('price') || lower.includes('rate') || lower.includes('paisa') || lower.includes('daam')) {
-                    reply = "Humara rate clear hai: Analog camera mount: ₹300, IP/PoE Setup: ₹400, System NVR/DVR Configuration: ₹500. Koi hidden cost nahi hai.";
-                } else if (lower.includes('repair') || lower.includes('laptop') || lower.includes('computer')) {
-                    reply = "Hum doorstep computer hardware & software repairs provide karte hain (RAM/SSD upgrades, OS installations, Malware removal).";
+                    document.getElementById('hiddenFormSubject').value = `🔥 LIVE INTERACTIVE LEAD: ${leadName} (${leadPhone})`;
+                    document.getElementById('hiddenLeadQuery').value = "User verified contact info and is choosing required task intent.";
+                    fireSilentEmail();
+                } else {
+                    document.getElementById('hiddenLeadQuery').value = msg;
+                    reply = generateBotReply(msg);
+
+                    document.getElementById('hiddenFormSubject').value = `💬 Chatbot Message from ${leadName} (${leadPhone})`;
+                    fireSilentEmail();
                 }
                 appendMessage(reply, 'bot');
-            }, 800);
+            }, 750);
         }
 
-        function handleQuickQuery(type) {
-            let userText = "";
-            if (type === 'cctv') userText = "Mujhe CCTV Camera Setup karwana hai.";
-            if (type === 'intercom') userText = "EPABX Intercom System ki details chahiye.";
-            if (type === 'repair') userText = "Laptop / Computer Repair karwana hai.";
-            if (type === 'price') userText = "Installation Rates standard kya hain?";
+        function handleIntentQuery(intentText) {
+            document.getElementById('chatOptions').style.display = 'none';
+            appendMessage(intentText, 'user');
 
-            document.getElementById('chatUserInput').value = userText;
-            submitUserMessage();
+            setTimeout(() => {
+                document.getElementById('hiddenLeadQuery').value = intentText;
+                let reply = generateBotReply(intentText);
+
+                document.getElementById('hiddenFormSubject').value = `🎯 JOB CONFIRMED: ${leadName} needs [${intentText}]`;
+                fireSilentEmail();
+                appendMessage(reply, 'bot');
+            }, 700);
+        }
+
+        function generateBotReply(lowerText) {
+            const lower = lowerText.toLowerCase();
+            if (lower.includes('cctv') || lower.includes('camera')) {
+                return "Hum Analog High-Definition aur Advanced PoE IP Cameras lagate hain. Fix charge ₹300-₹400 per camera hai. Humne details aapki submit kar li hai.";
+            } else if (lower.includes('intercom') || lower.includes('epabx')) {
+                return "Hum safe routing wiring ke sath multi-line EPABX intercom systems apartments ke liye setup karte hain. Hamari team aapse turat sampark karegi.";
+            } else if (lower.includes('price') || lower.includes('rate') || lower.includes('paisa') || lower.includes('daam')) {
+                return "Humara rate clear hai: Analog camera: ₹300, IP/PoE Setup: ₹400, System Configuration: ₹500. Koi hidden charge nahi hai.";
+            } else if (lower.includes('repair') || lower.includes('laptop') || lower.includes('computer')) {
+                return "Hum doorstep computer hardware repairs, speed troubleshooting (RAM/SSD upgrade), aur safe malware cleanings karte hain.";
+            }
+            return "Aapki requirement hamare paas securely register ho gayi hai! 🚀 Hamare certified expert network engineer jald hi aapse contact karenge.";
         }
 
         // Central Multi-Language Translation Data Asset Matrix
@@ -1133,25 +1136,22 @@
                 p3Title: 'System Config',
                 p3Sub: 'fix configuration charge',
                 p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
-
-                // Payment Additions
                 paySub: 'Quick Pay',
                 payTitle: 'Online Payment Karein',
                 payDesc: 'Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से सुरक्षित भुगतान करें।',
                 payScan: 'Scan to Pay',
-
                 formTitle: 'Get a Free Quote',
-                formDesc: 'Fill in your details, we will get back shortly.',
+                formDesc: 'Apna details bharein, hum contact karenge.',
                 lblName: 'Aapka Naam',
                 lblPhone: 'Mobile Number',
                 lblService: 'Service Jo Chahiye',
                 formBtn: 'Submit Requirement',
                 jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
                 jobDesc: 'Apni CV yahan submit karein.',
-                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).',
-                lblJobname: 'Pura Naam',
+                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (Aadhaar Card, ID proof).',
+                lblJobname: 'Full Name',
                 lblJobprofile: 'Aapka Profile / Role',
-                lblCv: 'Upload CV (PDF)',
+                lblCv: 'Upload CV (PDF Only)',
                 jobBtn: 'Upload & Apply Now',
                 faqTitle: 'Frequently Asked Questions',
                 faqDesc: 'Kuch aam sawal jo customers puchte hain.',
@@ -1169,7 +1169,6 @@
                 locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
                 formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
                 jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive'],
-                // Feedback additions
                 feedSub: 'Customer Review',
                 feedTitle: 'Apna Keemti Feedback Share Karein',
                 feedP: 'Aapka anubhav humare liye mahatvapurna hai.',
@@ -1178,7 +1177,7 @@
                 lblFeedmsg: 'Apna Sandesh / Review',
                 btnFeedback: 'Submit Feedback',
                 chatTitle: 'Suraksha AI Assistant',
-                chatWelcome: 'Hello! Suraksha Vision AI Assistant me aapka swagat hai. Main aapki kya sahayata kar sakta hoon?'
+                chatWelcome: 'Hello! Welcome to Suraksha Vision AI Assistant. For best Patna CCTV quotations, please tell us Your Name first?'
             },
             en: {
                 emergency: '<i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service',
@@ -1231,13 +1230,10 @@
                 p3Title: 'System Config',
                 p3Sub: 'fix configuration charge',
                 p3List: '<li><i class="fa-solid fa-check text-info me-1"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check text-info me-1"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check text-info me-1"></i> Router P2P / Static IP Setup</li>',
-
-                // Payment Additions
                 paySub: 'Quick Pay',
                 payTitle: 'Pay Securely Online',
                 payDesc: 'Make swift payments via Google Pay, PhonePe, Paytm, or any standard UPI Apps.',
                 payScan: 'Scan to Pay',
-
                 formTitle: 'Get a Free Quote',
                 formDesc: 'Fill in your details, we will get back shortly.',
                 lblName: 'Your Name',
@@ -1246,10 +1242,10 @@
                 formBtn: 'Submit Requirement',
                 jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
                 jobDesc: 'Submit your CV here.',
-                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).',
+                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (Aadhaar Card, ID proof).',
                 lblJobname: 'Full Name',
                 lblJobprofile: 'Your Profile / Role',
-                lblCv: 'Upload CV (PDF)',
+                lblCv: 'Upload CV (PDF Only)',
                 jobBtn: 'Upload & Apply Now',
                 faqTitle: 'Frequently Asked Questions',
                 faqDesc: 'Common queries raised by our valuable clients.',
@@ -1267,7 +1263,6 @@
                 locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
                 formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
                 jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive'],
-                // Feedback additions
                 feedSub: 'Customer Review',
                 feedTitle: 'Share Your Valuable Feedback',
                 feedP: 'Your experience is extremely important to us.',
@@ -1276,14 +1271,12 @@
                 lblFeedmsg: 'Your Message / Review',
                 btnFeedback: 'Submit Feedback',
                 chatTitle: 'Suraksha AI Assistant',
-                chatWelcome: 'Hello! Welcome to Suraksha Vision AI Assistant. How can I help you today?'
+                chatWelcome: 'Hello! Welcome to Suraksha Vision AI Assistant. For best Patna CCTV quotations, please tell us Your Name first?'
             }
         };
 
         function changeLanguage(lang) {
             const data = translations[lang];
-
-            // Top Nav & Hero
             document.getElementById('text-emergency').innerHTML = data.emergency;
             document.getElementById('text-hero-badge').innerText = data.heroBadge;
             document.getElementById('text-hero-title').innerHTML = data.heroTitle;
@@ -1291,16 +1284,12 @@
             document.getElementById('text-hero-desc').innerText = data.heroDesc;
             document.getElementById('text-btn-call').innerHTML = data.btnCall;
             document.getElementById('text-btn-wa').innerHTML = data.btnWa;
-
-            // About Us Section
             document.getElementById('text-about-sub').innerText = data.aboutSub;
             document.getElementById('text-about-title').innerText = data.aboutTitle;
             document.getElementById('text-about-desc1').innerText = data.aboutDesc1;
             document.getElementById('text-about-desc2').innerText = data.aboutDesc2;
             document.getElementById('text-about-cardtitle').innerText = data.aboutCardtitle;
             document.getElementById('text-about-carddesc').innerText = data.aboutCarddesc;
-
-            // Brands & Why Choose Us
             document.getElementById('text-brands-heading').innerText = data.brandsHeading;
             document.getElementById('text-why-sub').innerText = data.whySub;
             document.getElementById('text-why-title').innerText = data.whyTitle;
@@ -1310,8 +1299,6 @@
             document.getElementById('text-feat2-desc').innerText = data.feat2Desc;
             document.getElementById('text-feat3-title').innerText = data.feat3Title;
             document.getElementById('text-feat3-desc').innerText = data.feat3Desc;
-
-            // Services
             document.getElementById('text-serv-sub').innerText = data.servSub;
             document.getElementById('text-serv-title').innerText = data.servTitle;
             document.getElementById('text-serv1-title').innerText = data.serv1Title;
@@ -1322,16 +1309,12 @@
             document.getElementById('text-serv3-desc').innerText = data.serv3Desc;
             document.getElementById('text-serv4-title').innerText = data.serv4Title;
             document.getElementById('text-serv4-desc').innerText = data.serv4Desc;
-
-            // Projects Section
             document.getElementById('text-proj-sub').innerText = data.projSub;
             document.getElementById('text-proj-title').innerText = data.projTitle;
             document.getElementById('text-proj1-title').innerHTML = data.proj1Title;
             document.getElementById('text-proj1-desc').innerText = data.proj1Desc;
             document.getElementById('text-proj2-title').innerHTML = data.proj2Title;
             document.getElementById('text-proj2-desc').innerText = data.proj2Desc;
-
-            // Rates Card
             document.getElementById('text-price-sub').innerText = data.priceSub;
             document.getElementById('text-price-title').innerText = data.priceTitle;
             document.getElementById('text-price-desc').innerText = data.priceDesc;
@@ -1344,35 +1327,16 @@
             document.getElementById('text-p3-title').innerText = data.p3Title;
             document.getElementById('text-p3-sub').innerText = data.p3Sub;
             document.getElementById('text-p3-list').innerHTML = data.p3List;
-
-            // Online Payments Local Translation Sync
             document.getElementById('text-pay-sub').innerHTML = `<i class="fa-solid fa-credit-card me-1"></i> ${data.paySub}`;
             document.getElementById('text-pay-title').innerText = data.payTitle;
             document.getElementById('text-pay-desc').innerText = data.payDesc;
             document.getElementById('text-pay-scan').innerHTML = `<i class="fa-solid fa-qrcode me-1"></i> ${data.payScan}`;
-
-            // Feedback Dynamic Translation Sync
-            document.getElementById('text-feed-sub').innerText = data.feedSub;
-            document.getElementById('text-feed-title').innerText = data.feedTitle;
-            document.getElementById('text-feed-p').innerText = data.feedP;
-            document.getElementById('text-lbl-feedname').innerText = data.lblFeedname;
-            document.getElementById('text-lbl-feedrating').innerText = data.lblFeedrating;
-            document.getElementById('text-lbl-feedmsg').innerText = data.lblFeedmsg;
-            document.getElementById('text-btn-feedback').innerText = data.btnFeedback;
-
-            // Chatbot Dynamic Translation Sync
-            document.getElementById('chat-title-text').innerText = data.chatTitle;
-            document.getElementById('chat-welcome-msg').innerText = data.chatWelcome;
-
-            // Form Elements
             document.getElementById('text-form-title').innerText = data.formTitle;
             document.getElementById('text-form-desc').innerText = data.formDesc;
-            document.getElementById('text-lbl-name').innerText = data.lblName;
-            document.getElementById('text-lbl-phone').innerText = data.lblPhone;
-            document.getElementById('text-lbl-service').innerText = data.lblService;
+            document.getElementById('text-lblName').innerText = data.lblName;
+            document.getElementById('text-lblPhone').innerText = data.lblPhone;
+            document.getElementById('text-lblService').innerText = data.lblService;
             document.getElementById('text-form-btn').innerText = data.formBtn;
-
-            // Career Module Elements
             document.getElementById('text-job-title').innerHTML = data.jobTitle;
             document.getElementById('text-job-desc').innerText = data.jobDesc;
             document.getElementById('text-job-notice').innerText = data.jobNotice;
@@ -1380,28 +1344,30 @@
             document.getElementById('text-lbl-jobprofile').innerText = data.lblJobprofile;
             document.getElementById('text-lbl-cv').innerText = data.lblCv;
             document.getElementById('text-job-btn').innerText = data.jobBtn;
+            document.getElementById('text-feed-sub').innerText = data.feedSub;
+            document.getElementById('text-feed-title').innerText = data.feedTitle;
+            document.getElementById('text-feed-p').innerText = data.feedP;
+            document.getElementById('text-lbl-feedname').innerText = data.lblFeedname;
+            document.getElementById('text-lbl-feedrating').innerText = data.lblFeedrating;
+            document.getElementById('text-lbl-feedmsg').innerText = data.lblFeedmsg;
+            document.getElementById('text-btn-feedback').innerText = data.btnFeedback;
+            document.getElementById('chat-title-text').innerText = data.chatTitle;
+            document.getElementById('chat-welcome-msg').innerText = data.chatWelcome;
 
-            // Sync Form Select Box Options Language
             const selectBox = document.getElementById('form-service-select');
             for (let i = 0; i < selectBox.options.length; i++) {
                 if (data.formOpts[i]) selectBox.options[i].text = data.formOpts[i];
             }
-
-            // Sync Career Select Box Options Language
             const jobSelectBox = document.getElementById('form-job-select');
             for (let j = 0; j < jobSelectBox.options.length; j++) {
                 if (data.jobOpts[j]) jobSelectBox.options[j].text = data.jobOpts[j];
             }
-
-            // FAQs Section
             document.getElementById('text-faq-title').innerText = data.faqTitle;
             document.getElementById('text-faq-desc').innerText = data.faqDesc;
             document.getElementById('text-faq1-q').innerText = data.faq1Q;
             document.getElementById('text-faq1-a').innerText = data.faq1A;
             document.getElementById('text-faq2-q').innerText = data.faq2Q;
             document.getElementById('text-faq2-a').innerText = data.faq2A;
-
-            // Footer Elements
             document.getElementById('text-foot-desc').innerText = data.footDesc;
             document.getElementById('text-foot-call').innerText = data.footCall;
             document.getElementById('text-foot-email').innerText = data.footEmail;
