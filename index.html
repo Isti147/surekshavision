@@ -514,6 +514,14 @@
                     <i class="fa-solid fa-envelope text-info me-1"></i>
                     <a href="mailto:ahamadmdistiyaque@gmail.com" class="text-light">ahamadmdistiyaque@gmail.com</a>
                 </div>
+                <!-- 1. MAP LINK ADDED IN NAVBAR (CORRECTED SPELLING) -->
+                <div class="small">
+                    <i class="fa-solid fa-location-dot text-danger me-1"></i>
+                    <a href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank" rel="noopener noreferrer"
+                        class="text-light text-decoration-none">
+                        Sureksha Vision, Patna
+                    </a>
+                </div>
                 <div id="text-emergency" class="small">
                     <i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service
                 </div>
@@ -583,6 +591,12 @@
                             target="_blank" rel="noopener noreferrer"
                             class="btn btn-premium-wa btn-md rounded-pill px-4 py-2">
                             <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message
+                        </a>
+                        <!-- 2. MAP LINK ADDED IN HERO SECTION -->
+                        <a id="heroMapBtn" href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-light btn-md rounded-pill px-4 py-2 text-dark fw-bold shadow-sm mt-2 mt-sm-0">
+                            <i class="fa-solid fa-map-location-dot text-danger me-2"></i> Our Location
                         </a>
                     </div>
                 </div>
@@ -681,8 +695,9 @@
                 <h3 id="text-serv-title" class="fw-bold fs-4" style="color: var(--primary-dark);">Professional Security
                     & IT Solutions</h3>
             </div>
+            <!-- Grid updated to 3 per row (col-lg-4) to perfectly fit 6 items -->
             <div class="row g-3">
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
                         <h5 id="text-serv1-title" class="fw-bold mb-2">CCTV Camera Setup</h5>
@@ -690,7 +705,7 @@
                             aur mobile par router ke through live view setting.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-tty"></i></div>
                         <h5 id="text-serv2-title" class="fw-bold mb-2">EPABX Intercom Systems</h5>
@@ -698,7 +713,7 @@
                             liye complete multi-line intercom programming aur secure wiring.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
                         <h5 id="text-serv3-title" class="fw-bold mb-2">Networking & POE Switches</h5>
@@ -706,12 +721,30 @@
                             settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
                         <h5 id="text-serv4-title" class="fw-bold mb-2">Computer Hardware & Software</h5>
                         <p id="text-serv4-desc" class="text-muted small mb-0">Laptop/Desktop repair, OS installation,
                             malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
+                    </div>
+                </div>
+                <!-- NEW SERVICE: Electric & Electronic -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                        <h5 id="text-serv5-title" class="fw-bold mb-2">Electrical & Electronic Work</h5>
+                        <p id="text-serv5-desc" class="text-muted small mb-0">Ghar aur office ke sabhi electric wiring,
+                            appliances repair aur electronic gadgets ka fix.</p>
+                    </div>
+                </div>
+                <!-- NEW SERVICE: Website Design -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card card-service-premium p-3 text-center h-100">
+                        <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h5 id="text-serv6-title" class="fw-bold mb-2">Custom Website Design</h5>
+                        <p id="text-serv6-desc" class="text-muted small mb-0">Customer ki jarurat aur business ke hisaab
+                            se modern, fast aur responsive website development.</p>
                     </div>
                 </div>
             </div>
@@ -875,6 +908,9 @@
                                 <option>Biometric / Access Control</option>
                                 <option>Networking / WiFi Setup</option>
                                 <option>Computer Hardware & Software Repair</option>
+                                <!-- Nayi services form mein add ki gayi hain -->
+                                <option>Electrical & Electronic Work</option>
+                                <option>Custom Website Design</option>
                             </select>
                         </div>
                         <button id="text-form-btn" type="submit"
@@ -923,7 +959,7 @@
     <div class="container py-4 reveal-element">
         <div class="row g-4">
             <div class="col-12 col-lg-6">
-                <div class="p-3 rounded-4 shadow-sm h-100"
+                <div class="p-3 rounded-4 shadow-sm mb-4"
                     style="background-color: white; border-top: 4px solid var(--glow-yellow);">
                     <h4 id="text-job-title" class="fw-bold mb-1 text-dark fs-5"><i
                             class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
@@ -1039,8 +1075,10 @@
                         <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i
                                 class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
                         <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong
-                                id="text-loc-addr">Address:</strong> Usri, Jamsaut Road, Near Danapur Cantt, Patna,
-                            Bihar - 801503</p>
+                                id="text-loc-addr">Address:</strong> <a href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA"
+                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light">Usri,
+                                Jamsaut Road, Near Danapur Cantt, Patna,
+                                Bihar - 801503</a></p>
                         <p class="mb-2 small text-muted"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong
                                 id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
                         <div class="text-center text-md-start">
@@ -1056,7 +1094,7 @@
             </div>
             <hr class="border-secondary my-3">
             <div class="text-center opacity-50 small">
-                <p class="mb-0">&copy; 2026 Sureksha Vision. All Rights Reserved.</p>
+                <p class="mb-0">© 2026 Sureksha Vision. All Rights Reserved.</p>
             </div>
         </div>
     </div>
@@ -1423,13 +1461,13 @@
                 let reply = "";
                 if (chatStep === 1) {
                     // Sanitize leadName for further use in HTML
-                    leadName = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    leadName = msg.replace(/</g, "<").replace(/>/g, ">");
                     document.getElementById('hiddenLeadName').value = leadName;
                     reply = `Thank you, **${leadName}**! <br><br>Ab kripya aapna **Mobile Number** share karne ki kripa karein?`;
                     input.placeholder = "Apna 10-digit number likhein...";
                     chatStep = 2;
                 } else if (chatStep === 2) {
-                    leadPhone = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    leadPhone = msg.replace(/</g, "<").replace(/>/g, ">");
                     document.getElementById('hiddenLeadPhone').value = leadPhone;
                     reply = `Perfect! Aapka details safe hai. 👍<br><br>Aapko **kaun sa kaam karwana hai**, kripya niche diye gaye options me se chunein:`;
                     document.getElementById('chatOptions').style.display = 'flex';
@@ -1439,7 +1477,7 @@
                     document.getElementById('hiddenFormSubject').value = `🔥 LIVE INTERACTIVE LEAD: ${leadName} (${leadPhone})`;
                     fireSilentEmail();
                 } else {
-                    const safeMsg = msg.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    const safeMsg = msg.replace(/</g, "<").replace(/>/g, ">");
                     document.getElementById('hiddenLeadQuery').value += ` | Chat: ${safeMsg}`;
                     reply = generateBotReply(safeMsg);
                     document.getElementById('hiddenFormSubject').value = `💬 Chatbot Message from ${leadName} (${leadPhone})`;
@@ -1513,6 +1551,11 @@
                 serv3Desc: 'Heavy camera networks ke liye static IP settings, high-quality POE switches setup aur complete routing troubleshoot.',
                 serv4Title: 'Computer Hardware & Software',
                 serv4Desc: 'Laptop/Desktop repair, OS installation, malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).',
+                // New Services Added
+                serv5Title: 'Electrical & Electronic Work',
+                serv5Desc: 'Ghar aur office ke sabhi electric wiring, appliances repair aur electronic gadgets ka fix.',
+                serv6Title: 'Custom Website Design',
+                serv6Desc: 'Customer ki jarurat aur business ke hisaab se modern, fast aur responsive website development.',
                 projSub: 'Hamare Kamyab Projects',
                 projTitle: 'Proven Track Record & Case Studies',
                 proj1Title: '<i class="fa-solid fa-building me-2" style="color: var(--accent-blue);"></i>16-Channel Apartment NVR Security',
@@ -1561,18 +1604,7 @@
                 locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
                 locAddr: 'Address:',
                 locLand: 'Landmark:',
-                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
-                formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
-                jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive'],
-                feedSub: 'Customer Review',
-                feedTitle: 'Apna Keemti Feedback Share Karein',
-                feedP: 'Aapka anubhav humare liye mahatvapurna hai.',
-                lblFeedname: 'Aapka Naam',
-                lblFeedrating: 'Rating Dein',
-                lblFeedmsg: 'Apna Sandesh / Review',
-                btnFeedback: 'Submit Feedback',
-                chatTitle: 'Sureksha AI Assistant',
-                chatWelcome: 'Hello! Sureksha Vision AI Assistant me aapka swagat hai. 👍 <br><br>Patna & Danapur me best CCTV rates aur support ke liye, sabse pehle **Aapka Naam** batayein?'
+                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat'
             },
             en: {
                 welcomeModalTitle: '🙏 A Warm Welcome to Sureksha Vision!',
@@ -1610,6 +1642,11 @@
                 serv3Desc: 'Static IP configuration for heavy networks, PoE switches setup, and complete network troubleshooting.',
                 serv4Title: 'Computer Hardware & Software',
                 serv4Desc: 'Complete desktop/laptop repair, OS installation, malware/virus removal, and hardware upgrades (RAM/SSD) for optimal performance.',
+                // New Services Added
+                serv5Title: 'Electrical & Electronics',
+                serv5Desc: 'Complete electrical wiring, appliance repair, and electronic gadget troubleshooting for homes and offices.',
+                serv6Title: 'Custom Website Design',
+                serv6Desc: 'Modern, fast, and responsive website development tailored to your specific business needs.',
                 projSub: 'Our Successful Projects',
                 projTitle: 'Proven Track Record & Case Studies',
                 proj1Title: '<i class="fa-solid fa-building me-2" style="color: var(--accent-blue);"></i>16-Channel Apartment NVR Security',
@@ -1658,18 +1695,7 @@
                 locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
                 locAddr: 'Address:',
                 locLand: 'Landmark:',
-                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat',
-                formOpts: ['CCTV Camera Installation / Repair', 'EPABX Intercom Programming', 'Biometric / Access Control', 'Networking / WiFi Setup', 'Computer Hardware & Software Repair'],
-                jobOpts: ['CCTV Installation Technician', 'Network Support Engineer', 'Intercom / EPABX Expert', 'Sales & Marketing Executive'],
-                feedSub: 'Customer Review',
-                feedTitle: 'Share Your Valuable Feedback',
-                feedP: 'Your experience is extremely important to us.',
-                lblFeedname: 'Your Name',
-                lblFeedrating: 'Give Rating',
-                lblFeedmsg: 'Your Message / Review',
-                btnFeedback: 'Submit Feedback',
-                chatTitle: 'Sureksha AI Assistant',
-                chatWelcome: 'Hello! Welcome to Sureksha Vision AI Assistant. For best Patna CCTV quotations, please tell us Your Name first?'
+                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat'
             }
         };
 
@@ -1714,6 +1740,12 @@
             document.getElementById('text-serv3-desc').innerText = data.serv3Desc;
             document.getElementById('text-serv4-title').innerText = data.serv4Title;
             document.getElementById('text-serv4-desc').innerText = data.serv4Desc;
+            // Language updates for the new services
+            document.getElementById('text-serv5-title').innerText = data.serv5Title;
+            document.getElementById('text-serv5-desc').innerText = data.serv5Desc;
+            document.getElementById('text-serv6-title').innerText = data.serv6Title;
+            document.getElementById('text-serv6-desc').innerText = data.serv6Desc;
+
             document.getElementById('text-proj-sub').innerText = data.projSub;
             document.getElementById('text-proj-title').innerText = data.projTitle;
             document.getElementById('text-proj1-title').innerHTML = data.proj1Title;
