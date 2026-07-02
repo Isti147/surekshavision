@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT & Hardware Repair - Suraksha Vision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <a href="index.html">
+            <img src="logo.png" alt="Suraksha Vision Logo" class="site-logo">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Billing Panel</a>
+            <a href="tel:+910000000000">📞 Call Us</a>
+        </div>
+    </header>
+
+    <!-- Laptop Repair Content -->
+    <div class="container">
+        <div class="service-details">
+            <h2>💻 Complete IT & Hardware Repair</h2>
+
+            <img src="laptop-large-banner.jpg" alt="Laptop Repair"
+                style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px;">
+
+            <div class="pricing-box">
+                <h3>Repair & Maintenance:</h3>
+                <ul>
+                    <li>Laptop & Desktop Troubleshooting</li>
+                    <li>OS Installation & Software Updates</li>
+                    <li>RAM/SSD Upgrades & Speed Optimization</li>
+                </ul>
+            </div>
+
+            <h3>Expert Hardware Solutions</h3>
+            <p>System slow ho gaya hai ya hardware me koi issue hai? Humari technical team fast aur reliable repair
+                services provide karti hai taaki aapka kaam kabhi na ruke.</p>
+
+            <a href="tel:+910000000000"
+                style="display:inline-block; margin-top:20px; padding:10px 20px; background:#0d47a1; color:white; text-decoration:none; border-radius:5px;">Book
+                a Repair</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Suraksha Vision CCTV / IT Solution. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
