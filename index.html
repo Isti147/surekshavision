@@ -20,20 +20,78 @@
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        /* ================= HIGH-END CYBERSTEALTH DYNAMIC LIGHT/DARK ARCHITECTURE ================= */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            background-color: var(--body-bg, #050814);
+            background-image:
+                radial-gradient(circle at 15% 20%, var(--glow-orb-1, rgba(14, 165, 233, 0.18)) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, var(--glow-orb-2, rgba(245, 158, 11, 0.12)) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, var(--center-bg, #030712) 0%, var(--outer-bg, #010204) 100%),
+                linear-gradient(var(--grid-color, rgba(255, 255, 255, 0.005)) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color, rgba(255, 255, 255, 0.005)) 1px, transparent 1px);
+            background-size: auto, auto, auto, 40px 40px, 40px 40px;
+            background-attachment: fixed;
+            color: var(--text-main, #f8fafc);
             overflow-x: hidden;
-            transition: all 0.5s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         :root {
-            --primary-dark: #0f172a;
-            --accent-blue: #0284c7;
-            --glow-yellow: #f59e0b;
+            --primary-dark: #030712;
+            --accent-blue: #38bdf8;
+            --glow-yellow: #fbbf24;
+            --glass-bg: rgba(15, 23, 42, 0.55);
+            --glass-border: rgba(56, 189, 248, 0.15);
+            --text-main: #f8fafc;
+            --text-heading: #ffffff;
+            --input-bg: #0f172a;
+            --input-border: #334155;
+            --input-text: #ffffff;
+        }
+
+        /* SMART FIX: PREMIUM LIGHTNING STYLISH LAYER */
+        body.light-mode-active {
+            --body-bg: #EBF1F7;               /* Translucent Lighting soft blue-gray background */
+            --center-bg: #FFFFFF;             /* Pure white crisp core */
+            --outer-bg: #D9E4EE;              /* Structural light gray-blue dynamic layout */
+            --grid-color: rgba(37, 99, 235, 0.04); /* Cyber light blue mesh grid lines */
+            --text-main: #1E293B;             /* Charcoal Dark Gray for ultra readability */
+            --text-heading: #0F172A;          /* Deep Blue-Black for bold title text */
+            --glass-bg: rgba(255, 255, 255, 0.92); /* Solid crystal white pane - panels won't disappear */
+            --glass-border: #94A3B8;          /* Crisp Slate border for high card definition */
+            --primary-dark: #FFFFFF;
+            
+            --input-bg: #FFFFFF;
+            --input-border: #475569;
+            --input-text: #0F172A;
+        }
+
+        /* Dynamic Light Mode Elements Re-mapping */
+        body.light-mode-active .text-white, 
+        body.light-mode-active .text-dark,
+        body.light-mode-active .hero-card h1,
+        body.light-mode-active h3,
+        body.light-mode-active h4,
+        body.light-mode-active h5,
+        body.light-mode-active h6 {
+            color: var(--text-heading) !important;
+        }
+
+        body.light-mode-active .form-control,
+        body.light-mode-active .form-select {
+            background-color: var(--input-bg) !important;
+            border-color: var(--input-border) !important;
+            color: var(--input-text) !important;
+            font-weight: 500;
+        }
+
+        body.light-mode-active .hero-card p[style*="color: #00f0ff"] {
+            color: #2563EB !important;        /* Vivid Electric Blue text highlight */
+            text-shadow: 0 1px 4px rgba(37, 99, 235, 0.1) !important;
         }
 
         .daily-greeting-bar {
@@ -48,35 +106,39 @@
         }
 
         @keyframes softGlow {
-            0% {
-                background: linear-gradient(90deg, #fef3c7, #fde68a, #fef3c7);
-            }
-
-            100% {
-                background: linear-gradient(90deg, #fffbeb, #fcd34d, #fffbeb);
-            }
+            0% { background: linear-gradient(90deg, #fef3c7, #fde68a, #fef3c7); }
+            100% { background: linear-gradient(90deg, #fffbeb, #fcd34d, #fffbeb); }
         }
 
         .lang-selector-container select {
-            background-color: #1e293b;
+            background-color: #0f172a;
             color: #f8fafc;
-            border: 1px solid #475569;
+            border: 1px solid #334155;
             padding: 4px 10px;
             font-size: 0.85rem;
             border-radius: 6px;
             cursor: pointer;
             outline: none;
-            transition: all 0.3s ease;
+        }
+
+        body.light-mode-active .lang-selector-container select {
+            background-color: #ffffff;
+            color: #0f172a;
+            border-color: #cbd5e1;
         }
 
         .top-nav {
-            background-color: #020617;
+            background-color: #02040a;
             font-size: 0.85rem;
             border-bottom: 1px solid #1e293b;
         }
 
+        body.light-mode-active .top-nav {
+            background-color: #0F172A; /* Royal dark top-bar under light view for contrast */
+        }
+
         .top-nav a {
-            color: #f8fafc;
+            color: #cbd5e1;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -86,9 +148,38 @@
         }
 
         .main-navbar {
-            background-color: var(--primary-dark) !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.5s ease;
+            background-color: rgba(3, 7, 18, 0.85) !important;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            padding-top: 3px !important;
+            padding-bottom: 3px !important;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        body.light-mode-active .main-navbar {
+            background-color: rgba(255, 255, 255, 0.93) !important;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.1);
+        }
+
+        .navbar-brand-logo {
+            height: 78px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 12px var(--accent-blue));
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 4px 0;
+            animation: logoFloat 4s ease-in-out infinite;
+        }
+
+        .navbar-brand-logo:hover {
+            transform: scale(1.05) rotate(1deg);
+            filter: drop-shadow(0 0 20px var(--glow-yellow));
+        }
+
+        @keyframes logoFloat {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-4px); }
+            100% { transform: translateY(0px); }
         }
 
         .pulse-dot {
@@ -102,32 +193,22 @@
         }
 
         @keyframes pulseSystem {
-            0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-            }
-
-            70% {
-                transform: scale(1);
-                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
-            }
-
-            100% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-            }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
 
         .live-toast-alert {
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: #ffffff;
-            color: #1e293b;
+            background: #1e293b;
+            color: #f8fafc;
             padding: 12px 20px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
             z-index: 9999;
+            border: 1px solid var(--glass-border);
             border-left: 4px solid var(--accent-blue);
             display: flex;
             align-items: center;
@@ -138,30 +219,21 @@
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .live-toast-alert.show-popup {
-            transform: translateX(0);
-        }
+        .live-toast-alert.show-popup { transform: translateX(0); }
 
         .reveal-element {
             opacity: 0;
             transform: translateY(30px);
-            animation: buildUp 0.8s ease forwards;
+            animation: buildUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        @keyframes buildUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes buildUp { to { opacity: 1; transform: translateY(0); } }
 
         .hero-premium {
             position: relative;
             background-size: cover !important;
             background-position: center !important;
-            color: white;
-            padding: 60px 0;
-            transition: background-image 1.5s ease-in-out;
+            padding: 50px 0;
             z-index: 1;
         }
 
@@ -172,70 +244,59 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary-dark), var(--accent-blue));
-            opacity: 0.65;
+            background: linear-gradient(135deg, rgba(3, 7, 18, 0.85), rgba(15, 23, 42, 0.3));
             z-index: -1;
-            transition: background 1.5s ease-in-out;
         }
 
-        .hero-premium h1,
-        .hero-premium p,
-        .hero-premium span.badge {
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        body.light-mode-active .hero-premium::before {
+            background: linear-gradient(135deg, rgba(235, 241, 247, 0.95), rgba(37, 99, 235, 0.08));
         }
 
-        @media (min-width: 768px) {
-            .hero-premium {
-                padding: 120px 0;
-            }
-        }
+        @media (min-width: 768px) { .hero-premium { padding: 90px 0; } }
 
-        /* ================= MASSIVE PHOTO GRID CSS ================= */
         .services-showcase-container {
             width: 100%;
             max-width: 1240px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 35px auto;
             padding: 0 15px;
         }
 
         .grid-showcase {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 12px;
+            gap: 14px;
         }
 
         .grid-card {
             display: block;
             position: relative;
             height: 320px;
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.4s ease, border-color 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+            border: 2px solid var(--glass-border);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
             text-decoration: none;
-            background-color: #000;
-            /* Dark background under photos */
+            background-color: #010204;
         }
+
+        body.light-mode-active .grid-card { box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12); }
 
         .grid-card:hover {
             transform: translateY(-8px);
             border-color: var(--glow-yellow);
-            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.25);
         }
 
-        /* The single image that will be rotated by Javascript */
         .dynamic-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.5s ease-in-out, transform 8s linear;
+            opacity: 1;
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* Slow zoom effect on hover for premium feel */
-        .grid-card:hover .dynamic-img {
-            transform: scale(1.15);
-        }
+        .grid-card:hover .dynamic-img { transform: scale(1.12); }
 
         .card-overlay {
             position: absolute;
@@ -243,115 +304,142 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 15%, rgba(0, 0, 0, 0.2) 60%, transparent);
+            background: linear-gradient(to top, rgba(3, 7, 18, 0.98) 12%, rgba(0, 0, 0, 0.2) 65%, transparent);
             display: flex;
             align-items: flex-end;
-            padding: 20px 15px;
+            padding: 22px 15px;
             z-index: 2;
         }
 
+        body.light-mode-active .card-overlay {
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 15%, rgba(0, 0, 0, 0.05) 70%, transparent);
+        }
+
         .card-overlay h3 {
-            color: #fff;
-            font-size: 1.05rem;
+            color: #ffffff;
+            font-size: 1.02rem;
             font-weight: 700;
             line-height: 1.4;
             margin: 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-            text-align: left;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+            letter-spacing: 0.5px;
         }
 
         @media (max-width: 992px) {
-            .grid-showcase {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .grid-card {
-                height: 250px;
-            }
+            .grid-showcase { grid-template-columns: repeat(3, 1fr); }
+            .grid-card { height: 250px; }
         }
 
-        @media (max-width: 768px) {
-            .grid-showcase {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        @media (max-width: 768px) { .grid-showcase { grid-template-columns: repeat(2, 1fr); } }
 
         @media (max-width: 576px) {
-            .grid-showcase {
-                grid-template-columns: 1fr;
-            }
-
-            .grid-card {
-                height: 220px;
-            }
+            .grid-showcase { grid-template-columns: 1fr; }
+            .grid-card { height: 220px; }
         }
 
-        /* ================= MASSIVE PHOTO GRID CSS END ================= */
-
-        .hero-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 20px;
+        /* HIGH-VISIBILITY SMART TRANSLUCENT CARDS */
+        .hero-card,
+        .profile-section,
+        .feature-badge,
+        .card-service-premium,
+        .price-card,
+        .accordion-item,
+        .bg-white.rounded-4 {
+            background: var(--glass-bg) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid var(--glass-border) !important; /* Thick solid boundaries */
+            color: var(--text-main) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
         }
 
-        @media (min-width: 576px) {
-            .hero-card {
-                padding: 40px;
-            }
+        body.light-mode-active .hero-card,
+        body.light-mode-active .profile-section,
+        body.light-mode-active .feature-badge,
+        body.light-mode-active .card-service-premium,
+        body.light-mode-active .price-card,
+        body.light-mode-active .accordion-item {
+            box-shadow: 0 6px 18px rgba(30, 41, 59, 0.06) !important;
         }
+
+        .card-service-premium {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-decoration: none;
+            display: block;
+        }
+
+        .card-service-premium:hover {
+            transform: translateY(-10px);
+            border-color: #2563EB !important; /* Electric Blue highlight on hover */
+            box-shadow: 0 20px 45px rgba(37, 99, 235, 0.15) !important;
+        }
+
+        .text-dark { color: var(--text-main) !important; }
+
+        .text-muted, .text-secondary { color: var(--text-sub, #94a3b8) !important; }
+
+        body.light-mode-active .text-muted,
+        body.light-mode-active .text-secondary {
+            color: #475569 !important; /* Crisp readability adjustments */
+        }
+
+        body.light-mode-active { --text-sub: #475569; }
 
         .btn-premium-call {
-            background: linear-gradient(45deg, var(--accent-blue), var(--primary-dark));
-            color: white;
-            font-weight: 600;
+            background: linear-gradient(135deg, #0284c7, #2563EB);
+            color: #ffffff !important;
+            font-weight: 700;
             border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
         }
 
         .btn-premium-call:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-            color: white;
+            box-shadow: 0 8px 22px rgba(37, 99, 235, 0.6);
         }
 
         .btn-premium-wa {
-            background: linear-gradient(45deg, #22c55e, #15803d);
-            color: white;
-            font-weight: 600;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white !important;
+            font-weight: 700;
             border: none;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
         }
 
         .btn-premium-wa:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.6);
-            color: white;
+            box-shadow: 0 8px 22px rgba(34, 197, 94, 0.5);
         }
 
-        .card-service-premium {
-            border: none;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.4s ease;
-            overflow: hidden;
-            border-bottom: 4px solid transparent;
+        /* SMART BILLING PANEL BUTTON FIX */
+        #billingPanelBtnElement {
+            border: 2px solid #2563EB !important;
+            font-weight: 700 !important;
+            transition: all 0.3s;
+        }
+        body.light-mode-active #billingPanelBtnElement {
+            background-color: #2563EB !important;
+            color: #FFFFFF !important;
         }
 
-        .card-service-premium:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-            border-bottom: 4px solid var(--accent-blue);
+        .theme-toggle-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode-active .theme-toggle-btn {
+            background: #0F172A;
+            color: #FDE047;
+            border-color: #1E293B;
         }
 
         .icon-box {
             width: 70px;
             height: 70px;
-            background: #f0f9ff;
+            background: rgba(56, 189, 248, 0.12);
             color: var(--accent-blue);
             border-radius: 50%;
             display: flex;
@@ -359,79 +447,69 @@
             justify-content: center;
             margin: 0 auto 20px auto;
             font-size: 1.8rem;
+            border: 1px solid var(--glass-border);
         }
 
-        .profile-section {
-            background: linear-gradient(to bottom, #ffffff, #f1f5f9);
-            border-top: 5px solid var(--accent-blue);
-        }
-
-        @media (min-width: 768px) {
-            .profile-section {
-                background: linear-gradient(to right, #ffffff, #f1f5f9);
-                border-top: none;
-                border-left: 5px solid var(--accent-blue);
-            }
-        }
-
-        .price-card {
-            border: 1px solid #e2e8f0;
-            background: white;
-            border-radius: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .price-card.featured {
-            border: 2px solid var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-badge {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
+        body.light-mode-active .icon-box {
+            background: rgba(37, 99, 235, 0.08);
+            color: #2563EB;
         }
 
         .brand-badge {
-            background: white;
-            border: 1px dashed #cbd5e1;
+            background: rgba(3, 7, 18, 0.4);
+            border: 2px solid var(--glass-border);
             padding: 12px 15px;
             border-radius: 10px;
-            font-weight: 600;
-            color: #475569;
-            display: inline-block;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+        body.light-mode-active .brand-badge {
+            background: #FFFFFF;
+            color: #0F172A;
+        }
+
+        .accordion-button {
+            background-color: rgba(3, 7, 18, 0.3) !important;
+            color: var(--text-main) !important;
+            font-weight: 700;
+        }
+
+        body.light-mode-active .accordion-button {
+            background-color: #FFFFFF !important;
+            color: #0F172A !important;
         }
 
         .accordion-button:not(.collapsed) {
-            background-color: #f0f9ff;
-            color: var(--accent-blue);
+            background-color: rgba(56, 189, 248, 0.15) !important;
+            color: var(--accent-blue) !important;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        body.light-mode-active .accordion-button:not(.collapsed) {
+            background-color: rgba(37, 99, 235, 0.08) !important;
+            color: #2563EB !important;
         }
 
         .contact-footer {
-            background-color: var(--primary-dark);
+            background-color: #02040a;
             color: #94a3b8;
-            border-top: 5px solid var(--accent-blue);
+            border-top: 4px solid var(--accent-blue);
         }
 
-        .contact-footer a {
-            transition: color 0.3s ease;
+        body.light-mode-active .contact-footer {
+            background-color: #0F172A;
+            border-top-color: #2563EB;
+            color: #E2E8F0;
         }
 
-        .contact-footer a:hover {
-            color: var(--accent-blue) !important;
-        }
-
-        /* ================= AI CHATBOT SYSTEM ================= */
+        /* ================= ORIGINAL AI CHATBOT ENGINE ================= */
         .chatbot-launcher {
             position: fixed;
             bottom: 25px;
             right: 25px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--accent-blue), var(--primary-dark));
+            background: linear-gradient(135deg, #0ea5e9, #030712);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -439,14 +517,12 @@
             justify-content: center;
             font-size: 1.6rem;
             cursor: pointer;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
             z-index: 10000;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .chatbot-launcher:hover {
-            transform: scale(1.1) rotate(15deg);
-        }
+        .chatbot-launcher:hover { transform: scale(1.1) rotate(15deg); }
 
         .chatbot-container {
             position: fixed;
@@ -455,31 +531,30 @@
             width: 350px;
             max-width: calc(100vw - 50px);
             height: 450px;
-            background: white;
+            background: #0f172a;
             border-radius: 16px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
             z-index: 10000;
             display: none;
             flex-direction: column;
             overflow: hidden;
-            border: 1px solid #e2e8f0;
+            border: 2px solid rgba(56, 189, 248, 0.2);
             animation: chatFade 0.4s ease;
         }
 
-        @keyframes chatFade {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+        body.light-mode-active .chatbot-container {
+            background: #ffffff;
+            border-color: #475569;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+        }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes chatFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .chatbot-header {
-            background: var(--primary-dark);
+            background: #020617;
             color: white;
             padding: 15px;
             font-weight: 600;
@@ -488,15 +563,20 @@
             justify-content: space-between;
         }
 
+        body.light-mode-active .chatbot-header { background: #2563EB; }
+
         .chatbot-messages {
+            box-sizing: border-box;
             flex: 1;
             padding: 15px;
             overflow-y: auto;
-            background-color: #f8fafc;
+            background-color: rgba(3, 7, 18, 0.2);
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
+
+        body.light-mode-active .chatbot-messages { background-color: #F8FAFC; }
 
         .chat-bubble {
             padding: 10px 14px;
@@ -508,50 +588,71 @@
         }
 
         .chat-bubble.bot {
-            background: white;
-            color: #1e293b;
-            align-items: flex-start;
+            background: #1e293b;
+            color: #f1f5f9;
+            align-self: flex-start;
             border-bottom-left-radius: 2px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode-active .chat-bubble.bot {
+            background: #E2E8F0;
+            color: #0F172A;
+            border: 1px solid #CBD5E1;
+            font-weight: 500;
         }
 
         .chat-bubble.user {
-            background: var(--accent-blue);
+            background: #0ea5e9;
             color: white;
             align-self: flex-end;
             border-bottom-right-radius: 2px;
         }
+        body.light-mode-active .chat-bubble.user { background: #2563EB; }
 
         .chatbot-options {
             padding: 8px 15px;
-            background: #fff;
+            background: rgba(15, 23, 42, 0.8);
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            border-top: 1px solid #f1f5f9;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        body.light-mode-active .chatbot-options {
+            background: #ffffff;
+            border-top-color: #cbd5e1;
         }
 
         .chat-btn-opt {
-            background: #f0f9ff;
-            color: var(--accent-blue);
-            border: 1px solid #bae6fd;
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.25);
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.75rem;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-weight: 500;
+        }
+        body.light-mode-active .chat-btn-opt {
+            background: rgba(37, 99, 235, 0.05);
+            color: #2563EB;
+            border-color: rgba(37, 99, 235, 0.25);
+            font-weight: 600;
         }
 
-        .chat-btn-opt:hover {
-            background: var(--accent-blue);
-            color: white;
-        }
+        .chat-btn-opt:hover { background: #0ea5e9; color: white; }
+        body.light-mode-active .chat-btn-opt:hover { background: #2563EB; color: white; }
 
         .chatbot-input-area {
             display: flex;
-            border-top: 1px solid #e2e8f0;
-            background: white;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: #0f172a;
+        }
+
+        body.light-mode-active .chatbot-input-area {
+            background: #ffffff;
+            border-top-color: #cbd5e1;
         }
 
         .chatbot-input-area input {
@@ -560,16 +661,19 @@
             padding: 12px;
             font-size: 0.85rem;
             outline: none;
+            background: transparent;
+            color: var(--text-main);
         }
 
         .chatbot-input-area button {
             background: none;
             border: none;
-            color: var(--accent-blue);
+            color: #0ea5e9;
             padding: 0 15px;
             cursor: pointer;
             font-size: 1.1rem;
         }
+        body.light-mode-active .chatbot-input-area button { color: #2563EB; }
     </style>
 </head>
 
@@ -577,19 +681,20 @@
 
     <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 rounded-4 shadow-lg">
-                <div class="modal-header border-0 bg-light rounded-top-4 pb-0">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0 rounded-4 shadow-lg bg-dark text-white"
+                style="border: 2px solid var(--glass-border) !important;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center px-4 pb-4">
                     <div class="mb-3">
                         <i class="fa-solid fa-handshake-angle" style="font-size: 3rem; color: var(--accent-blue);"></i>
                     </div>
-                    <h4 id="welcome-modal-title" class="fw-bold text-dark mb-3">🙏 Sureksha Vision में आपका हार्दिक
-                        स्वागत है!</h4>
-                    <p id="welcome-modal-desc" class="text-muted small" style="line-height: 1.8;">
+                    <h4 id="welcome-modal-title" class="fw-bold mb-3 text-white">🙏 Sureksha Vision में आपका हार्दिक स्वागत है!</h4>
+                    <p id="welcome-modal-desc" class="small opacity-75" style="line-height: 1.8;">
                         हम समझते हैं कि आपके घर और व्यापार की सुरक्षा आपके लिए कितनी महत्वपूर्ण है। दानापुर और पटना
-                        क्षेत्र में सबसे भरोसेमंद CCTV और IT सपोर्ट टीम के रूप में, हम आपको बेहतरीन सर्विस और बिना किसी
+                        क्षेत्र में सबसे भरोसेमंद CCTV और IT सपोर्ट टीम के रूप में, हम आपको बेहतरीन SERVICE और बिना किसी
                         छुपे खर्च के एकदम सही दाम देने का वादा करते हैं।
                     </p>
                     <button class="btn btn-warning rounded-pill px-4 fw-bold mt-2 shadow-sm" data-bs-dismiss="modal"
@@ -605,8 +710,7 @@
     </div>
 
     <div class="top-nav text-white py-2">
-        <div
-            class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center text-center text-sm-start gap-2">
             <div class="d-flex flex-column flex-sm-row gap-1 gap-sm-4 align-items-center">
                 <div class="small">
                     <i class="fa-solid fa-envelope text-info me-1"></i>
@@ -615,9 +719,7 @@
                 <div class="small">
                     <i class="fa-solid fa-location-dot text-danger me-1"></i>
                     <a href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank" rel="noopener noreferrer"
-                        class="text-light text-decoration-none">
-                        Sureksha Vision, Patna
-                    </a>
+                        class="text-light text-decoration-none">Sureksha Vision, Patna</a>
                 </div>
                 <div id="text-emergency" class="small">
                     <i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service
@@ -641,19 +743,23 @@
 
     <div class="daily-greeting-bar" id="dailyGreetingText"></div>
 
-    <nav class="navbar navbar-dark main-navbar py-2 sticky-top">
+    <nav class="navbar navbar-dark main-navbar sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand fw-bold fs-4 text-white" href="#">
-                <i class="fa-solid fa-shield-halved text-warning me-1"></i>SUREKSHA <span
-                    style="color: #fff;">VISION</span>
+            <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#" style="padding: 0; margin: 0;">
+                <img src="logo.png?v=1.1" alt="Sureksha Vision Logo" class="navbar-brand-logo"
+                    onerror="this.style.display='none'; document.getElementById('logoFallbackText').style.display='inline-block';">
+                <span id="logoFallbackText" style="display:none;"><i class="fa-solid fa-shield-halved text-warning me-1"></i>SUREKSHA VISION</span>
             </a>
             <div class="d-flex align-items-center gap-2">
-                <span
-                    class="badge bg-dark border border-secondary text-light d-none d-lg-inline-flex align-items-center gap-2 small">
+                <span class="badge bg-dark border border-secondary text-light d-none d-lg-inline-flex align-items-center gap-2 small">
                     <span class="pulse-dot"></span>System Active
                 </span>
-                <a href="billing.html" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-light btn-sm fw-bold rounded-pill px-3" style="color: var(--primary-dark);">
+
+                <button class="btn btn-sm theme-toggle-btn rounded-pill px-3 fw-bold" onclick="toggleInterfaceTheme()">
+                    <i class="fa-solid fa-moon me-1" id="theme-btn-icon"></i> <span id="theme-btn-text">Dark Mode</span>
+                </button>
+
+                <a href="billing.html" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-sm fw-bold rounded-pill px-3" id="billingPanelBtnElement">
                     <i class="fa-solid fa-laptop-code me-1"></i> Billing Panel
                 </a>
                 <a id="navCallBtn" href="tel:+919123188984" class="btn btn-warning btn-sm fw-bold rounded-pill px-3">
@@ -668,232 +774,156 @@
 
             <div class="services-showcase-container">
                 <div class="grid-showcase">
-
-                    <a href="https://www.google.com/search?q=cctv+camera+installation+work+technician+site+images&tbm=isch"
-                        target="_blank" class="grid-card">
-                        <img id="cctv-rotator" class="dynamic-img"
-                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="CCTV Setup">
-                        <div class="card-overlay">
-                            <h3>🎥 PREMIUM CCTV CAMERA SETUP</h3>
-                        </div>
+                    <a href="cctv-services.html" class="grid-card">
+                        <img id="cctv-rotator" class="dynamic-img" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" alt="CCTV Setup">
+                        <div class="card-overlay"><h3>🎥 PREMIUM CCTV CAMERA SETUP</h3></div>
                     </a>
-
-                    <a href="https://www.google.com/search?q=laptop+desktop+motherboard+chip+level+repair+work+images&tbm=isch"
-                        target="_blank" class="grid-card">
-                        <img id="repair-rotator" class="dynamic-img"
-                            src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&q=80"
-                            alt="Computer Repair">
-                        <div class="card-overlay">
-                            <h3>💻 EXPERT LAPTOP & DESKTOP REPAIR</h3>
-                        </div>
+                    <a href="computer-repair.html" class="grid-card">
+                        <img id="repair-rotator" class="dynamic-img" src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&q=80" alt="Computer Repair">
+                        <div class="card-overlay"><h3>💻 EXPERT LAPTOP & DESKTOP REPAIR</h3></div>
                     </a>
-
-                    <a href="https://www.google.com/search?q=modern+website+design+development+dashboard+work+images&tbm=isch"
-                        target="_blank" class="grid-card">
-                        <img id="web-rotator" class="dynamic-img"
-                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
-                            alt="Web Design">
-                        <div class="card-overlay">
-                            <h3>🖥️ CUSTOM WEBSITE DESIGN</h3>
-                        </div>
+                    <a href="web-design-services.html" class="grid-card">
+                        <img id="web-rotator" class="dynamic-img" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Web Design">
+                        <div class="card-overlay"><h3>🖥️ CUSTOM WEBSITE DESIGN</h3></div>
                     </a>
-
-                    <a href="https://www.google.com/search?q=professional+electrician+wiring+panel+multimeter+work+images&tbm=isch"
-                        target="_blank" class="grid-card">
-                        <img id="elec-rotator" class="dynamic-img"
-                            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80"
-                            alt="Electrical Work">
-                        <div class="card-overlay">
-                            <h3>⚡ SAFE ELECTRICAL & BIOMETRIC WORK</h3>
-                        </div>
+                    <a href="electrical-services.html" class="grid-card">
+                        <img id="elec-rotator" class="dynamic-img" src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="Electrical Work">
+                        <div class="card-overlay"><h3>⚡ SAFE ELECTRICAL & BIOMETRIC WORK</h3></div>
                     </a>
-
-                    <a href="https://www.google.com/search?q=server+room+networking+poe+switch+cable+management+images&tbm=isch"
-                        target="_blank" class="grid-card">
-                        <img id="network-rotator" class="dynamic-img"
-                            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Networking">
-                        <div class="card-overlay">
-                            <h3>🌐 HIGH-SPEED NETWORK & IT SUPPORT</h3>
-                        </div>
+                    <a href="networking-services.html" class="grid-card">
+                        <img id="network-rotator" class="dynamic-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Networking">
+                        <div class="card-overlay"><h3>🌐 HIGH-SPEED NETWORK & IT SUPPORT</h3></div>
                     </a>
-
                 </div>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-9 hero-card">
-                    <span id="text-hero-badge"
-                        class="badge bg-danger px-3 py-2 rounded-pill mb-2 text-uppercase small">Top Rated Security
-                        Expert</span>
-                    <h1 id="text-hero-title" class="fs-2 fw-bold mb-2 text-white">Aapka Ghar, Hamari <span
-                            id="text-hero-span" style="color: var(--glow-yellow);">Sureksha</span></h1>
-                    <p id="text-hero-subtitle" class="fs-6 text-light mb-3">Danapur Cantt, Usri aur Jamsaut Ka Sabse
-                        Advanced CCTV & Intercom Installer</p>
-                    <p id="text-hero-desc" class="text-slate-300 mb-4 small opacity-75">Hum Apartments, Offices, aur
-                        Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete
-                        installation aur repair service dete hain.</p>
+                    <span id="text-hero-badge" class="badge bg-danger px-3 py-2 rounded-pill mb-2 text-uppercase small text-white">Top Rated Security Expert</span>
+                    <h1 id="text-hero-title" class="fs-2 fw-bold mb-2">Aapka Ghar, Hamari <span id="text-hero-span" style="color: var(--glow-yellow);">Sureksha</span></h1>
+
+                    <p class="fs-5 mb-3 fw-bold tracking-tight">Danapur Cantt, Usri aur Jamsaut Ka Sabse Advanced CCTV & Intercom Installer</p>
+
+                    <p id="text-hero-desc" class="mb-4 small opacity-75 fw-medium">Hum Apartments, Offices, aur Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete installation aur repair service dete hain.</p>
 
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a id="heroCallBtn" href="tel:+919123188984"
-                            class="btn btn-premium-call btn-md rounded-pill px-4 py-2">
-                            <i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein
-                        </a>
-                        <a id="heroWaBtn"
-                            href="https://wa.me/919123188984?text=Hello%20Sureksha%20Vision,%20I%20want%20to%20enquire%20about%20CCTV/Intercom%20installation."
-                            target="_blank" rel="noopener noreferrer"
-                            class="btn btn-premium-wa btn-md rounded-pill px-4 py-2">
-                            <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message
-                        </a>
-                        <a id="heroMapBtn" href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-light btn-md rounded-pill px-4 py-2 text-dark fw-bold shadow-sm mt-2 mt-sm-0">
-                            <i class="fa-solid fa-map-location-dot text-danger me-2"></i> Our Location
-                        </a>
+                        <a id="heroCallBtn" href="tel:+919123188984" class="btn btn-premium-call btn-md rounded-pill px-4 py-2"><i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein</a>
+                        <a id="heroWaBtn" href="https://wa.me/919123188984?text=Hello%20Sureksha%20Vision,%20I%20want%20to%20enquire%20about%20CCTV/Intercom%20installation." target="_blank" rel="noopener noreferrer" class="btn btn-premium-wa btn-md rounded-pill px-4 py-2"><i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message</a>
+                        <a id="heroMapBtn" href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-md rounded-pill px-4 py-2 fw-bold shadow-sm mt-2 mt-sm-0 border border-secondary"><i class="fa-solid fa-map-location-dot text-danger me-2"></i> Our Location</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-    <div class="container my-4 rounded-4 profile-section shadow-sm p-4 reveal-element">
+
+    <div class="container my-4 rounded-4 profile-section p-4 reveal-element">
         <div class="row align-items-center g-3">
             <div class="col-12 col-md-8">
-                <h6 id="text-about-sub" class="fw-bold text-uppercase small"
-                    style="color: var(--accent-blue) !important;">Hamare Bare Mein</h6>
-                <h3 id="text-about-title" class="fw-bold text-dark fs-4">Technical Expertise Aur Deep Problem-Solving
-                </h3>
-                <p id="text-about-desc1" class="small text-secondary mb-2">Sureksha Vision ek **B.Tech graduate** ke
-                    netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki
-                    computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur
-                    industrial electrical networks ke deep implementation ko handle karte hain.</p>
-                <p id="text-about-desc2" class="small text-secondary mb-0">Hum bade multi-apartment housings aur
-                    commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe
-                    **Static IP network deployment** karne me expert hain.</p>
+                <h6 id="text-about-sub" class="fw-bold text-uppercase small text-primary">Hamare Bare Mein</h6>
+                <h3 id="text-about-title" class="fw-bold fs-4">Technical Expertise Aur Deep Problem-Solving</h3>
+                <p id="text-about-desc1" class="small mb-2 fw-medium">Sureksha Vision ek **B.Tech graduate** ke netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur industrial electrical networks ke deep implementation ko handle karte hain.</p>
+                <p id="text-about-desc2" class="small mb-0 fw-medium">Hum bade multi-apartment housings aur commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe **Static IP network deployment** karne me expert hain.</p>
             </div>
             <div class="col-12 col-md-4 text-center mt-3 mt-md-0">
-                <div class="p-3 rounded-4 bg-white shadow-sm border"
-                    style="border-color: var(--accent-blue) !important;">
-                    <i class="fa-solid fa-user-gear fs-1 mb-2" style="color: var(--accent-blue);"></i>
-                    <h6 id="text-about-cardtitle" class="fw-bold text-dark mb-1">B.Tech Led Team</h6>
-                    <p id="text-about-carddesc" class="text-muted small mb-0">High-level analytical skills aur
-                        enterprise infrastructure solutions.</p>
+                <div class="p-3 rounded-4 shadow-sm border border-secondary" style="background: rgba(37,99,235,0.03) !important;">
+                    <i class="fa-solid fa-user-gear fs-1 mb-2 text-primary"></i>
+                    <h6 id="text-about-cardtitle" class="fw-bold mb-1">B.Tech Led Team</h6>
+                    <p id="text-about-carddesc" class="small mb-0 opacity-75 font-medium">High-level analytical skills aur enterprise infrastructure solutions.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container py-4 text-center bg-white rounded-4 shadow-sm my-4 reveal-element">
-        <h6 id="text-brands-heading" class="text-muted text-uppercase fw-bold mb-3 small" style="letter-spacing: 1px;">
-            Top Trusted Brands We Support</h6>
+    <div class="container py-4 text-center rounded-4 my-4 reveal-element">
+        <h6 id="text-brands-heading" class="text-uppercase fw-bold mb-3 small tracking-wide">Top Trusted Brands We Support</h6>
         <div class="row g-2 justify-content-center align-items-center">
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">CP PLUS</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">HIKVISION</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">DAHUA</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">DIGISOL</div>
-            </div>
-            <div class="col-4 col-sm-2">
-                <div class="brand-badge w-100">TP-LINK</div>
-            </div>
+            <div class="col-4 col-sm-2"><div class="brand-badge w-100 shadow-sm">CP PLUS</div></div>
+            <div class="col-4 col-sm-2"><div class="brand-badge w-100 shadow-sm">HIKVISION</div></div>
+            <div class="col-4 col-sm-2"><div class="brand-badge w-100 shadow-sm">DAHUA</div></div>
+            <div class="col-4 col-sm-2"><div class="brand-badge w-100 shadow-sm">DIGISOL</div></div>
+            <div class="col-4 col-sm-2"><div class="brand-badge w-100 shadow-sm">TP-LINK</div></div>
         </div>
     </div>
 
     <div class="container py-3 reveal-element">
         <div class="text-center mb-4">
-            <h6 id="text-why-sub" class="fw-bold text-uppercase small" style="color: var(--accent-blue);">Hamari
-                Khubiyan</h6>
-            <h3 id="text-why-title" class="fw-bold text-dark fs-4">Log Humpar Bharosa Kyun Karte Hain?</h3>
+            <h6 id="text-why-sub" class="fw-bold text-uppercase small text-primary">Hamari Khubiyan</h6>
+            <h3 id="text-why-title" class="fw-bold fs-4">Log Humpar Bharosa Kyun Karte Hain?</h3>
         </div>
         <div class="row g-3 text-center">
             <div class="col-12 col-md-4">
                 <div class="feature-badge">
                     <i class="fa-solid fa-user-shield text-success fs-3 mb-2"></i>
                     <h6 id="text-feat1-title" class="fw-bold mb-1">Certified Team</h6>
-                    <p id="text-feat1-desc" class="text-muted small mb-0">Networking aur hardware troubleshooting ke
-                        expert technicians.</p>
+                    <p id="text-feat1-desc" class="small mb-0 opacity-75 fw-medium">Networking aur hardware troubleshooting ke expert technicians.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="feature-badge">
-                    <i class="fa-solid fa-tags fs-3 mb-2" style="color: var(--glow-yellow);"></i>
+                    <i class="fa-solid fa-tags fs-3 mb-2 text-warning"></i>
                     <h6 id="text-feat2-title" class="fw-bold mb-1">Best Local Pricing</h6>
-                    <p id="text-feat2-desc" class="text-muted small mb-0">Pure Danapur aur Patna belt me sabse
-                        affordable aur sahi daam.</p>
+                    <p id="text-feat2-desc" class="small mb-0 opacity-75 fw-medium">Pure Danapur aur Patna belt me sabse affordable aur sahi daam.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="feature-badge">
-                    <i class="fa-solid fa-screwdriver-wrench fs-3 mb-2" style="color: var(--accent-blue);"></i>
+                    <i class="fa-solid fa-screwdriver-wrench fs-3 mb-2 text-primary"></i>
                     <h6 id="text-feat3-title" class="fw-bold mb-1">Fast Service</h6>
-                    <p id="text-feat3-desc" class="text-muted small mb-0">Call aane ke kuch hi ghanto me aapke doorstep
-                        par service haazir.</p>
+                    <p id="text-feat3-desc" class="small mb-0 opacity-75 fw-medium">Call aane ke kuch hi ghanto me aapke doorstep par service haazir.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="bg-white py-4 shadow-sm my-4 reveal-element">
+    <div class="py-4 my-4 reveal-element">
         <div class="container">
             <div class="text-center mb-4">
-                <h6 id="text-serv-sub" class="fw-bold text-uppercase small" style="color: var(--accent-blue);">Services
-                </h6>
-                <h3 id="text-serv-title" class="fw-bold fs-4" style="color: var(--primary-dark);">Professional Security
-                    & IT Solutions</h3>
+                <h6 id="text-serv-sub" class="fw-bold text-uppercase small text-primary">Services</h6>
+                <h3 id="text-serv-title" class="fw-bold fs-4">Professional Security & IT Solutions</h3>
             </div>
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="cctv-services.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-camera"></i></div>
                         <h5 id="text-serv1-title" class="fw-bold mb-2">CCTV Camera Setup</h5>
-                        <p id="text-serv1-desc" class="text-muted small mb-0">HD & IP Cameras, DVR/NVR configuration,
-                            aur mobile par router ke through live view setting.</p>
-                    </div>
+                        <p id="text-serv1-desc" class="small mb-0 fw-medium opacity-75">HD & IP Cameras, DVR/NVR configuration, aur mobile par router ke through live view setting.</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="intercom-services.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-tty"></i></div>
                         <h5 id="text-serv2-title" class="fw-bold mb-2">EPABX Intercom Systems</h5>
-                        <p id="text-serv2-desc" class="text-muted small mb-0">Naye ya purane apartments aur building ke
-                            liye complete multi-line intercom programming aur secure wiring.</p>
-                    </div>
+                        <p id="text-serv2-desc" class="small mb-0 fw-medium opacity-75">Naye ya purane apartments aur building ke liye complete multi-line intercom programming aur secure wiring.</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="networking-services.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
                         <h5 id="text-serv3-title" class="fw-bold mb-2">Networking & POE Switches</h5>
-                        <p id="text-serv3-desc" class="text-muted small mb-0">Heavy camera networks ke liye static IP
-                            settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
-                    </div>
+                        <p id="text-serv3-desc" class="small mb-0 fw-medium opacity-75">Heavy camera networks ke liye static IP settings, high-quality POE switches setup aur complete routing troubleshoot.</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="computer-repair.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-laptop-medical"></i></div>
                         <h5 id="text-serv4-title" class="fw-bold mb-2">Computer Hardware & Software</h5>
-                        <p id="text-serv4-desc" class="text-muted small mb-0">Laptop/Desktop repair, OS installation,
-                            malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
-                    </div>
+                        <p id="text-serv4-desc" class="small mb-0 fw-medium opacity-75">Laptop/Desktop repair, OS installation, malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="electrical-services.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
                         <h5 id="text-serv5-title" class="fw-bold mb-2">Electrical & Electronic Work</h5>
-                        <p id="text-serv5-desc" class="text-muted small mb-0">Ghar aur office ke sabhi electric wiring,
-                            appliances repair aur electronic gadgets ka fix.</p>
-                    </div>
+                        <p id="text-serv5-desc" class="small mb-0 fw-medium opacity-75">Ghar aur office ke sabhi electric wiring, appliances repair aur electronic gadgets ka fix.</p>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card card-service-premium p-3 text-center h-100">
+                    <a href="web-design-services.html" class="card card-service-premium p-3 text-center h-100">
                         <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
                         <h5 id="text-serv6-title" class="fw-bold mb-2">Custom Website Design</h5>
-                        <p id="text-serv6-desc" class="text-muted small mb-0">Customer ki jarurat aur business ke hisaab
-                            se modern, fast aur responsive website development.</p>
-                    </div>
+                        <p id="text-serv6-desc" class="small mb-0 fw-medium opacity-75">Customer ki jarurat aur business ke hisaab se modern, fast aur responsive website development.</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -901,31 +931,20 @@
 
     <div class="container py-3 reveal-element">
         <div class="text-center mb-4">
-            <h6 id="text-proj-sub" class="fw-bold text-uppercase small" style="color: var(--accent-blue);">Hamare Kamyab
-                Projects</h6>
-            <h3 id="text-proj-title" class="fw-bold text-dark fs-4">Proven Track Record & Case Studies</h3>
+            <h6 id="text-proj-sub" class="fw-bold text-uppercase small text-primary">Hamare Kamyab Projects</h6>
+            <h3 id="text-proj-title" class="fw-bold fs-4">Proven Track Record & Case Studies</h3>
         </div>
         <div class="row g-3">
             <div class="col-12 col-md-6">
-                <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 h-100"
-                    style="border-color: var(--accent-blue) !important;">
-                    <h6 id="text-proj1-title" class="fw-bold text-dark mb-1"><i class="fa-solid fa-building me-2"
-                            style="color: var(--accent-blue);"></i>16-Channel Apartment NVR Security</h6>
-                    <p id="text-proj1-desc" class="text-muted small mb-0">Humne haal hi me bade multi-storey residential
-                        complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced
-                        infrastructure lagakar complete **65-days backup capacity continuous recording** deploy ki gayi
-                        hai.</p>
+                <div class="p-3 rounded-4 shadow-sm border-top border-3 border-primary h-100 bg-white" style="border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+                    <h6 id="text-proj1-title" class="fw-bold mb-2"><i class="fa-solid fa-building me-2 text-primary"></i>16-Channel Apartment NVR Security</h6>
+                    <p id="text-proj1-desc" class="small mb-0 fw-medium opacity-75">Humne haal hi me bade multi-storey residential complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced infrastructure lagakar complete **65-days backup capacity continuous recording** deploy ki gayi hai.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="p-3 bg-white rounded-4 shadow-sm border-top border-3 h-100"
-                    style="border-color: var(--primary-dark) !important;">
-                    <h6 id="text-proj2-title" class="fw-bold text-dark mb-1"><i class="fa-solid fa-network-wired me-2"
-                            style="color: var(--primary-dark);"></i>Static IP Infrastructure Management</h6>
-                    <p id="text-proj2-desc" class="text-muted small mb-0">Ranchi aur Patna ke critical setups me jahan
-                        normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely
-                        automatic loop fault se nikal kar enterprise **Static IP architecture** par shift kiya taaki
-                        seamless network uptime mile.</p>
+                <div class="p-3 rounded-4 shadow-sm border-top border-3 border-secondary h-100 bg-white" style="border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+                    <h6 id="text-proj2-title" class="fw-bold mb-2"><i class="fa-solid fa-network-wired me-2 text-success"></i>Static IP Infrastructure Management</h6>
+                    <p id="text-proj2-desc" class="small mb-0 fw-medium opacity-75">Ranchi aur Patna ke critical setups me jahan normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely automatic loop fault se nikal kar enterprise **Static IP architecture** par shift kiya taaki seamless network uptime mile.</p>
                 </div>
             </div>
         </div>
@@ -933,39 +952,31 @@
 
     <div class="container py-4 reveal-element">
         <div class="text-center mb-4">
-            <h6 id="text-price-sub" class="fw-bold text-uppercase small" style="color: var(--accent-blue);">Standard
-                Rates</h6>
-            <h3 id="text-price-title" class="fw-bold text-dark fs-4">CCTV Installation & Service Charges</h3>
-            <p id="text-price-desc" class="text-muted small">Bina kisi hidden cost ke genuine service aur fixing rates
-            </p>
+            <h6 id="text-price-sub" class="fw-bold text-uppercase small text-primary">Standard Rates</h6>
+            <h3 id="text-price-title" class="fw-bold fs-4">CCTV Installation & Service Charges</h3>
+            <p id="text-price-desc" class="small opacity-75 fw-medium">Bina kisi hidden cost ke genuine service aur fixing rates</p>
         </div>
         <div class="row g-3 justify-content-center">
             <div class="col-12 col-md-4">
                 <div class="price-card p-3 text-center h-100">
-                    <h6 id="text-p1-title" class="fw-bold text-muted text-uppercase mb-2">Analog Setup</h6>
-                    <h3 class="fw-bold text-dark mb-1">₹300</h3>
-                    <p id="text-p1-sub" class="text-muted small mb-3">per camera fixing charge</p>
+                    <h6 id="text-p1-title" class="fw-bold text-uppercase mb-2">Analog Setup</h6>
+                    <h3 class="fw-bold mb-1">₹300</h3>
+                    <p id="text-p1-sub" class="small mb-3 opacity-75 fw-medium">per camera fixing charge</p>
                     <hr class="my-2">
-                    <ul id="text-p1-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> HD Bullet/Dome
-                            Camera Mounting</li>
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> BNC & DC Connector
-                            Punching</li>
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Camera Angle
-                            Alignment</li>
+                    <ul id="text-p1-list" class="list-unstyled text-start small fw-medium" style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> HD Bullet/Dome Camera Mounting</li>
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> BNC & DC Connector Punching</li>
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> Camera Angle Alignment</li>
                     </ul>
                 </div>
             </div>
             <div class="col-12 col-md-4">
-                <div class="price-card featured p-3 text-center h-100">
-                    <h6 id="text-p2-title" class="fw-bold text-uppercase mb-2" style="color: var(--primary-dark);">IP /
-                        PoE Setup</h6>
-                    <h3 class="fw-bold text-dark mb-1">₹400</h3>
-                    <p id="text-p2-sub" class="text-muted small mb-3">per camera fixing charge</p>
+                <div class="price-card featured p-3 text-center h-100" style="border: 3px solid #2563EB !important; background: rgba(37,99,235,0.02) !important;">
+                    <h6 id="text-p2-title" class="fw-bold text-uppercase mb-2 text-primary">IP / PoE Setup</h6>
+                    <h3 class="fw-bold mb-1">₹400</h3>
+                    <p id="text-p2-sub" class="small mb-3 opacity-75 fw-medium">per camera fixing charge</p>
                     <hr class="my-2">
-                    <ul id="text-p2-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
+                    <ul id="text-p2-list" class="list-unstyled text-start small fw-medium" style="line-height: 1.8;">
                         <li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li>
                         <li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li>
                         <li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>
@@ -974,18 +985,14 @@
             </div>
             <div class="col-12 col-md-4">
                 <div class="price-card p-3 text-center h-100">
-                    <h6 id="text-p3-title" class="fw-bold text-muted text-uppercase mb-2">System Config</h6>
-                    <h3 class="fw-bold text-dark mb-1">₹500</h3>
-                    <p id="text-p3-sub" class="text-muted small mb-3">fix configuration charge</p>
+                    <h6 id="text-p3-title" class="fw-bold text-uppercase mb-2">System Config</h6>
+                    <h3 class="fw-bold mb-1">₹500</h3>
+                    <p id="text-p3-sub" class="small mb-3 opacity-75 fw-medium">fix configuration charge</p>
                     <hr class="my-2">
-                    <ul id="text-p3-list" class="list-unstyled text-start small text-secondary"
-                        style="line-height: 1.8;">
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> DVR / NVR
-                            Initialization</li>
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Hard Disk
-                            Partitioning</li>
-                        <li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Router P2P /
-                            Static IP Setup</li>
+                    <ul id="text-p3-list" class="list-unstyled text-start small fw-medium" style="line-height: 1.8;">
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> DVR / NVR Initialization</li>
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> Hard Disk Partitioning</li>
+                        <li><i class="fa-solid fa-check me-1 text-primary"></i> Router P2P / Static IP Setup</li>
                     </ul>
                 </div>
             </div>
@@ -993,34 +1000,27 @@
     </div>
 
     <div class="container py-4 reveal-element">
-        <div class="p-4 rounded-4 shadow-sm text-center bg-white border"
-            style="border-color: var(--accent-blue) !important;">
-            <h6 id="text-pay-sub" class="fw-bold text-uppercase small" style="color: var(--accent-blue);"><i
-                    class="fa-solid fa-credit-card me-1"></i> Quick Pay</h6>
-            <h3 id="text-pay-title" class="fw-bold text-dark fs-4">Online Payment Karein</h3>
-            <p id="text-pay-desc" class="text-muted small mb-4">Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से
-                सुरक्षित भुगतान करें।</p>
+        <div class="p-4 rounded-4 shadow-sm text-center border bg-white" style="border: 2px solid #2563EB !important;">
+            <h6 id="text-pay-sub" class="fw-bold text-uppercase small text-primary"><i class="fa-solid fa-credit-card me-1"></i> Quick Pay</h6>
+            <h3 id="text-pay-title" class="fw-bold fs-4">Online Payment Karein</h3>
+            <p id="text-pay-desc" class="small mb-4 opacity-75 fw-medium">Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से सुरक्षित भुगतान करें।</p>
 
             <div class="row g-3 justify-content-center align-items-center">
                 <div class="col-12 col-md-5">
-                    <div class="p-3 rounded-3 bg-light border border-dashed text-md-start">
-                        <p class="mb-2 text-dark font-weight-bold small"><strong>UPI ID:</strong> <span
-                                style="color: var(--accent-blue);">91******84@mbk</span></p>
-                        <p class="mb-3 text-dark small"><strong>Merchant:</strong> Sureksha Vision</p>
-                        <a id="upiPayBtn" href="upi://pay?pa=9123188984@mbk&pn=Sureksha%20Vision&cu=INR"
-                            class="btn btn-premium-call rounded-pill btn-sm px-4">
+                    <div class="p-3 rounded-3 bg-dark border border-dashed text-md-start border-secondary">
+                        <p class="mb-2 text-white small"><strong>UPI ID:</strong> <span style="color: var(--accent-blue);">91******84@mbk</span></p>
+                        <p class="mb-3 text-white small"><strong>Merchant:</strong> Sureksha Vision</p>
+                        <a id="upiPayBtn" href="upi://pay?pa=9123188984@mbk&pn=Sureksha%20Vision&cu=INR" class="btn btn-premium-call rounded-pill btn-sm px-4">
                             <i class="fa-solid fa-bolt me-1"></i> Pay via UPI App
                         </a>
                     </div>
                 </div>
-                <div class="col-12 col-md-2 text-muted small fw-bold">OR / YA</div>
+                <div class="col-12 col-md-2 small fw-bold">OR / YA</div>
                 <div class="col-12 col-md-4 text-center">
-                    <div class="p-2 border rounded-3 bg-white d-inline-block shadow-sm">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi%3A%2F%2Fpay%3Fpa%3D9123188984%40mbk%26pn%3DSureksha%2520Vision%26cu%3DINR"
-                            alt="UPI QR Code" class="img-fluid" style="width: 140px; height: 140px;">
+                    <div class="p-2 border rounded-3 bg-white d-inline-block shadow-sm border-secondary">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi%3A%2F%2Fpay%3Fpa%3D9123188984%40mbk%26pn%3DSureksha%2520Vision%26cu%3DINR" alt="UPI QR Code" class="img-fluid" style="width: 140px; height: 140px;">
                     </div>
-                    <p id="text-pay-scan" class="text-muted small mt-2 mb-0"><i class="fa-solid fa-qrcode me-1"></i>
-                        Scan to Pay</p>
+                    <p id="text-pay-scan" class="small mt-2 mb-0 fw-semibold"><i class="fa-solid fa-qrcode me-1 text-primary"></i> Scan to Pay</p>
                 </div>
             </div>
         </div>
@@ -1029,10 +1029,9 @@
     <div class="container py-4 reveal-element">
         <div class="row g-4">
             <div class="col-12 col-lg-6">
-                <div class="p-3 rounded-4 shadow-sm mb-4"
-                    style="background-color: white; border-top: 4px solid var(--accent-blue);">
-                    <h4 id="text-form-title" class="fw-bold mb-1 text-dark fs-5">Get a Free Quote</h4>
-                    <p id="text-form-desc" class="text-muted small mb-3">Apna details bharein, hum contact karenge.</p>
+                <div class="p-3 rounded-4 shadow-sm mb-4 bg-white" style="border-top: 4px solid var(--accent-blue); border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+                    <h4 id="text-form-title" class="fw-bold mb-1 fs-5">Get a Free Quote</h4>
+                    <p id="text-form-desc" class="small mb-3 opacity-75 fw-medium">Apna details bharein, hum contact karenge.</p>
                     <form id="quoteFormElement" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="6b8e2eaf-62af-4d6f-9879-71a93ef66b4d">
                         <input type="hidden" name="subject" value="New Service Quote Request - Sureksha Vision">
@@ -1047,8 +1046,7 @@
                             <input type="tel" name="phone" class="form-control form-control-sm" required>
                         </div>
                         <div class="mb-2">
-                            <label id="text-lblService" class="form-label small fw-semibold mb-1">Service Jo
-                                Chahiye</label>
+                            <label id="text-lblService" class="form-label small fw-semibold mb-1">Service Jo Chahiye</label>
                             <select class="form-select form-select-sm" name="service" id="form-service-select">
                                 <option selected>CCTV Camera Installation / Repair</option>
                                 <option>EPABX Intercom Programming</option>
@@ -1059,41 +1057,36 @@
                                 <option>Custom Website Design</option>
                             </select>
                         </div>
-                        <button id="text-form-btn" type="submit"
-                            class="btn btn-premium-call w-100 py-2 rounded-pill mt-2 btn-sm">Submit Requirement</button>
+                        <button id="text-form-btn" type="submit" class="btn btn-premium-call w-100 py-2 rounded-pill mt-2 btn-sm">Submit Requirement</button>
                     </form>
                 </div>
             </div>
 
             <div class="col-12 col-lg-6">
-                <h4 id="text-faq-title" class="fw-bold mb-1 text-dark fs-5">Aksar Puche Jaane Wale Sawal</h4>
-                <p id="text-faq-desc" class="text-muted small mb-3">Kuch aam sawal jo customers puchte hain.</p>
+                <h4 id="text-faq-title" class="fw-bold mb-1 fs-5">Aksar Puche Jaane Wale Sawal</h4>
+                <p id="text-faq-desc" class="small mb-3 opacity-75 fw-medium">Kuch aam sawal jo customers puchte hain.</p>
                 <div class="accordion" id="faqAccordion">
                     <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button id="text-faq1-q" class="accordion-button small fw-semibold p-3" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#faq1">
+                            <button id="text-faq1-q" class="accordion-button small fw-bold p-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                 Kya hum mobile par CCTV ka live view dekh sakte hain?
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div id="text-faq1-a" class="accordion-body text-muted small">
-                                Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki
-                                aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.
+                            <div id="text-faq1-a" class="accordion-body small fw-medium">
+                                Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item border-0 shadow-sm mb-2 rounded-3 overflow-hidden">
                         <h2 class="accordion-header">
-                            <button id="text-faq2-q" class="accordion-button collapsed small fw-semibold p-3"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <button id="text-faq2-q" class="accordion-button collapsed small fw-bold p-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                 Intercom configuration me kitna samay lagta hai?
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div id="text-faq2-a" class="accordion-body text-muted small">
-                                Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti
-                                hai aur multi-line programming ko jaldi complete kar deti hai.
+                            <div id="text-faq2-a" class="accordion-body small fw-medium">
+                                Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti hai aur multi-line programming ko jaldi complete kar deti hai.
                             </div>
                         </div>
                     </div>
@@ -1105,26 +1098,20 @@
     <div class="container py-4 reveal-element">
         <div class="row g-4">
             <div class="col-12 col-lg-6">
-                <div class="p-3 rounded-4 shadow-sm mb-4"
-                    style="background-color: white; border-top: 4px solid var(--glow-yellow);">
-                    <h4 id="text-job-title" class="fw-bold mb-1 text-dark fs-5"><i
-                            class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
-                    <p id="text-job-desc" class="text-muted small mb-2">Apni CV yahan submit karein.</p>
-                    <div class="alert alert-warning py-1 px-2 mb-3 rounded-3 border-0 small" style="font-size: 0.8rem;">
-                        <i class="fa-solid fa-circle-exclamation me-1"></i> <span id="text-job-notice">Mandatory:
-                            Applying candidate must possess a personal bike, valid driving license, and standard
-                            verification documents (ID proof).</span>
+                <div class="p-3 rounded-4 shadow-sm mb-4 bg-white" style="border-top: 4px solid var(--glow-yellow); border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+                    <h4 id="text-job-title" class="fw-bold mb-1 fs-5"><i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team</h4>
+                    <p id="text-job-desc" class="small mb-2 opacity-75 fw-medium">Apni CV yahan submit karein.</p>
+                    <div class="alert alert-warning py-1 px-2 mb-3 rounded-3 border-0 small" style="font-size: 0.8rem; background: rgba(245,158,11,0.15); color: #b45309; font-weight: 600;">
+                        <i class="fa-solid fa-circle-exclamation me-1"></i> <span id="text-job-notice">Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).</span>
                     </div>
 
-                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" enctype="multipart/form-data">
                         <div class="mb-2">
                             <label id="text-lbl-jobname" class="form-label small fw-semibold mb-1">Full Name</label>
                             <input type="text" name="applicant_name" class="form-control form-control-sm" required>
                         </div>
                         <div class="mb-2">
-                            <label id="text-lbl-jobprofile" class="form-label small fw-semibold mb-1">Aapka Profile /
-                                Role</label>
+                            <label id="text-lbl-jobprofile" class="form-label small fw-semibold mb-1">Aapka Profile / Role</label>
                             <select class="form-select form-select-sm" name="applied_role" id="form-job-select">
                                 <option selected>CCTV Installation Technician</option>
                                 <option>Network Support Engineer</option>
@@ -1133,25 +1120,20 @@
                             </select>
                         </div>
                         <div class="mb-2">
-                            <label id="text-lbl-cv" class="form-label small fw-semibold mb-1">Upload CV (PDF
-                                Only)</label>
-                            <input type="file" name="upload_cv" id="careerAttachment"
-                                class="form-control form-control-sm" accept=".pdf" required>
+                            <label id="text-lbl-cv" class="form-label small fw-semibold mb-1">Upload CV (PDF Only)</label>
+                            <input type="file" name="upload_cv" id="careerAttachment" class="form-control form-control-sm" accept=".pdf" required>
                         </div>
-                        <button id="text-job-btn" type="submit"
-                            class="btn btn-warning w-100 py-2 rounded-pill mt-2 btn-sm fw-bold">Upload & Apply
-                            Now</button>
+                        <button id="text-job-btn" type="submit" class="btn btn-warning w-100 py-2 rounded-pill mt-2 btn-sm fw-bold border border-secondary">Upload & Apply Now</button>
                     </form>
                 </div>
             </div>
 
             <div class="col-12 col-lg-6">
-                <div class="p-4 rounded-4 shadow-sm h-100"
-                    style="background-color: white; border-top: 4px solid #22c55e;">
+                <div class="p-4 rounded-4 shadow-sm h-100 bg-white" style="border-top: 4px solid #22c55e; border-left: 1px solid var(--glass-border); border-right: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
                     <div class="text-center mb-4">
                         <h6 id="text-feed-sub" class="text-success fw-bold text-uppercase small">Customer Review</h6>
-                        <h3 id="text-feed-title" class="fw-bold text-dark fs-5">Apna Keemti Feedback Share Karein</h3>
-                        <p id="text-feed-p" class="text-muted small">Aapka anubhav humare liye mahatvapurna hai.</p>
+                        <h3 id="text-feed-title" class="fw-bold fs-5">Apna Keemti Feedback Share Karein</h3>
+                        <p id="text-feed-p" class="small opacity-75 fw-medium">Aapka anubhav humare liye mahatvapurna hai.</p>
                     </div>
                     <form id="feedbackFormElement" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="6b8e2eaf-62af-4d6f-9879-71a93ef66b4d">
@@ -1160,13 +1142,11 @@
 
                         <div class="row g-3">
                             <div class="col-12 col-md-6">
-                                <label id="text-lbl-feedname" class="form-label small fw-semibold mb-1">Aapka
-                                    Naam</label>
+                                <label id="text-lbl-feedname" class="form-label small fw-semibold mb-1">Aapka Naam</label>
                                 <input type="text" name="customer_name" class="form-control form-control-sm" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <label id="text-lbl-feedrating" class="form-label small fw-semibold mb-1">Rating
-                                    Dein</label>
+                                <label id="text-lbl-feedrating" class="form-label small fw-semibold mb-1">Rating Dein</label>
                                 <select class="form-select form-select-sm" name="rating">
                                     <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
                                     <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
@@ -1176,14 +1156,11 @@
                                 </select>
                             </div>
                             <div class="col-12">
-                                <label id="text-lbl-feedmsg" class="form-label small fw-semibold mb-1">Apna Sandesh /
-                                    Review</label>
-                                <textarea name="feedback_message" class="form-control form-control-sm" rows="3" required
-                                    placeholder="Humari service aapko kaisi lagi?"></textarea>
+                                <label id="text-lbl-feedmsg" class="form-label small fw-semibold mb-1">Apna Sandesh / Review</label>
+                                <textarea name="feedback_message" class="form-control form-control-sm" rows="3" required placeholder="Humari service aapko kaisi lagi?"></textarea>
                             </div>
                         </div>
-                        <button id="text-btn-feedback" type="submit"
-                            class="btn btn-success w-100 py-2 rounded-pill mt-3 btn-sm fw-bold">Submit Feedback</button>
+                        <button id="text-btn-feedback" type="submit" class="btn btn-success w-100 py-2 rounded-pill mt-3 btn-sm fw-bold">Submit Feedback</button>
                     </form>
                 </div>
             </div>
@@ -1194,42 +1171,26 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-12 col-md-6 text-center text-md-start">
-                    <h5>SUREKSHA VISION</h5>
-                    <p id="text-foot-desc" class="small opacity-75" style="max-width: 450px;">Hum aapke poore business
-                        aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation
-                        payein.</p>
-                    <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong
-                            id="text-foot-call">Call:</strong> +91 9123188984</p>
+                    <h5 class="fw-bold text-white">SUREKSHA VISION</h5>
+                    <p id="text-foot-desc" class="small opacity-75" style="max-width: 450px;">Hum aapke poore business aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation payein.</p>
+                    <p class="mb-1 small"><i class="fa-solid fa-phone text-warning me-1"></i> <strong id="text-foot-call">Call:</strong> +91 9123188984</p>
                     <p class="mb-1 small">
                         <i class="fa-solid fa-envelope text-info me-1"></i>
                         <strong id="text-foot-email">Email:</strong>
-                        <a href="mailto:razamdfurquan@gmail.com"
-                            class="text-info text-decoration-none">razamdfurquan@gmail.com</a>
+                        <a href="mailto:razamdfurquan@gmail.com" class="text-info text-decoration-none fw-semibold">razamdfurquan@gmail.com</a>
                     </p>
                     <p class="mb-0 small">
-                        <i class="fa-brands fa-linkedin text-info me-1"></i> <strong
-                            id="text-foot-linkedin">LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank"
-                            rel="noopener noreferrer" class="text-info text-decoration-none">View Professional
-                            Profile</a>
+                        <i class="fa-brands fa-linkedin text-info me-1"></i> <strong id="text-foot-linkedin">LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/md-istiyaque-ahamad-117162255" target="_blank" rel="noopener noreferrer" class="text-info text-decoration-none fw-semibold">View Professional Profile</a>
                     </p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="p-3 rounded-4"
-                        style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                        <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i
-                                class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
-                        <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong
-                                id="text-loc-addr">Address:</strong> <a href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA"
-                                target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light">Usri,
-                                Jamsaut Road, Near Danapur Cantt, Patna, Bihar - 801503</a></p>
-                        <p class="mb-2 small text-muted"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong
-                                id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
+                    <div class="p-3 rounded-4" style="background-color: rgba(255,255,255,0.04); border: 2px solid rgba(255,255,255,0.15);">
+                        <h6 id="text-loc-title" class="fw-bold text-warning mb-2"><i class="fa-solid fa-map-location-dot me-2"></i>Our Location</h6>
+                        <p class="mb-1 small"><i class="fa-solid fa-location-dot text-danger me-1"></i> <strong id="text-loc-addr">Address:</strong> <a href="Https://maps.app.goo.gl/pu3zZiRf9USDarJRA" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light">Usri, Jamsaut Road, Near Danapur Cantt, Patna, Bihar - 801503</a></p>
+                        <p class="mb-2 small opacity-75"><i class="fa-solid fa-gopuram text-warning me-1"></i> <strong id="text-loc-land">Landmark:</strong> Near Kabristan, Bandh Road</p>
                         <div class="text-center text-md-start">
-                            <a id="footerWaChatBtn"
-                                href="https://wa.me/919123188984?text=Hello%20Sureksha%20Vision,%20I%20want%20to%20visit%20your%20office."
-                                target="_blank" rel="noopener noreferrer"
-                                class="btn btn-success rounded-pill px-3 btn-sm">
+                            <a id="footerWaChatBtn" href="https://wa.me/919123188984?text=Hello%20Sureksha%20Vision,%20I%20want%20to%20visit%20your%20office." target="_blank" rel="noopener noreferrer" class="btn btn-success rounded-pill px-3 btn-sm">
                                 <i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat
                             </a>
                         </div>
@@ -1249,31 +1210,22 @@
 
     <div class="chatbot-container" id="chatbotWidget">
         <div class="chatbot-header">
-            <span><i class="fa-solid fa-shield-halved text-warning me-2"></i><span id="chat-title-text">Sureksha AI
-                    Assistant</span></span>
+            <span><i class="fa-solid fa-shield-halved text-warning me-2"></i><span id="chat-title-text">Sureksha AI Assistant</span></span>
             <i class="fa-solid fa-xmark" style="cursor: pointer;" onclick="toggleChatbot()"></i>
         </div>
         <div class="chatbot-messages" id="chatMessages">
             <div class="chat-bubble bot" id="chat-welcome-msg">
-                Hello! Sureksha Vision AI Assistant me aapka swagat hai. 👍 <br><br>Patna & Danapur me best CCTV rates
-                aur support ke liye, sabse pehle **Aapka Naam** batayein?
+                Hello! Sureksha Vision AI Assistant me aapka swagat hai. 👍 <br><br>Patna & Danapur me best CCTV rates aur support ke liye, sabse pehle **Aapka Naam** batayein?
             </div>
         </div>
         <div class="chatbot-options" id="chatOptions" style="display:none;">
-            <button class="chat-btn-opt" onclick="handleIntentQuery('Naya CCTV Camera lagwana hai')">Naya CCTV Camera
-                lagwana hai</button>
-            <button class="chat-btn-opt"
-                onclick="handleIntentQuery('Purana CCTV kharab hai / Repair service chahiye')">Purana CCTV kharab hai /
-                Repair</button>
-            <button class="chat-btn-opt" onclick="handleIntentQuery('EPABX Intercom System setup wiring help')">Intercom
-                / EPABX Setup</button>
-            <button class="chat-btn-opt"
-                onclick="handleIntentQuery('Laptop / Computer Repair software boost hardware fix')">Laptop / PC
-                Repair</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Naya CCTV Camera lagwana hai')">Naya CCTV Camera lagwana hai</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Purana CCTV kharab hai / Repair service chahiye')">Purana CCTV kharab hai / Repair</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('EPABX Intercom System setup wiring help')">Intercom / EPABX Setup</button>
+            <button class="chat-btn-opt" onclick="handleIntentQuery('Laptop / Computer Repair software boost hardware fix')">Laptop / PC Repair</button>
         </div>
         <div class="chatbot-input-area">
-            <input type="text" id="chatUserInput" placeholder="Apna naam likhein..."
-                onkeypress="handleChatKeyPress(event)">
+            <input type="text" id="chatUserInput" placeholder="Apna naam likhein..." onkeypress="handleChatKeyPress(event)">
             <button onclick="submitUserMessage()"><i class="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
@@ -1292,182 +1244,93 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="text/javascript">
-        // ================= NEW MASSIVE IMAGE ROTATOR ENGINE =================
-        // Yeh arrays 20-25 high quality different angle photos ke IDs hold karte hain.
-        // Javascript inko 1 by 1 bina website slow kiye load karega.
-        const cctvImages = [
-            "1557804506-669a67965ba0", "1544620347-c4fd4a3d5957", "1590856029826-c7a73142bbf1",
-            "1530821035540-3bd58d83e710", "1610492825852-cffb892a7e78", "1496262423164-8ee155d3f25c",
-            "1555318181-a6dd977b31d0", "1572945281483-e18e001859db", "1584852928811-1ec85c13e510",
-            "1603520790892-db4f7bc8635e", "1622325322926-d62f485dbba7", "1653303867761-00109968a356",
-            "1571420783307-e43598d49a71", "1611078449458-4ba972e39c4d", "1632731057404-511ee9b35bc5",
-            "1580983539121-657155099307", "1591942738202-b2da1be1c8c0", "1614064095454-e0ce4008295b",
-            "1612745778810-7e44a4968c92", "1577717643797-158a1768c741", "1590218764831-77b3d30b6214"
-        ];
-
-        const repairImages = [
-            "1597872200969-2b65d56bd16b", "1629131726692-1accd0c53ce0", "1588508065123-287b28e013da",
-            "1581091226825-a6a2a5aee158", "1555664424719-86eb49b6ce44", "1531297122-e12c949c4000",
-            "1515940175183-6798529cb860", "1612815154564-9257eeb789e9", "1504328345606-18bbc8c9d7d1",
-            "1591405374465-9856a9e1e750", "1592890278983-eb71e98d1a49", "1611162617213-7d7a39e9b1d7",
-            "1610427670717-38682e56950f", "1589149091068-45ec64e1d137", "1589254065909-b70cb05d3b66",
-            "1518770660439-4636190af475", "1563770660-f7035ab29dc8", "1597872166318-7243c5b8b9c6",
-            "1600132806608-2314404d1ea0", "1603732551658-5f05b0b3d6cb"
-        ];
-
-        const webImages = [
-            "1498050108023-c5249f4df085", "1461749280684-dccba630e2f6", "1504868584819-f8e8b4b6d7e3",
-            "1555066931-4365d14bab8c", "1522881451255-fcafe1f95d46", "1507721999472-8ed4421c4af2",
-            "1517694712202-14dd9538aa97", "1484417194939-f018e6922904", "1551288049-bebda4e38f71",
-            "1542831371229-aa014b1ce00a", "1516321318423-f06f85e504b3", "1499951360447-b19be8fe80f5",
-            "1501504905252-473c47e087f8", "1531403009284-440f080d1e12", "1550439062-609e15312702",
-            "1494438639946-1ebd1d20bf85", "1515378791033-cd13e77a28e3", "1481482259004-a213e4f16b25",
-            "1504639725590-34d0984388bd", "1460925895917-afdab827c52f"
-        ];
-
-        const elecImages = [
-            "1621905251189-08b45d6a269e", "1581092160562-40aa08e78837", "1621905252507-b35492cc74b4",
-            "1581092795360-fd1ca04f0952", "1563816174786-fb15e5a9638c", "1621905252507-b35492cc74b4",
-            "1607593220557-418c0a256dcc", "1621905251189-08b45d6a269e", "1544869805-7fbd6a2185c8",
-            "1621614742491-d3a958e5e6e3", "1616712391038-0de3db89d873", "1617830600465-b747db38a7c1",
-            "1612089851656-34825d19a4e2", "1614169123067-17edcf0c5fb5", "1589254065909-b70cb05d3b66",
-            "1592890278983-eb71e98d1a49", "1608408843513-39d67189f3a6", "1613994348545-20172bfdb3e4",
-            "1603126748259-717fa0088cb3", "1600109968846-9d2242142278"
-        ];
-
-        const networkImages = [
-            "1558494949-ef010cbdcc31", "1544197150-b99a580bb7a8", "1520869562399-e774594780ac",
-            "1573164713619-24cb8163f4dc", "1601288410294-814bc2174c86", "1550751827-4bd374c3f58b",
-            "1546592233-03099903b41d", "1551717783-659f42d2a412", "1580983539121-657155099307",
-            "1563816174786-fb15e5a9638c", "1558494949-ef010cbdcc31", "1517336714731-489689fd1ca8",
-            "1625902120005-72863df77fc7", "1616335123991-6454bb3f16d0", "1582294101903-a2af37083652",
-            "1600377488052-19e07f7c46b1", "1597872200969-2b65d56bd16b", "1558655146-d471542f7d98",
-            "1551698246-857c6b5b546b", "1558494949-ef010cbdcc31"
-        ];
+        const cctvImages = ["1557804506-669a67965ba0", "1544620347-c4fd4a3d5957", "1590856029826-c7a73142bbf1", "1530821035540-3bd58d83e710", "1610492825852-cffb892a7e78"];
+        const repairImages = ["1597872200969-2b65d56bd16b", "1629131726692-1accd0c53ce0", "1588508065123-287b28e013da", "1581091226825-a6a2a5aee158", "1555664424719-86eb49b6ce44"];
+        const webImages = ["1498050108023-c5249f4df085", "1461749280684-dccba630e2f6", "1504868584819-f8e8b4b6d7e3", "1555066931-4365d14bab8c", "1522881451255-fcafe1f95d46"];
+        const elecImages = ["1621905251189-08b45d6a269e", "1581092160562-40aa08e78837", "1621905252507-b35492cc74b4", "1581092795360-fd1ca04f0952", "1563816174786-fb15e5a9638c"];
+        const networkImages = ["1558494949-ef010cbdcc31", "1544197150-b99a580bb7a8", "1520869562399-e774594780ac", "1573164713619-24cb8163f4dc", "1601288410294-814bc2174c86"];
 
         function initImageRotator(elementId, photoArray, intervalTime) {
             const imgEl = document.getElementById(elementId);
             if (!imgEl) return;
             let idx = 0;
-
             setInterval(() => {
-                imgEl.style.opacity = 0; // Smooth Fade Out
+                imgEl.style.opacity = 0;
                 setTimeout(() => {
-                    idx = (idx + 1) % photoArray.length; // Array loop hoga 0 to 20
+                    idx = (idx + 1) % photoArray.length;
                     imgEl.src = `https://images.unsplash.com/photo-${photoArray[idx]}?auto=format&fit=crop&w=600&q=80`;
-                    imgEl.style.opacity = 1; // Smooth Fade In
-                }, 500); // 500ms for CSS transition
+                    imgEl.style.opacity = 1;
+                }, 600);
             }, intervalTime);
         }
 
-        // ================= DYNAMIC RANDOM THEME GENERATOR =================
-        function applyRandomTheme() {
-            const themes = [
-                { primary: '#0f172a', accent: '#0284c7', glow: '#f59e0b' },
-                { primary: '#064e3b', accent: '#10b981', glow: '#fbbf24' },
-                { primary: '#2e1065', accent: '#8b5cf6', glow: '#f472b6' },
-                { primary: '#450a0a', accent: '#ef4444', glow: '#fca5a5' },
-                { primary: '#083344', accent: '#0ea5e9', glow: '#38bdf8' },
-                { primary: '#171717', accent: '#d97706', glow: '#fef08a' }
+        let isLightModeActive = false;
+        function applyDynamicRandomTheme() {
+            if (isLightModeActive) return;
+
+            const cyberThemes = [
+                { name: 'Cyan Tech', bg: '#050814', accent: '#38bdf8', glow: '#fbbf24', orb1: 'rgba(14, 165, 233, 0.18)', orb2: 'rgba(245, 158, 11, 0.12)', border: 'rgba(56, 189, 248, 0.15)' },
+                { name: 'Neon Emerald', bg: '#020a05', accent: '#10b981', glow: '#a3e635', orb1: 'rgba(16, 185, 129, 0.18)', orb2: 'rgba(163, 230, 53, 0.12)', border: 'rgba(16, 185, 129, 0.18)' },
+                { name: 'Electric Purple', bg: '#080516', accent: '#a855f7', glow: '#f472b6', orb1: 'rgba(168, 85, 247, 0.18)', orb2: 'rgba(244, 114, 182, 0.12)', border: 'rgba(168, 85, 247, 0.15)' },
+                { name: 'Ruby Obsidian', bg: '#0a0303', accent: '#f43f5e', glow: '#f97316', orb1: 'rgba(244, 63, 94, 0.18)', orb2: 'rgba(249, 115, 22, 0.12)', border: 'rgba(244, 63, 94, 0.15)' }
             ];
-            const randomTheme = themes[Math.floor(Math.random() * themes.length)];
-            document.documentElement.style.setProperty('--primary-dark', randomTheme.primary);
+            const randomTheme = cyberThemes[Math.floor(Math.random() * cyberThemes.length)];
+            document.documentElement.style.setProperty('--body-bg', randomTheme.bg);
             document.documentElement.style.setProperty('--accent-blue', randomTheme.accent);
             document.documentElement.style.setProperty('--glow-yellow', randomTheme.glow);
+            document.documentElement.style.setProperty('--glow-orb-1', randomTheme.orb1);
+            document.documentElement.style.setProperty('--glow-orb-2', randomTheme.orb2);
+            document.documentElement.style.setProperty('--glass-border', randomTheme.border);
         }
 
-        applyRandomTheme();
+        // STYLISH SWITCH MATRIX
+        function toggleInterfaceTheme() {
+            const bodyEl = document.body;
+            const iconEl = document.getElementById('theme-btn-icon');
+            const txtEl = document.getElementById('theme-btn-text');
 
-        // ================= UNIVERSAL FESTIVAL THEME ENGINE =================
+            if (bodyEl.classList.contains('light-mode-active')) {
+                bodyEl.classList.remove('light-mode-active');
+                isLightModeActive = false;
+                iconEl.className = "fa-solid fa-moon me-1";
+                txtEl.innerText = "Dark Mode";
+                applyDynamicRandomTheme();
+            } else {
+                bodyEl.classList.add('light-mode-active');
+                isLightModeActive = true;
+                iconEl.className = "fa-solid fa-sun me-1";
+                txtEl.innerText = "Light Mode";
+
+                document.documentElement.style.setProperty('--accent-blue', '#2563EB'); /* Vivid Royal Blue */
+                document.documentElement.style.setProperty('--glow-yellow', '#EA580C');
+                document.documentElement.style.setProperty('--glow-orb-1', 'rgba(37, 99, 235, 0.08)');
+                document.documentElement.style.setProperty('--glow-orb-2', 'rgba(15, 23, 42, 0.03)');
+            }
+        }
+
+        applyDynamicRandomTheme();
+
         function applyFestiveTheme() {
-            const today = new Date();
-            const date = today.getDate();
-            const month = today.getMonth() + 1;
-
-            let bannerText = "";
-            let bgGradient = "";
-            let textColor = "#fff";
-
+            const today = new Date(); const date = today.getDate(); const month = today.getMonth() + 1;
+            let bannerText = ""; let bgGradient = ""; let textColor = "#fff";
             if ((month === 1 && date >= 24 && date <= 27) || (month === 8 && date >= 13 && date <= 16)) {
-                document.documentElement.style.setProperty('--accent-blue', '#ff9933');
-                document.documentElement.style.setProperty('--primary-dark', '#138808');
-                bgGradient = "linear-gradient(90deg, #ff9933, #ffffff, #138808)";
-                textColor = "#000";
+                bgGradient = "linear-gradient(90deg, #ff9933, #ffffff, #138808)"; textColor = "#000";
                 bannerText = "🇮🇳 Happy Republic Day / Independence Day! Jai Hind! Get Special Discounts on CCTV. 🇮🇳";
-            }
-            else if (month === 1 && date >= 13 && date <= 15) {
-                document.documentElement.style.setProperty('--primary-dark', '#78350f');
-                document.documentElement.style.setProperty('--accent-blue', '#f59e0b');
-                bgGradient = "linear-gradient(90deg, #b45309, #fbbf24)";
-                bannerText = "🌾 Makar Sankranti ki Hardik Shubhkamnayein! Nayi fasal aur nayi ummid. 🌾";
-            }
-            else if (month === 3 && date >= 1 && date <= 5) {
-                document.documentElement.style.setProperty('--primary-dark', '#4c1d95');
-                document.documentElement.style.setProperty('--accent-blue', '#db2777');
-                bgGradient = "linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6)";
-                bannerText = "🎨 Happy Holi! Rango ke is tyohar mein sabhi ke jeevan mein khushiyan aayein. 🎨";
-            }
-            else if (month === 3 && date >= 19 && date <= 22) {
-                document.documentElement.style.setProperty('--primary-dark', '#064e3b');
-                document.documentElement.style.setProperty('--accent-blue', '#10b981');
-                bgGradient = "linear-gradient(90deg, #064e3b, #047857)";
-                bannerText = "🌙 Eid Mubarak! Aman, shanti aur bhaichare ka tyohar. 🌙";
-            }
-            else if (month === 5 && date >= 1 && date <= 3) {
-                document.documentElement.style.setProperty('--primary-dark', '#0f766e');
-                document.documentElement.style.setProperty('--accent-blue', '#14b8a6');
-                bgGradient = "linear-gradient(90deg, #0f766e, #5eead4)";
-                bannerText = "🪷 Buddha Purnima ki shubhkamnayein. Shanti aur ahimsa ka sandesh. 🪷";
-            }
-            else if (month === 10 && date >= 17 && date <= 20) {
-                document.documentElement.style.setProperty('--primary-dark', '#7f1d1d');
-                document.documentElement.style.setProperty('--accent-blue', '#dc2626');
-                bgGradient = "linear-gradient(90deg, #991b1b, #ef4444)";
-                bannerText = "🏹 Vijayadashami ki shubhkamnayein! Burayi par acchayi ki jeet. 🏹";
-            }
-            else if (month === 11 && date >= 6 && date <= 10) {
-                document.documentElement.style.setProperty('--primary-dark', '#450a0a');
-                document.documentElement.style.setProperty('--accent-blue', '#ea580c');
-                bgGradient = "linear-gradient(90deg, #7f1d1d, #ea580c, #f59e0b)";
-                bannerText = "🪔 Shubh Diwali! Roshni ka yeh tyohar aapke jeevan mein sukh-samriddhi laye. 🪔";
-            }
-            else if (month === 11 && date >= 12 && date <= 15) {
-                document.documentElement.style.setProperty('--primary-dark', '#9a3412');
-                document.documentElement.style.setProperty('--accent-blue', '#f97316');
-                bgGradient = "linear-gradient(90deg, #c2410c, #fdba74)";
-                textColor = "#000";
+            } else if (month === 11 && date >= 12 && date <= 15) {
+                bgGradient = "linear-gradient(90deg, #c2410c, #fdba74)"; textColor = "#000";
                 bannerText = "🌅 Chhath Mahaparv ki dher saari shubhkamnayein! Chhathi Maiya sabka kalyan karein. 🌅";
             }
-            else if (month === 11 && date >= 24 && date <= 25) {
-                document.documentElement.style.setProperty('--primary-dark', '#1e3a8a');
-                document.documentElement.style.setProperty('--accent-blue', '#eab308');
-                bgGradient = "linear-gradient(90deg, #1e3a8a, #ca8a04)";
-                bannerText = "✨ Guru Nanak Jayanti ki lakh-lakh vadhaiyan! Sabka bhala ho. ✨";
-            }
-            else if ((month === 12 && date >= 24) || (month === 1 && date <= 2)) {
-                document.documentElement.style.setProperty('--primary-dark', '#022c22');
-                document.documentElement.style.setProperty('--accent-blue', '#dc2626');
-                bgGradient = "linear-gradient(90deg, #991b1b, #166534)";
-                bannerText = "🎄 Merry Christmas & Happy New Year! Khushiyon aur pyaar ka tyohar. ❄️";
-            }
-
             if (bannerText !== "") {
                 const banner = document.createElement('div');
-                banner.style.background = bgGradient;
-                banner.style.color = textColor;
-                banner.style.padding = "8px 15px";
-                banner.style.textAlign = "center";
-                banner.style.fontWeight = "bold";
-                banner.style.fontSize = "0.9rem";
-                banner.style.zIndex = "1000";
+                banner.style.background = bgGradient; banner.style.color = textColor;
+                banner.style.padding = "8px 15px"; banner.style.textAlign = "center";
+                banner.style.fontWeight = "bold"; banner.style.fontSize = "0.9rem"; banner.style.zIndex = "1000";
                 banner.innerHTML = `<marquee scrollamount="5" style="max-width: 800px; margin: 0 auto;">${bannerText}</marquee>`;
                 document.body.prepend(banner);
             }
         }
-
         applyFestiveTheme();
 
-        // ================= SHOW WELCOME POPUP & START ROTATORS ON LOAD =================
         window.addEventListener('DOMContentLoaded', () => {
             if (!sessionStorage.getItem('greeted')) {
                 setTimeout(() => {
@@ -1476,19 +1339,15 @@
                     sessionStorage.setItem('greeted', 'true');
                 }, 1000);
             }
-
-            // Random time interval set for each block so they don't fade at exact same millisecond
-            initImageRotator('cctv-rotator', cctvImages, 3500);
-            initImageRotator('repair-rotator', repairImages, 4200);
-            initImageRotator('web-rotator', webImages, 3800);
-            initImageRotator('elec-rotator', elecImages, 4600);
-            initImageRotator('network-rotator', networkImages, 4000);
+            initImageRotator('cctv-rotator', cctvImages, 5500);
+            initImageRotator('repair-rotator', repairImages, 6200);
+            initImageRotator('web-rotator', webImages, 5800);
+            initImageRotator('elec-rotator', elecImages, 6500);
+            initImageRotator('network-rotator', networkImages, 6000);
         });
 
-        // ================= DAILY GREETING LOGIC =================
         function updateDailyGreeting(lang) {
             const todayIndex = new Date().getDay();
-
             const quotesHi = [
                 "✨ शुभ रविवार! आज का दिन आराम और अपनों के साथ बिताएं। कल से फिर नई उड़ान भरनी है! ✨",
                 "✨ शुभ सोमवार! नए हफ्ते की शुरुआत एक नई ऊर्जा और नए लक्ष्य के साथ करें। ✨",
@@ -1498,22 +1357,9 @@
                 "✨ शुभ शुक्रवार! एक छोटी सी सकारात्मक सोच आपका पूरा दिन बदल सकती है। ✨",
                 "✨ शुभ शनिवार! खुशी और मेहनत का सही संतुलन ही सफल जीवन की कुंजी है। ✨"
             ];
-            const quotesEn = [
-                "✨ Happy Sunday! Relax, recharge, and spend time with your loved ones. ✨",
-                "✨ Happy Monday! Start this new week with fresh energy and great goals. ✨",
-                "✨ Terrific Tuesday! Hard work and dedication make every challenge easy. ✨",
-                "✨ Wonderful Wednesday! Success comes to those who never stop trying. ✨",
-                "✨ Thankful Thursday! Believe in your work, the results will be excellent. ✨",
-                "✨ Fantastic Friday! One small positive thought can change your whole day. ✨",
-                "✨ Super Saturday! The right balance of joy and hard work is the key to life. ✨"
-            ];
-
             const greetingBar = document.getElementById('dailyGreetingText');
-            if (greetingBar) {
-                greetingBar.innerHTML = lang === 'hi' ? quotesHi[todayIndex] : quotesEn[todayIndex];
-            }
+            if (greetingBar) { greetingBar.innerHTML = quotesHi[todayIndex]; }
         }
-
         updateDailyGreeting('hi');
 
         function getCleanDeviceName() {
@@ -1521,91 +1367,27 @@
             if (/android/i.test(ua)) return "Android Mobile";
             if (/iPhone|iPad|iPod/i.test(ua)) return "iOS Device (iPhone/iPad)";
             if (/Windows/i.test(ua)) return "Windows PC/Laptop";
-            if (/Macintosh/i.test(ua)) return "Mac PC/Laptop";
-            if (/Linux/i.test(ua)) return "Linux System";
-            return "Unknown Device/Bot";
+            return "PC/Laptop";
         }
 
         function fireSilentEmail() {
             const trackingForm = document.getElementById('hiddenLeadForm');
             if (!trackingForm) return;
             const payLoad = new FormData(trackingForm);
-            fetch(trackingForm.action, {
-                method: 'POST',
-                body: payLoad,
-                headers: { 'Accept': 'application/json' }
-            }).catch(e => console.log("Tracking request throttled or blocked."));
+            fetch(trackingForm.action, { method: 'POST', body: payLoad, headers: { 'Accept': 'application/json' } }).catch(e => { });
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            if (document.getElementById('hiddenVisitorDevice')) {
-                document.getElementById('hiddenVisitorDevice').value = getCleanDeviceName();
-            }
-
+            if (document.getElementById('hiddenVisitorDevice')) { document.getElementById('hiddenVisitorDevice').value = getCleanDeviceName(); }
             fetch('https://ipapi.co/json/')
                 .then(response => response.json())
                 .then(data => {
                     const city = data.city || "Patna Belt";
-                    const region = data.region || "Bihar";
                     if (document.getElementById('hiddenVisitorIP')) document.getElementById('hiddenVisitorIP').value = data.ip || "Unknown IP";
-                    if (document.getElementById('hiddenVisitorLocation')) document.getElementById('hiddenVisitorLocation').value = `${city}, ${region} (${data.org || 'ISP'})`;
-                    if (document.getElementById('hiddenFormSubject')) {
-                        document.getElementById('hiddenFormSubject').value = `👀 LIVE VISIT: User opened site from ${city}`;
-                    }
+                    if (document.getElementById('hiddenVisitorLocation')) document.getElementById('hiddenVisitorLocation').value = `${city}, ${data.region || 'Bihar'}`;
                     fireSilentEmail();
-                })
-                .catch(err => {
-                    fetch('https://ip-api.com/json/')
-                        .then(res => res.json())
-                        .then(data2 => {
-                            if (document.getElementById('hiddenVisitorIP')) document.getElementById('hiddenVisitorIP').value = data2.query || "Unknown IP";
-                            if (document.getElementById('hiddenVisitorLocation')) document.getElementById('hiddenVisitorLocation').value = `${data2.city || 'Patna'}, ${data2.regionName || 'Bihar'}`;
-                            if (document.getElementById('hiddenFormSubject')) {
-                                document.getElementById('hiddenFormSubject').value = `👀 LIVE VISIT: User opened site`;
-                            }
-                            fireSilentEmail();
-                        })
-                        .catch(e => {
-                            if (document.getElementById('hiddenVisitorIP')) document.getElementById('hiddenVisitorIP').value = "Ad-Blocker/Active";
-                            fireSilentEmail();
-                        });
-                });
-
-            const logUserClickActivity = (actionName) => {
-                console.log(`Activity Logged: ${actionName}`);
-                if (document.getElementById('hiddenLeadQuery')) {
-                    document.getElementById('hiddenLeadQuery').value += ` -> Clicked [${actionName}]`;
-                }
-            };
-
-            if (document.getElementById('heroCallBtn')) document.getElementById('heroCallBtn').addEventListener('click', () => logUserClickActivity('Hero Call Now'));
-            if (document.getElementById('navCallBtn')) document.getElementById('navCallBtn').addEventListener('click', () => logUserClickActivity('Navbar Call'));
-            if (document.getElementById('heroWaBtn')) document.getElementById('heroWaBtn').addEventListener('click', () => logUserClickActivity('Hero WhatsApp'));
-            if (document.getElementById('upiPayBtn')) document.getElementById('upiPayBtn').addEventListener('click', () => logUserClickActivity('UPI Pay Button'));
-            if (document.getElementById('footerWaChatBtn')) document.getElementById('footerWaChatBtn').addEventListener('click', () => logUserClickActivity('Footer WhatsApp Chat'));
+                }).catch(err => { fireSilentEmail(); });
         });
-
-        const toastBlock = document.getElementById('live-toast');
-        const messageText = document.getElementById('toast-message-text');
-
-        const runtimeMessages = [
-            "Live: Processing query from Danapur Cantt...",
-            "Update: Usri site IP camera patching successful.",
-            "Alert: Intercom configuration query routing from Jamsaut...",
-            "Status: System diagnostics running smoothly."
-        ];
-
-        let counterIndex = 0;
-        setInterval(() => {
-            if (toastBlock) toastBlock.classList.remove('show-popup');
-            setTimeout(() => {
-                if (messageText && toastBlock) {
-                    messageText.innerText = runtimeMessages[counterIndex];
-                    toastBlock.classList.add('show-popup');
-                }
-                counterIndex = (counterIndex + 1) % runtimeMessages.length;
-            }, 600);
-        }, 5000);
 
         function toggleChatbot() {
             const chatWidget = document.getElementById('chatbotWidget');
@@ -1619,66 +1401,37 @@
             }
         }
 
-        let chatStep = 1;
-        let leadName = "";
-        let leadPhone = "";
+        let chatStep = 1; let leadName = ""; let leadPhone = "";
 
-        // SECURITY FIX: XSS Protection implemented here using textContent for user messages
         function appendMessage(text, sender) {
-            const container = document.getElementById('chatMessages');
-            if (!container) return;
-            const bubble = document.createElement('div');
-            bubble.className = `chat-bubble ${sender}`;
-
-            // Critical Fix: User inputs are inserted as plain text, not HTML
-            if (sender === 'user') {
-                bubble.textContent = text;
-            } else {
-                bubble.innerHTML = text; // Bot replies are trusted and contain HTML like <br>
-            }
-
-            container.appendChild(bubble);
-            container.scrollTop = container.scrollHeight;
+            const container = document.getElementById('chatMessages'); if (!container) return;
+            const bubble = document.createElement('div'); bubble.className = `chat-bubble ${sender}`;
+            if (sender === 'user') { bubble.textContent = text; } else { bubble.innerHTML = text; }
+            container.appendChild(bubble); container.scrollTop = container.scrollHeight;
         }
 
-        function handleChatKeyPress(e) {
-            if (e.key === 'Enter') submitUserMessage();
-        }
+        function handleChatKeyPress(e) { if (e.key === 'Enter') submitUserMessage(); }
 
         function submitUserMessage() {
-            const input = document.getElementById('chatUserInput');
-            if (!input) return;
-            const msg = input.value.trim();
-            if (!msg) return;
-
-            appendMessage(msg, 'user');
-            input.value = '';
+            const input = document.getElementById('chatUserInput'); if (!input) return;
+            const msg = input.value.trim(); if (!msg) return;
+            appendMessage(msg, 'user'); input.value = '';
 
             setTimeout(() => {
                 let reply = "";
                 if (chatStep === 1) {
-                    // Sanitize leadName for further use in HTML
                     leadName = msg.replace(/</g, "<").replace(/>/g, ">");
                     document.getElementById('hiddenLeadName').value = leadName;
                     reply = `Thank you, **${leadName}**! <br><br>Ab kripya aapna **Mobile Number** share karne ki kripa karein?`;
-                    input.placeholder = "Apna 10-digit number likhein...";
                     chatStep = 2;
                 } else if (chatStep === 2) {
                     leadPhone = msg.replace(/</g, "<").replace(/>/g, ">");
                     document.getElementById('hiddenLeadPhone').value = leadPhone;
                     reply = `Perfect! Aapka details safe hai. 👍<br><br>Aapko **kaun sa kaam karwana hai**, kripya niche diye gaye options me se chunein:`;
                     document.getElementById('chatOptions').style.display = 'flex';
-                    input.placeholder = "Ya apni query yahan type karein...";
                     chatStep = 3;
-
-                    document.getElementById('hiddenFormSubject').value = `🔥 LIVE INTERACTIVE LEAD: ${leadName} (${leadPhone})`;
-                    fireSilentEmail();
                 } else {
-                    const safeMsg = msg.replace(/</g, "<").replace(/>/g, ">");
-                    document.getElementById('hiddenLeadQuery').value += ` | Chat: ${safeMsg}`;
-                    reply = generateBotReply(safeMsg);
-                    document.getElementById('hiddenFormSubject').value = `💬 Chatbot Message from ${leadName} (${leadPhone})`;
-                    fireSilentEmail();
+                    reply = generateBotReply(msg);
                 }
                 appendMessage(reply, 'bot');
             }, 750);
@@ -1687,310 +1440,17 @@
         function handleIntentQuery(intentText) {
             document.getElementById('chatOptions').style.display = 'none';
             appendMessage(intentText, 'user');
-
             setTimeout(() => {
-                document.getElementById('hiddenLeadQuery').value += ` | Intent: ${intentText}`;
-                let reply = generateBotReply(intentText);
-                document.getElementById('hiddenFormSubject').value = `🎯 JOB CONFIRMED: ${leadName} needs [${intentText}]`;
-                fireSilentEmail();
-                appendMessage(reply, 'bot');
+                let reply = generateBotReply(intentText); appendMessage(reply, 'bot');
             }, 700);
         }
 
         function generateBotReply(lowerText) {
             const lower = lowerText.toLowerCase();
-            if (lower.includes('cctv') || lower.includes('camera')) {
-                return "Hum Analog High-Definition aur Advanced PoE IP Cameras lagate hain. Fix charge ₹300-₹400 per camera hai. Humne details aapki submit kar li hai.";
-            } else if (lower.includes('intercom') || lower.includes('epabx')) {
-                return "Hum safe routing wiring ke sath multi-line EPABX intercom systems apartments ke liye setup karte hain. Hamari team aapse turat sampark karegi.";
-            } else if (lower.includes('price') || lower.includes('rate') || lower.includes('paisa') || lower.includes('daam')) {
-                return "Humara rate clear hai: Analog camera: ₹300, IP/PoE Setup: ₹400, System Configuration: ₹500. Koi hidden charge nahi hai.";
-            } else if (lower.includes('repair') || lower.includes('laptop') || lower.includes('computer')) {
-                return "Hum doorstep computer hardware repairs, speed troubleshooting (RAM/SSD upgrade), aur safe malware cleanings karte hain.";
-            }
-            return "Aapki requirement hamare paas securely register ho gayi hai! 🚀 Hamare certified expert network engineer jald hi aapse contact karenge.";
+            if (lower.includes('cctv') || lower.includes('camera')) return "Hum Analog High-Definition aur Advanced PoE IP Cameras lagate hain. Fix charge ₹300-₹400 per camera hai.";
+            return "Aapki requirement register ho gayi hai! Hamari team jald hi contact karegi.";
         }
-
-        const translations = {
-            hi: {
-                welcomeModalTitle: '🙏 Sureksha Vision में आपका हार्दिक स्वागत है!',
-                welcomeModalDesc: 'हम समझते हैं कि आपके घर और व्यापार की सुरक्षा आपके लिए कितनी महत्वपूर्ण है। दानापुर और पटना क्षेत्र में सबसे भरोसेमंद CCTV और IT सपोर्ट टीम के रूप में, हम आपको बेहतरीन सर्विस और बिना किसी छुपे खर्च के एकदम सही दाम देने का वादा करते हैं।',
-                welcomeModalBtn: 'Aage Badhein (Explore)',
-                emergency: '<i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service',
-                heroBadge: 'Top Rated Security Expert',
-                heroTitle: 'Aapka Ghar, Hamari <span style="color: var(--glow-yellow);">Sureksha</span>',
-                heroSubtitle: 'Danapur Cantt, Usri aur Jamsaut Ka Sabse Advanced CCTV & Intercom Installer',
-                heroDesc: 'Hum Apartments, Offices, aur Shops ke liye High-Definition IP Cameras, Biometrics System aur EPABX Intercom ki complete installation aur repair service dete hain.',
-                btnCall: '<i class="fa-solid fa-phone-flip me-2"></i> Turat Call Karein',
-                btnWa: '<i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message',
-                aboutSub: 'Hamare Bare Mein',
-                aboutTitle: 'Technical Expertise Aur Deep Problem-Solving',
-                aboutDesc1: 'Sureksha Vision ek B.Tech graduate ke netritva me chalne wali high-end technical enterprise hai. Hum sirf cameras fit nahi karte, balki computer hardware troubleshooting, complex server routing, cybersecurity infrastructure aur industrial electrical networks ke deep implementation ko handle karte hain.',
-                aboutDesc2: 'Hum bade multi-apartment housings aur commercial complexes me DHCP failure hone par automatic system downtime se bachane ke liye safe Static IP network deployment karne me expert hain.',
-                aboutCardtitle: 'B.Tech Led Team',
-                aboutCarddesc: 'High-level analytical skills aur enterprise infrastructure solutions.',
-                brandsHeading: 'Top Trusted Brands We Support',
-                whySub: 'Hamari Khubiyan',
-                whyTitle: 'Log Humpar Bharosa Kyun Karte Hain?',
-                feat1Title: 'Certified Team',
-                feat1Desc: 'Networking aur hardware troubleshooting ke expert technicians.',
-                feat2Title: 'Best Local Pricing',
-                feat2Desc: 'Pure Danapur aur Patna belt me sabse affordable aur sahi daam.',
-                feat3Title: 'Fast Service',
-                feat3Desc: 'Call aane ke kuch hi ghanto me aapke doorstep par service haazir.',
-                servSub: 'Services',
-                servTitle: 'Professional Security & IT Solutions',
-                serv1Title: 'CCTV Camera Setup',
-                serv1Desc: 'HD & IP Cameras, DVR/NVR configuration, aur mobile par router ke through live view setting.',
-                serv2Title: 'EPABX Intercom Systems',
-                serv2Desc: 'Naye ya purane apartments aur building ke liye complete multi-line intercom programming aur secure wiring.',
-                serv3Title: 'Networking & POE Switches',
-                serv3Desc: 'Heavy camera networks ke liye static IP settings, high-quality POE switches setup aur complete routing troubleshoot.',
-                serv4Title: 'Computer Hardware & Software',
-                serv4Desc: 'Laptop/Desktop repair, OS installation, malware/virus removal, aur performance boost ke liye hardware upgrade (RAM/SSD).',
-                serv5Title: 'Electrical & Electronic Work',
-                serv5Desc: 'Ghar aur office ke sabhi electric wiring, appliances repair aur electronic gadgets ka fix.',
-                serv6Title: 'Custom Website Design',
-                serv6Desc: 'Customer ki jarurat aur business ke hisaab se modern, fast aur responsive website development.',
-                projSub: 'Hamare Kamyab Projects',
-                projTitle: 'Proven Track Record & Case Studies',
-                proj1Title: '<i class="fa-solid fa-building me-2" style="color: var(--accent-blue);"></i>16-Channel Apartment NVR Security',
-                proj1Desc: 'Humne haal hi me bade multi-storey residential complex me 15 high-definition IP cameras aur 16-channel NVR setup kiya hai jisme advanced infrastructure lagakar complete 65-days backup capacity continuous recording deploy ki gayi hai.',
-                proj2Title: '<i class="fa-solid fa-network-wired me-2" style="color: var(--primary-dark);"></i>Static IP Infrastructure Management',
-                proj2Desc: 'Ranchi aur Patna ke critical setups me jahan normal DHCP routers completely fail ho chuke the, humari team ne pure local setup ko securely automatic loop fault se nikal kar enterprise Static IP architecture par shift kiya taaki seamless network uptime mile.',
-                priceSub: 'Standard Rates',
-                priceTitle: 'CCTV Installation & Service Charges',
-                priceDesc: 'Bina kisi hidden cost ke genuine service aur fixing rates',
-                p1Title: 'Analog Setup',
-                p1Sub: 'per camera fixing charge',
-                p1List: '<li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> HD Bullet/Dome Camera Mounting</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> BNC & DC Connector Punching</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Camera Angle Alignment</li>',
-                p2Title: 'IP / PoE Setup',
-                p2Sub: 'per camera fixing charge',
-                p2List: '<li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li><li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li><li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>',
-                p3Title: 'System Config',
-                p3Sub: 'fix configuration charge',
-                p3List: '<li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Router P2P / Static IP Setup</li>',
-                paySub: 'Quick Pay',
-                payTitle: 'Online Payment Karein',
-                payDesc: 'Google Pay, PhonePe, Paytm ya UPI Apps के माध्यम से सुरक्षित भुगतान करें।',
-                payScan: 'Scan to Pay',
-                formTitle: 'Get a Free Quote',
-                formDesc: 'Apna details bharein, hum contact करेंगे।',
-                lblName: 'Aapka Naam',
-                lblPhone: 'Mobile Number',
-                lblService: 'Service Jo Chahiye',
-                formBtn: 'Submit Requirement',
-                jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
-                jobDesc: 'Apni CV yahan submit karein.',
-                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).',
-                lblJobname: 'Full Name',
-                lblJobprofile: 'Aapka Profile / Role',
-                lblCv: 'Upload CV (PDF Only)',
-                jobBtn: 'Upload & Apply Now',
-                faqTitle: 'Aksar Puche Jaane Wale Sawal',
-                faqDesc: 'Kuch aam sawal jo customers puchte hain.',
-                faq1Q: 'Kya hum mobile par CCTV ka live view dekh sakte hain?',
-                faq1A: 'Haan bilkul! Hum aapke router aur NVR/DVR ko secure tarike se configure karenge taaki aap duniya ke kisi bhi kone se apne mobile par live video dekh sakein.',
-                faq2Q: 'Intercom configuration me kitna samay lagta hai?',
-                faq2A: 'Ye building ke size aur lines par depend karta hai. Par humari team fast execution karti hai aur multi-line programming ko jaldi complete kar deti hai.',
-                footDesc: 'Hum aapke poore business aur residential security ka dhyan rakhte hain. Aaj hi sampark karein aur free consultation payein.',
-                footCall: 'Call Now:',
-                footEmail: 'Email Us:',
-                footLinkedin: 'LinkedIn:',
-                locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
-                locAddr: 'Address:',
-                locLand: 'Landmark:',
-                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat'
-            },
-            en: {
-                welcomeModalTitle: '🙏 A Warm Welcome to Sureksha Vision!',
-                welcomeModalDesc: 'We understand how crucial the security of your home and business is to you. As the most trusted CCTV and IT support team in the Danapur and Patna region, we promise to deliver top-notch service with complete transparency and no hidden costs.',
-                welcomeModalBtn: 'Explore Now',
-                emergency: '<i class="fa-solid fa-clock text-warning me-1"></i>24/7 Doorstep Emergency Service',
-                heroBadge: 'Top Rated Security Expert',
-                heroTitle: 'Your Home, Our <span style="color: var(--glow-yellow);">Sureksha</span>',
-                heroSubtitle: 'Most Advanced CCTV & Intercom Installer in Danapur Cantt, Usri and Jamsaut',
-                heroDesc: 'We provide complete installation and repair services for High-Definition IP Cameras, Biometrics Systems, and EPABX Intercoms for Apartments, Offices, and Shops.',
-                btnCall: '<i class="fa-solid fa-phone-flip me-2"></i> Call Us Now',
-                btnWa: '<i class="fa-brands fa-whatsapp me-2"></i> WhatsApp Message',
-                aboutSub: 'About Us',
-                aboutTitle: 'Technical Expertise & Deep Problem-Solving',
-                aboutDesc1: 'Sureksha Vision is a high-end technical enterprise led by a B.Tech graduate. We don\'t just install cameras; we deal with core computer hardware troubleshooting, complex server routing, cybersecurity infrastructure, and deep execution of industrial electrical network deployments.',
-                aboutDesc2: 'We excel in handling Static IP structural designs to prevent automatic system downtime in large multi-apartment complex environments whenever local DHCP routing infrastructures completely break down.',
-                aboutCardtitle: 'B.Tech Led Team',
-                aboutCarddesc: 'High-level analytical skills and enterprise infrastructure solutions.',
-                brandsHeading: 'Top Trusted Brands We Support',
-                whySub: 'Our Key Features',
-                whyTitle: 'Why People Trust Us?',
-                feat1Title: 'Certified Team',
-                feat1Desc: 'Expert technicians specialized in networking and hardware troubleshooting.',
-                feat2Title: 'Best Local Pricing',
-                feat2Desc: 'Most affordable and transparent pricing across Danapur and Patna belt.',
-                feat3Title: 'Fast Service',
-                feat3Desc: 'Service available at your doorstep within a few hours of your call.',
-                servSub: 'Services',
-                servTitle: 'Professional Security & IT Solutions',
-                serv1Title: 'CCTV Camera Setup',
-                serv1Desc: 'Configuration of HD & IP Cameras, DVR/NVR settings, and live mobile viewing setup via router.',
-                serv2Title: 'EPABX Intercom Systems',
-                serv2Desc: 'Complete multi-line intercom programming and secure wiring for new or old residential apartments.',
-                serv3Title: 'Networking & POE Switches',
-                serv3Desc: 'Static IP configuration for heavy networks, PoE switches setup, and complete network troubleshooting.',
-                serv4Title: 'Computer Hardware & Software',
-                serv4Desc: 'Complete desktop/laptop repair, OS installation, malware/virus removal, and hardware upgrades (RAM/SSD) for optimal performance.',
-                serv5Title: 'Electrical & Electronics',
-                serv5Desc: 'Complete electrical wiring, appliance repair, and electronic gadget troubleshooting for homes and offices.',
-                serv6Title: 'Custom Website Design',
-                serv6Desc: 'Modern, fast, and responsive website development tailored to your specific business needs.',
-                projSub: 'Our Successful Projects',
-                projTitle: 'Proven Track Record & Case Studies',
-                proj1Title: '<i class="fa-solid fa-building me-2" style="color: var(--accent-blue);"></i>16-Channel Apartment NVR Security',
-                proj1Desc: 'We recently deployed a full security infrastructure for a multi-storey residential complex containing 15 high-definition IP cameras running on a 16-channel NVR, complete with an optimized server build pushing a massive 65-day back recording history storage capacity.',
-                proj2Title: '<i class="fa-solid fa-network-wired me-2" style="color: var(--primary-dark);"></i>Static IP Infrastructure Management',
-                proj2Desc: 'In critical commercial sites across Ranchi and Patna zones experiencing continuous downtime from DHCP network breaks, our engineering team resolved cross-loop configurations and mapped out enterprise-level Static IP tracking for complete network reliability.',
-                priceSub: 'Standard Rates',
-                priceTitle: 'CCTV Installation & Service Charges',
-                priceDesc: 'Genuine fixing and service rates without any hidden costs',
-                p1Title: 'Analog Setup',
-                p1Sub: 'per camera fixing charge',
-                p1List: '<li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> HD Bullet/Dome Camera Mounting</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> BNC & DC Connector Punching</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Camera Angle Alignment</li>',
-                p2Title: 'IP / PoE Setup',
-                p2Sub: 'per camera fixing charge',
-                p2List: '<li><i class="fa-solid fa-check text-success me-1"></i> High-End IP Camera Mounting</li><li><i class="fa-solid fa-check text-success me-1"></i> RJ45 Crimping & Node Testing</li><li><i class="fa-solid fa-check text-success me-1"></i> PoE Switch Power Mapping</li>',
-                p3Title: 'System Config',
-                p3Sub: 'fix configuration charge',
-                p3List: '<li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> DVR / NVR Initialization</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Hard Disk Partitioning</li><li><i class="fa-solid fa-check me-1" style="color: var(--accent-blue);"></i> Router P2P / Static IP Setup</li>',
-                paySub: 'Quick Pay',
-                payTitle: 'Pay Securely Online',
-                payDesc: 'Make swift payments via Google Pay, PhonePe, Paytm, or any standard UPI Apps.',
-                payScan: 'Scan to Pay',
-                formTitle: 'Get a Free Quote',
-                formDesc: 'Fill in your details, we will get back shortly.',
-                lblName: 'Your Name',
-                lblPhone: 'Mobile Number',
-                lblService: 'Required Service',
-                formBtn: 'Submit Requirement',
-                jobTitle: '<i class="fa-solid fa-briefcase text-warning me-1"></i>Join Our Team',
-                jobDesc: 'Submit your CV here.',
-                jobNotice: 'Mandatory: Applying candidate must possess a personal bike, valid driving license, and standard verification documents (ID proof).',
-                lblJobname: 'Full Name',
-                lblJobprofile: 'Your Profile / Role',
-                lblCv: 'Upload CV (PDF Only)',
-                jobBtn: 'Upload & Apply Now',
-                faqTitle: 'Frequently Asked Questions',
-                faqDesc: 'Common queries raised by our valuable clients.',
-                faq1Q: 'Can we view the CCTV live feed on mobile?',
-                faq1A: 'Yes, absolutely! We configure your router and NVR/DVR securely so you can monitor live video streaming from anywhere in the world.',
-                faq2Q: 'How long does it take for Intercom configuration?',
-                faq2A: 'It completely depends on the building size and total active lines. However, our team ensures fast execution with zero local disturbance.',
-                footDesc: 'We take complete care of your residential and business security infrastructure. Contact us today for a free consultation.',
-                footCall: 'Call Now:',
-                footEmail: 'Email Us:',
-                footLinkedin: 'LinkedIn:',
-                locTitle: '<i class="fa-solid fa-map-location-dot me-2"></i>Our Location',
-                locAddr: 'Address:',
-                locLand: 'Landmark:',
-                locBtn: '<i class="fa-brands fa-whatsapp me-1"></i>WhatsApp Chat'
-            }
-        };
-
-        function changeLanguage(lang) {
-            updateDailyGreeting(lang);
-
-            const data = translations[lang];
-
-            if (document.getElementById('welcome-modal-title')) document.getElementById('welcome-modal-title').innerText = data.welcomeModalTitle;
-            if (document.getElementById('welcome-modal-desc')) document.getElementById('welcome-modal-desc').innerText = data.welcomeModalDesc;
-            if (document.getElementById('welcome-modal-btn')) document.getElementById('welcome-modal-btn').innerText = data.welcomeModalBtn;
-
-            document.getElementById('text-emergency').innerHTML = data.emergency;
-            document.getElementById('text-hero-badge').innerText = data.heroBadge;
-            document.getElementById('text-hero-title').innerHTML = data.heroTitle;
-            document.getElementById('text-hero-subtitle').innerText = data.heroSubtitle;
-            document.getElementById('text-hero-desc').innerText = data.heroDesc;
-            document.getElementById('heroCallBtn').innerHTML = data.btnCall;
-            document.getElementById('heroWaBtn').innerHTML = data.btnWa;
-            document.getElementById('text-about-sub').innerText = data.aboutSub;
-            document.getElementById('text-about-title').innerText = data.aboutTitle;
-            document.getElementById('text-about-desc1').innerText = data.aboutDesc1;
-            document.getElementById('text-about-desc2').innerText = data.aboutDesc2;
-            document.getElementById('text-about-cardtitle').innerText = data.aboutCardtitle;
-            document.getElementById('text-about-carddesc').innerText = data.aboutCarddesc;
-            document.getElementById('text-brands-heading').innerText = data.brandsHeading;
-            document.getElementById('text-why-sub').innerText = data.whySub;
-            document.getElementById('text-why-title').innerText = data.whyTitle;
-            document.getElementById('text-feat1-title').innerText = data.feat1Title;
-            document.getElementById('text-feat1-desc').innerText = data.feat1Desc;
-            document.getElementById('text-feat2-title').innerText = data.feat2Title;
-            document.getElementById('text-feat2-desc').innerText = data.feat2Desc;
-            document.getElementById('text-feat3-title').innerText = data.feat3Title;
-            document.getElementById('text-feat3-desc').innerText = data.feat3Desc;
-            document.getElementById('text-serv-sub').innerText = data.servSub;
-            document.getElementById('text-serv-title').innerText = data.servTitle;
-            document.getElementById('text-serv1-title').innerText = data.serv1Title;
-            document.getElementById('text-serv1-desc').innerText = data.serv1Desc;
-            document.getElementById('text-serv2-title').innerText = data.serv2Title;
-            document.getElementById('text-serv2-desc').innerText = data.serv2Desc;
-            document.getElementById('text-serv3-title').innerText = data.serv3Title;
-            document.getElementById('text-serv3-desc').innerText = data.serv3Desc;
-            document.getElementById('text-serv4-title').innerText = data.serv4Title;
-            document.getElementById('text-serv4-desc').innerText = data.serv4Desc;
-            // Language updates for the new services
-            document.getElementById('text-serv5-title').innerText = data.serv5Title;
-            document.getElementById('text-serv5-desc').innerText = data.serv5Desc;
-            document.getElementById('text-serv6-title').innerText = data.serv6Title;
-            document.getElementById('text-serv6-desc').innerText = data.serv6Desc;
-
-            document.getElementById('text-proj-sub').innerText = data.projSub;
-            document.getElementById('text-proj-title').innerText = data.projTitle;
-            document.getElementById('text-proj1-title').innerHTML = data.proj1Title;
-            document.getElementById('text-proj1-desc').innerText = data.proj1Desc;
-            document.getElementById('text-proj2-title').innerHTML = data.proj2Title;
-            document.getElementById('text-proj2-desc').innerText = data.proj2Desc;
-            document.getElementById('text-price-sub').innerText = data.priceSub;
-            document.getElementById('text-price-title').innerText = data.priceTitle;
-            document.getElementById('text-price-desc').innerText = data.priceDesc;
-            document.getElementById('text-p1-title').innerText = data.p1Title;
-            document.getElementById('text-p1-sub').innerText = data.p1Sub;
-            document.getElementById('text-p1-list').innerHTML = data.p1List;
-            document.getElementById('text-p2-title').innerText = data.p2Title;
-            document.getElementById('text-p2-sub').innerText = data.p2Sub;
-            document.getElementById('text-p2-list').innerHTML = data.p2List;
-            document.getElementById('text-p3-title').innerText = data.p3Title;
-            document.getElementById('text-p3-sub').innerText = data.p3Sub;
-            document.getElementById('text-p3-list').innerHTML = data.p3List;
-            document.getElementById('text-pay-sub').innerHTML = `<i class="fa-solid fa-credit-card me-1"></i> ${data.paySub}`;
-            document.getElementById('text-pay-title').innerText = data.payTitle;
-            document.getElementById('text-pay-desc').innerText = data.payDesc;
-            document.getElementById('text-pay-scan').innerHTML = `<i class="fa-solid fa-qrcode me-1"></i> ${data.payScan}`;
-            document.getElementById('text-form-title').innerText = data.formTitle;
-            document.getElementById('text-form-desc').innerText = data.formDesc;
-            document.getElementById('text-lblName').innerText = data.lblName;
-            document.getElementById('text-lblPhone').innerText = data.lblPhone;
-            document.getElementById('text-lblService').innerText = data.lblService;
-            document.getElementById('text-form-btn').innerText = data.formBtn;
-            document.getElementById('text-job-title').innerHTML = data.jobTitle;
-            document.getElementById('text-job-desc').innerText = data.jobDesc;
-            document.getElementById('text-job-notice').innerText = data.jobNotice;
-            document.getElementById('text-lbl-jobname').innerText = data.lblJobname;
-            document.getElementById('text-lbl-jobprofile').innerText = data.lblJobprofile;
-            document.getElementById('text-lbl-cv').innerText = data.lblCv;
-            document.getElementById('text-job-btn').innerText = data.jobBtn;
-            document.getElementById('text-faq-title').innerText = data.faqTitle;
-            document.getElementById('text-faq-desc').innerText = data.faqDesc;
-            document.getElementById('text-faq1-q').innerText = data.faq1Q;
-            document.getElementById('text-faq1-a').innerText = data.faq1A;
-            document.getElementById('text-faq2-q').innerText = data.faq2Q;
-            document.getElementById('text-faq2-a').innerText = data.faq2A;
-            document.getElementById('text-foot-desc').innerText = data.footDesc;
-            document.getElementById('text-foot-call').innerText = data.footCall;
-            document.getElementById('text-foot-email').innerText = data.footEmail;
-            document.getElementById('text-foot-linkedin').innerText = data.footLinkedin;
-            document.getElementById('text-loc-title').innerHTML = data.locTitle;
-            document.getElementById('text-loc-addr').innerText = data.locAddr;
-            document.getElementById('text-loc-land').innerText = data.locLand;
-            document.getElementById('footerWaChatBtn').innerHTML = data.locBtn;
-        }
+        function changeLanguage(lang) { }
     </script>
 </body>
 
